@@ -1,0 +1,251 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "materials": "Materiales",
+    "contact": "Contacto"
+  },
+  "home": {
+    "hero": {
+      "title": "Tu Socio Tecnológico en Fabricación Dental",
+      "subtitle": "Laboratorio CAD/CAM especializado en prótesis de precisión y suministros de alta calidad para profesionales dentales.",
+      "cta": "Conoce Nuestros Servicios"
+    },
+    "valueProposition": {
+      "title": "Por Qué Elegir FANA",
+      "subtitle": "Tecnología de vanguardia al servicio de la excelencia dental",
+      "precision": {
+        "title": "Precisión Micrométrica",
+        "description": "Fresado CNC de 5 ejes con tolerancias de ±5μm"
+      },
+      "speed": {
+        "title": "Entrega Rápida",
+        "description": "Plazos de entrega optimizados sin comprometer calidad"
+      },
+      "quality": {
+        "title": "Materiales Premium",
+        "description": "Solo trabajamos con materiales certificados y biocompatibles"
+      }
+    },
+    "services": {
+      "title": "Nuestros Servicios",
+      "subtitle": "Soluciones completas para laboratorios y clínicas dentales",
+      "implants": {
+        "title": "Estructuras de Implantes",
+        "description": "Fresado de estructuras en Titanio y CrCo con máxima precisión"
+      },
+      "aesthetics": {
+        "title": "Estética Avanzada",
+        "description": "Zirconio multicapa y Disilicato para restauraciones naturales"
+      },
+      "supplies": {
+        "title": "Suministros B2B",
+        "description": "Distribución de materiales de fresado para laboratorios"
+      }
+    }
+  },
+  "services": {
+    "title": "Servicios de Fresado y Fabricación Digital.",
+    "subtitle": "Desde estructuras de implantes hasta estética avanzada. Flujos de trabajo 100% digitales garantizan la más alta precisión.",
+    "implants": {
+      "title": "Implantes Personalizados de Precisión",
+      "description1": "Nuestro proceso de fresado de estructuras de implantes combina la precisión micrométrica con tecnologías CNC de última generación.",
+      "description2": "Trabajamos exclusivamente con metales avanzados como Titanio (Ti) y Cromo-Cobalto (CrCo), garantizando biocompatibilidad y durabilidad excepcional.",
+      "description3": "Cada estructura es diseñada y fabricada siguiendo los más estrictos estándares de calidad, asegurando un ajuste perfecto y resultados predecibles."
+    },
+    "aesthetics": {
+      "title": "Diseño Estético con Zirconio y Disilicato",
+      "description1": "Especialistas en materiales de alta estética como Zirconio multicapa y Disilicato de Litio, ofreciendo la máxima naturalidad y resistencia.",
+      "description2": "Nuestra experiencia en diseño de sonrisa CAD/CAM nos permite crear restauraciones que no solo funcionan perfectamente, sino que también superan las expectativas estéticas.",
+      "description3": "Cada restauración estética es personalizada según las características únicas de cada paciente, garantizando resultados naturales y duraderos."
+    },
+    "workflow": {
+      "title": "Tu Laboratorio 4.0: Del Escáner a la Prótesis Final",
+      "subtitle": "Un proceso completamente digital que garantiza precisión, rapidez y calidad en cada paso",
+      "step1": {
+        "title": "Escaneado Digital",
+        "description": "Recepción y procesamiento de archivos STL de alta resolución"
+      },
+      "step2": {
+        "title": "Diseño CAD",
+        "description": "Modelado 3D personalizado con software especializado"
+      },
+      "step3": {
+        "title": "Fresado CAM",
+        "description": "Fabricación con maquinaria CNC de 5 ejes de precisión"
+      },
+      "step4": {
+        "title": "Control de Calidad",
+        "description": "Verificación dimensional y estética exhaustiva"
+      },
+      "step5": {
+        "title": "Envío",
+        "description": "Embalaje seguro y entrega garantizada"
+      }
+    },
+    "cta": {
+      "title": "¿Tienes un caso complejo? Hablemos de la solución.",
+      "description": "Nuestro equipo de expertos está listo para ayudarte con los casos más desafiantes. Contacta con nosotros para una consulta personalizada.",
+      "button": "Contactar Ahora"
+    }
+  },
+  "materials": {
+    "title": "La Tecnología en la que Confían los Profesionales.",
+    "subtitle": "Solo trabajamos con materiales certificados y la maquinaria de fresado más avanzada de Europa. Calidad sin compromisos para tus pacientes.",
+    "zirconia": {
+      "title": "Zirconio Multicapa de Alto Rendimiento",
+      "zirconiaMultilayer": {
+        "title": "Zirconio Multicapa",
+        "certification": "Certificación ISO 13356",
+        "resistance": "Resistencia > 1200 MPa",
+        "translucency": "Translucecencia natural",
+        "biocompatibility": "Biocompatibilidad total"
+      },
+      "lithiumDisilicate": {
+        "title": "Disilicato de Litio",
+        "resistance": "Resistencia > 400 MPa",
+        "aesthetics": "Estética superior",
+        "wear": "Mínimo desgaste",
+        "certification": "Certificación CE"
+      },
+      "titanium": {
+        "title": "Titanio Grado 5",
+        "certification": "ASTM F136 certificado",
+        "corrosion": "Resistencia a corrosión",
+        "biocompatibility": "Biocompatibilidad",
+        "lightness": "Ligereza excepcional"
+      }
+    },
+    "supplies": {
+      "title": "Bloques de Fresado y Resinas (PMMA, Cera, etc.)",
+      "subtitle": "Suministramos a laboratorios de toda España los materiales de fresado más demandados del mercado",
+      "pmma": "PMMA",
+      "pmmaDesc": "Bloques provisionales",
+      "wax": "Cera",
+      "waxDesc": "Modelado y encerado",
+      "composite": "Composite",
+      "compositeDesc": "Restauraciones directas",
+      "peek": "PEEK",
+      "peekDesc": "Materiales avanzados",
+      "temporaryResins": "Resinas Temp.",
+      "temporaryResinsDesc": "Provisionales",
+      "zirconiaBlanks": "Zirconio",
+      "zirconiaBlanksDesc": "Bloques multicapa",
+      "disilicateBlanks": "Disilicato",
+      "disilicateBlanksDesc": "Bloques estéticos",
+      "titaniumBlanks": "Titanio",
+      "titaniumBlanksDesc": "Implantes y estructuras"
+    },
+    "technology": {
+      "title": "Nuestra Maquinaria de Fresado CNC",
+      "subtitle": "Inversión constante en tecnología de vanguardia para garantizar la máxima precisión y eficiencia",
+      "fiveAxis": {
+        "title": "Fresadoras de 5 Ejes",
+        "precision": "Precisión micrométrica (±5μm)",
+        "multiMaterial": "Capacidad multi-material",
+        "automation": "Automatización completa",
+        "maintenance": "Mantenimiento predictivo"
+      },
+      "scanners": {
+        "title": "Escáneres de Alta Resolución",
+        "resolution": "Resolución 10μm",
+        "color": "Captura en color real",
+        "processing": "Procesamiento instantáneo",
+        "compatibility": "Compatibilidad universal"
+      },
+      "software": {
+        "title": "Software de Diseño Certificado",
+        "certification": "Certificación CE médica",
+        "ai": "IA para optimización",
+        "simulation": "Simulación de masticación",
+        "integration": "Integración completa"
+      },
+      "features": {
+        "title": "Características Técnicas Destacadas",
+        "cooling": "Sistema de refrigeración por aceite para máxima precisión",
+        "toolChange": "Cambio automático de herramientas sin intervención manual",
+        "monitoring": "Monitoreo en tiempo real de parámetros de fresado",
+        "isoCertification": "Certificación ISO 13485 para dispositivos médicos",
+        "traceability": "Trazabilidad completa de cada pieza fabricada",
+        "support": "Soporte técnico 24/7 para nuestros clientes"
+      }
+    },
+    "cta": {
+      "title": "Solicita el Catálogo de Materiales y Certificaciones",
+      "description": "Accede a toda la información técnica, certificaciones y especificaciones de nuestros materiales premium.",
+      "button": "Descargar Catálogo"
+    }
+  },
+  "contact": {
+    "title": "Hablemos de tu Próximo Proyecto.",
+    "subtitle": "El camino más rápido y fiable para obtener tus prótesis. Contáctanos o sube tus archivos digitales directamente.",
+    "form": {
+      "title": "Subir Archivos Digitales y Cotización Express",
+      "subtitle": "Completa el formulario y adjunta tus archivos CAD/CAM para recibir una cotización personalizada",
+      "clinicName": "Nombre (Clínica/Laboratorio)",
+      "email": "Email (Profesional)",
+      "phone": "Teléfono",
+      "caseType": "Tipo de Caso",
+      "caseTypeOptions": {
+        "select": "Selecciona el tipo de caso",
+        "aesthetics": "Estética",
+        "implant": "Implante",
+        "structure": "Estructura",
+        "provisional": "Provisional",
+        "other": "Otro"
+      },
+      "files": "Archivos Digitales (STL, PLY, OBJ, etc.)",
+      "fileUpload": "Haz clic para subir archivos",
+      "fileDragDrop": "o arrastra y suelta los archivos aquí",
+      "filesSelected": "archivo(s) seleccionado(s)",
+      "message": "Mensaje Adicional",
+      "messagePlaceholder": "Describe tu caso, especificaciones especiales, urgencia, etc.",
+      "submit": "Enviar Solicitud",
+      "submitting": "Enviando..."
+    },
+    "info": {
+      "title": "Datos del Laboratorio",
+      "subtitle": "Múltiples canales de contacto para atenderte de la mejor manera",
+      "phone": {
+        "title": "Teléfono B2B",
+        "number": "+34 91 123 45 67",
+        "hours": "Lunes a Viernes: 8:00 - 18:00"
+      },
+      "email": {
+        "title": "Email Profesional",
+        "address": "info@fanamilling.com",
+        "response": "Respuesta en 24h"
+      },
+      "address": {
+        "title": "Dirección Física",
+        "street": "Polígono Industrial Norte",
+        "city": "Calle Tecnología, 15",
+        "postal": "28050 Madrid, España",
+        "visits": "Visitas con cita previa"
+      }
+    },
+    "location": {
+      "title": "Ubicación del Laboratorio",
+      "mapTitle": "Mapa de Google Maps",
+      "mapAddress": "Polígono Industrial Norte, Madrid",
+      "hours": {
+        "title": "Horarios de Atención B2B",
+        "weekdays": "Lunes - Viernes",
+        "weekdaysHours": "8:00 - 18:00",
+        "saturday": "Sábados",
+        "saturdayHours": "9:00 - 14:00",
+        "sunday": "Domingos",
+        "sundayHours": "Cerrado",
+        "emergency": {
+          "title": "Servicio de Urgencias",
+          "description": "Disponible 24/7 para casos urgentes. Contacta por teléfono para activar el servicio."
+        }
+      }
+    }
+  },
+  "common": {
+    "materialPremium": "Material Premium",
+    "diagramTechnical": "Diagrama Técnico de Proceso CNC",
+    "highAesthetics": "Materiales de Alta Estética"
+  }
+}
