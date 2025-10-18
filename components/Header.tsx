@@ -107,14 +107,14 @@ export default function Header() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <div className="relative h-10 w-32">
+                <div className="relative h-14 w-44">
                   <Image
                     src="/images/logo/logo-fana-1.png"
                     alt="FANA Milling Center Logo"
                     fill
                     className="object-contain"
                     priority
-                    sizes="128px"
+                    sizes="176px"
                   />
                 </div>
               </motion.div>
