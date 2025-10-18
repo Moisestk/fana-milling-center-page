@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { 
-  SparklesIcon, 
+  StarIcon, 
   Cog6ToothIcon, 
   ArchiveBoxIcon 
 } from '@heroicons/react/24/outline';
@@ -39,7 +39,7 @@ export default function ServiceCategories() {
           >
             <div className="h-full bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-xl p-8">
               <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl flex items-center justify-center mb-6">
-                <SparklesIcon className="w-8 h-8 text-white" />
+                <StarIcon className="w-8 h-8 text-white" />
               </div>
               
               <h3 className="font-playfair text-2xl font-bold text-fana-navy mb-4">
