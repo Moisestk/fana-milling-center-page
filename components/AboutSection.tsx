@@ -59,7 +59,7 @@ export default function AboutSection() {
 
                 {/* Decorative stars */}
                 <motion.div 
-                  className="absolute -top-4 -left-4"
+                  className="absolute -top-4 -left-4 z-20"
                   animate={{ 
                     rotate: [0, 15, -15, 0],
                     scale: [1, 1.1, 1]
@@ -69,7 +69,7 @@ export default function AboutSection() {
                   <Sparkles className="w-8 h-8 text-blue-600" />
                 </motion.div>
                 <motion.div 
-                  className="absolute top-8 -left-6"
+                  className="absolute top-8 -left-6 z-20"
                   animate={{ 
                     rotate: [0, 360],
                     scale: [1, 1.2, 1]
@@ -81,7 +81,7 @@ export default function AboutSection() {
 
                 {/* Quality Badge */}
                 <motion.div 
-                  className="absolute bottom-8 -right-4 bg-blue-900 text-white rounded-full w-24 h-24 flex items-center justify-center shadow-lg"
+                  className="absolute bottom-8 -right-4 bg-blue-900 text-white rounded-full w-24 h-24 flex items-center justify-center shadow-lg z-20"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   animate={{ y: [0, -10, 0] }}
                   transition={{ y: { duration: 3, repeat: Infinity } }}
