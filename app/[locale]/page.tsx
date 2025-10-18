@@ -9,7 +9,7 @@ import AboutSection from '@/components/AboutSection';
 import ServicesNavigation from '@/components/ServicesNavigation';
 import OurServicesSection from '@/components/OurServicesSection';
 import Footer from '@/components/Footer';
-import { CheckIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
+import { CheckIcon, ArrowRightIcon, PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer, staggerItem, counterAnimation, viewportOptions } from '@/lib/animations';
 import PageTransition from '@/components/PageTransition';
@@ -333,9 +333,9 @@ export default function Home() {
               variants={staggerContainer}
             >
               {[
-                { emoji: '📞', title: t('cta2.contact.phone.title'), text: t('cta2.contact.phone.value') },
-                { emoji: '✉️', title: t('cta2.contact.email.title'), text: t('cta2.contact.email.value') },
-                { emoji: '📍', title: t('cta2.contact.location.title'), text: t('cta2.contact.location.value') }
+                { Icon: PhoneIcon, title: t('cta2.contact.phone.title'), text: t('cta2.contact.phone.value') },
+                { Icon: EnvelopeIcon, title: t('cta2.contact.email.title'), text: t('cta2.contact.email.value') },
+                { Icon: MapPinIcon, title: t('cta2.contact.location.title'), text: t('cta2.contact.location.value') }
               ].map((item, index) => (
                 <motion.div 
                   key={index}
@@ -348,11 +348,11 @@ export default function Home() {
                   transition={{ duration: 0.3 }}
                 >
                   <motion.div 
-                    className="text-3xl mb-3"
+                    className="mb-3"
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
                   >
-                    {item.emoji}
+                    <item.Icon className="w-12 h-12 text-white" />
                   </motion.div>
                   <h3 className="font-bold mb-2">{item.title}</h3>
                   <p className="text-gray-300 text-sm">{item.text}</p>
