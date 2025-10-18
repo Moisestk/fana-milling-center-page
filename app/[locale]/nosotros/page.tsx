@@ -39,49 +39,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="bg-white py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
-            Nuestro Equipo
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="w-32 h-32 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-4xl font-bold">JD</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Juan Díaz</h3>
-              <p className="text-blue-600 font-medium mb-2">Director Técnico</p>
-              <p className="text-gray-600 text-sm">
-                15 años de experiencia en tecnología CAD/CAM dental
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-32 h-32 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-4xl font-bold">ML</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">María López</h3>
-              <p className="text-blue-600 font-medium mb-2">Especialista en Estética</p>
-              <p className="text-gray-600 text-sm">
-                Experta en zirconio y materiales de alta estética
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-32 h-32 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-4xl font-bold">CR</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Carlos Ruiz</h3>
-              <p className="text-blue-600 font-medium mb-2">Ingeniero CNC</p>
-              <p className="text-gray-600 text-sm">
-                Especialista en fresado de precisión micrométrica
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <Footer />
       </div>
     </PageTransition>

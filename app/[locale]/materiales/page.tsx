@@ -5,6 +5,14 @@ import Footer from '@/components/Footer';
 import PageTransition from '@/components/PageTransition';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer, staggerItem, viewportOptions } from '@/lib/animations';
+import { 
+  SparklesIcon, 
+  StarIcon, 
+  BoltIcon, 
+  CubeIcon, 
+  CogIcon, 
+  BeakerIcon 
+} from '@heroicons/react/24/outline';
 
 export default function MaterialesPage() {
   return (
@@ -51,7 +59,7 @@ export default function MaterialesPage() {
             {/* Zirconio */}
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                <span className="text-white text-2xl">💎</span>
+                <SparklesIcon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Zirconio Multicapa</h3>
               <p className="text-gray-600 mb-6">
@@ -80,7 +88,7 @@ export default function MaterialesPage() {
             {/* Disilicato de Litio */}
             <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
-                <span className="text-white text-2xl">✨</span>
+                <StarIcon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Disilicato de Litio</h3>
               <p className="text-gray-600 mb-6">
@@ -109,7 +117,7 @@ export default function MaterialesPage() {
             {/* Titanio */}
             <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-gray-600 rounded-2xl flex items-center justify-center mb-6">
-                <span className="text-white text-2xl">🔩</span>
+                <BoltIcon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Titanio Grado 5</h3>
               <p className="text-gray-600 mb-6">
@@ -138,7 +146,7 @@ export default function MaterialesPage() {
             {/* PMMA */}
             <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mb-6">
-                <span className="text-white text-2xl">🦷</span>
+                <CubeIcon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">PMMA</h3>
               <p className="text-gray-600 mb-6">
@@ -167,7 +175,7 @@ export default function MaterialesPage() {
             {/* Cromo-Cobalto */}
             <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-orange-600 rounded-2xl flex items-center justify-center mb-6">
-                <span className="text-white text-2xl">⚙️</span>
+                <CogIcon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Cromo-Cobalto</h3>
               <p className="text-gray-600 mb-6">
@@ -196,7 +204,7 @@ export default function MaterialesPage() {
             {/* Cera */}
             <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-yellow-600 rounded-2xl flex items-center justify-center mb-6">
-                <span className="text-white text-2xl">🕯️</span>
+                <BeakerIcon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Cera de Fresado</h3>
               <p className="text-gray-600 mb-6">
