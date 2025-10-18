@@ -1,113 +1,124 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { ArrowUpTrayIcon } from '@heroicons/react/24/outline';
+import { useState } from 'react';
+import { PlayIcon, UserIcon, PhoneIcon, CalendarIcon, ClockIcon } from '@heroicons/react/24/outline';
+import { Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 export default function HeroSection() {
-  const t = useTranslations('home.hero');
+  const t = useTranslations('newDesign.hero');
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    date: '',
+    time: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+  };
+
   return (
-    <section className="min-h-screen bg-fana-navy flex items-center justify-center relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-32 h-32 border border-fana-primary rounded-full"></div>
-        <div className="absolute bottom-20 right-20 w-24 h-24 border border-fana-primary rounded-full"></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-fana-primary rounded-full"></div>
-      </div>
-
-      <div className="container mx-auto px-4 text-center relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold text-fana-white mb-6 leading-tight">
-            {t('title')}
-          </h1>
-        </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="font-lato text-lg md:text-xl lg:text-2xl text-fana-secondary mb-12 max-w-4xl mx-auto leading-relaxed"
-        >
-          {t('subtitle')}
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-        >
-          <button
-            className="bg-fana-primary text-fana-white text-lg px-8 py-4 font-lato font-normal rounded-lg hover:bg-opacity-90 transition-all duration-300 flex items-center gap-2"
-            data-cursor-hover
-          >
-            <ArrowUpTrayIcon className="w-6 h-6" />
-            🚀 Sube tu Caso y Cotiza Ahora
-          </button>
-          
-          <button
-            className="border-2 border-fana-primary text-fana-primary text-lg px-8 py-4 font-lato font-normal rounded-lg hover:bg-fana-primary hover:text-fana-white transition-all duration-300"
-            data-cursor-hover
-          >
-            {t('cta')}
-          </button>
-        </motion.div>
-
-        {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
-        >
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-center p-6">
-            <div className="font-playfair text-3xl md:text-4xl font-bold text-fana-primary mb-2">
-              500+
+    <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-12 md:py-20">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          {/* Left Content */}
+          <div className="space-y-6">
+            {/* Icon and Subtitle */}
+            <div className="flex items-center space-x-2">
+              <Sparkles className="w-5 h-5 text-blue-600" />
+              <span className="text-blue-600 font-medium text-sm">{t('badge')}</span>
             </div>
-            <div className="font-lato text-fana-secondary">
-              Casos Completados
+
+            {/* Main Title */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <span className="text-gray-800">{t('title.part1')}</span>
+              <span className="text-blue-600">{t('title.part2')}</span>
+              <span className="text-gray-800">{t('title.part3')}</span>
+            </h1>
+
+            {/* Description */}
+            <p className="text-base text-gray-600 leading-relaxed">
+              {t('description')}
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <button className="bg-blue-600 text-white px-7 py-3.5 rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm shadow-md hover:shadow-lg">
+                {t('cta1')}
+              </button>
+              <button className="flex items-center justify-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm border border-gray-300 px-7 py-3.5 rounded-lg hover:border-blue-600">
+                <PlayIcon className="w-5 h-5" />
+                <span>{t('cta2')}</span>
+              </button>
+            </div>
+
+            {/* Quick Info Cards */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
+              <div className="bg-white rounded-lg p-4 shadow-sm">
+                <UserIcon className="w-5 h-5 text-blue-600 mb-2" />
+                <p className="text-xs text-gray-500">{t('quickInfo.name')}</p>
+                <p className="text-sm font-semibold text-gray-800">{t('quickInfo.nameValue')}</p>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm">
+                <PhoneIcon className="w-5 h-5 text-blue-600 mb-2" />
+                <p className="text-xs text-gray-500">{t('quickInfo.phone')}</p>
+                <p className="text-sm font-semibold text-gray-800">{t('quickInfo.phoneValue')}</p>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm">
+                <CalendarIcon className="w-5 h-5 text-blue-600 mb-2" />
+                <p className="text-xs text-gray-500">{t('quickInfo.date')}</p>
+                <p className="text-sm font-semibold text-gray-800">{t('quickInfo.dateValue')}</p>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm">
+                <ClockIcon className="w-5 h-5 text-blue-600 mb-2" />
+                <p className="text-xs text-gray-500">{t('quickInfo.time')}</p>
+                <p className="text-sm font-semibold text-gray-800">{t('quickInfo.timeValue')}</p>
+              </div>
+            </div>
+
+            {/* Appointment Button */}
+            <div className="pt-2">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors font-medium text-sm shadow-lg hover:shadow-xl">
+                {t('ctaButton')}
+              </button>
             </div>
           </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-center p-6">
-            <div className="font-playfair text-3xl md:text-4xl font-bold text-fana-primary mb-2">
-              24h
-            </div>
-            <div className="font-lato text-fana-secondary">
-              Tiempo de Entrega
-            </div>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-center p-6">
-            <div className="font-playfair text-3xl md:text-4xl font-bold text-fana-primary mb-2">
-              99%
-            </div>
-            <div className="font-lato text-fana-secondary">
-              Satisfacción Cliente
-            </div>
-          </div>
-        </motion.div>
-      </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <div className="w-6 h-10 border-2 border-fana-primary rounded-full flex justify-center">
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-1 h-3 bg-fana-primary rounded-full mt-2"
-          />
+          {/* Right Content - Professional Image */}
+          <div className="relative lg:mt-0">
+            <div className="relative">
+              {/* Main Image Container */}
+              <div className="relative w-full aspect-[4/5] bg-gradient-to-br from-blue-400 to-blue-600 rounded-3xl overflow-hidden">
+                {/* Placeholder for professional image */}
+                <div className="absolute inset-0 flex items-end justify-center">
+                  <div className="w-full h-full bg-gradient-to-t from-blue-600 via-blue-500 to-transparent flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <div className="w-32 h-32 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span className="text-white text-5xl font-bold">F</span>
+                      </div>
+                      <p className="text-white font-semibold text-xl">FANA Milling Center</p>
+                      <p className="text-blue-100 text-sm">Tecnología CNC de Precisión</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Decorative Circle */}
+              <div className="absolute -top-6 -left-6 w-24 h-24 bg-blue-200 rounded-full opacity-50 blur-xl"></div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-300 rounded-full opacity-40 blur-2xl"></div>
+            </div>
+          </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

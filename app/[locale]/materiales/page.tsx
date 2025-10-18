@@ -1,318 +1,260 @@
-import type { Metadata } from 'next';
-import { BeakerIcon, ArchiveBoxIcon, CubeTransparentIcon, ArrowPathIcon, ServerStackIcon } from '@heroicons/react/24/outline';
-import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
-
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: 'materials' });
-  
-  return {
-    title: `${t('title')} - Fana Milling Center`,
-    description: t('subtitle'),
-  };
-}
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export default function MaterialesPage() {
   return (
-    <MaterialesPageContent />
-  );
-}
-
-function MaterialesPageContent() {
-  const t = useTranslations('materials');
-  const tCommon = useTranslations('common');
-
-  return (
-    <main className="min-h-screen bg-fana-white">
-      {/* Header Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-b from-fana-secondary to-fana-white">
+    <div className="min-h-screen">
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-semibold text-fana-navy mb-6">
-              {t('title')}
+            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+              Materiales Premium
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight">
+              <span className="text-blue-600">Materiales</span> de Alta Calidad
             </h1>
-            <p className="font-lato text-lg md:text-xl text-gray-600 leading-relaxed">
-              {t('subtitle')}
+            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+              Solo trabajamos con materiales certificados y biocompatibles de las mejores marcas internacionales.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Bloque 1: Zirconio y Disilicato */}
-      <section className="py-16 bg-fana-white">
+      {/* Materials Grid */}
+      <section className="bg-white py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="flex items-center justify-center mb-6">
-                <BeakerIcon className="h-8 w-8 text-fana-primary mr-3" />
-                <h2 className="font-playfair text-3xl md:text-4xl font-semibold text-fana-navy">
-                  {t('zirconia.title')}
-                </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Zirconio */}
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-white text-2xl">💎</span>
               </div>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Tarjeta Zirconio Premium */}
-              <div className="card relative overflow-hidden">
-                <div className="absolute top-4 right-4">
-                  <span className="bg-fana-primary text-fana-white px-3 py-1 rounded-full text-sm font-lato font-semibold">
-                    {tCommon('materialPremium')}
-                  </span>
-                </div>
-                <div className="mb-4">
-                  <BeakerIcon className="h-12 w-12 text-fana-primary mb-4" />
-                  <h3 className="font-playfair text-xl font-semibold text-fana-navy mb-3">
-                    {t('zirconia.zirconiaMultilayer.title')}
-                  </h3>
-                </div>
-                <div className="space-y-3 text-gray-700 font-lato">
-                  <p className="text-sm">• {t('zirconia.zirconiaMultilayer.certification')}</p>
-                  <p className="text-sm">• {t('zirconia.zirconiaMultilayer.resistance')}</p>
-                  <p className="text-sm">• {t('zirconia.zirconiaMultilayer.translucency')}</p>
-                  <p className="text-sm">• {t('zirconia.zirconiaMultilayer.biocompatibility')}</p>
-                </div>
-              </div>
-
-              {/* Tarjeta Disilicato */}
-              <div className="card relative overflow-hidden">
-                <div className="absolute top-4 right-4">
-                  <span className="bg-fana-primary text-fana-white px-3 py-1 rounded-full text-sm font-lato font-semibold">
-                    {tCommon('materialPremium')}
-                  </span>
-                </div>
-                <div className="mb-4">
-                  <BeakerIcon className="h-12 w-12 text-fana-primary mb-4" />
-                  <h3 className="font-playfair text-xl font-semibold text-fana-navy mb-3">
-                    {t('zirconia.lithiumDisilicate.title')}
-                  </h3>
-                </div>
-                <div className="space-y-3 text-gray-700 font-lato">
-                  <p className="text-sm">• {t('zirconia.lithiumDisilicate.resistance')}</p>
-                  <p className="text-sm">• {t('zirconia.lithiumDisilicate.aesthetics')}</p>
-                  <p className="text-sm">• {t('zirconia.lithiumDisilicate.wear')}</p>
-                  <p className="text-sm">• {t('zirconia.lithiumDisilicate.certification')}</p>
-                </div>
-              </div>
-
-              {/* Tarjeta Metales Avanzados */}
-              <div className="card relative overflow-hidden">
-                <div className="absolute top-4 right-4">
-                  <span className="bg-fana-primary text-fana-white px-3 py-1 rounded-full text-sm font-lato font-semibold">
-                    {tCommon('materialPremium')}
-                  </span>
-                </div>
-                <div className="mb-4">
-                  <BeakerIcon className="h-12 w-12 text-fana-primary mb-4" />
-                  <h3 className="font-playfair text-xl font-semibold text-fana-navy mb-3">
-                    {t('zirconia.titanium.title')}
-                  </h3>
-                </div>
-                <div className="space-y-3 text-gray-700 font-lato">
-                  <p className="text-sm">• {t('zirconia.titanium.certification')}</p>
-                  <p className="text-sm">• {t('zirconia.titanium.corrosion')}</p>
-                  <p className="text-sm">• {t('zirconia.titanium.biocompatibility')}</p>
-                  <p className="text-sm">• {t('zirconia.titanium.lightness')}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Bloque 2: Suministros para Laboratorios */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="flex items-center justify-center mb-6">
-                <ArchiveBoxIcon className="h-8 w-8 text-fana-primary mr-3" />
-                <h2 className="font-playfair text-3xl md:text-4xl font-semibold text-fana-navy">
-                  {t('supplies.title')}
-                </h2>
-              </div>
-              <p className="font-lato text-lg text-gray-600 max-w-3xl mx-auto">
-                {t('supplies.subtitle')}
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Zirconio Multicapa</h3>
+              <p className="text-gray-600 mb-6">
+                Material de alta resistencia y estética superior para restauraciones dentales duraderas.
               </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                  Resistencia &gt; 1200 MPa
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                  Translucidez natural
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                  Certificación ISO 13356
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                  Biocompatibilidad total
+                </li>
+              </ul>
             </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {/* PMMA */}
-              <div className="bg-fana-white rounded-lg p-4 shadow-md text-center hover:shadow-lg transition-shadow">
-                <ArchiveBoxIcon className="h-8 w-8 text-fana-primary mx-auto mb-3" />
-                <h3 className="font-lato font-semibold text-fana-navy mb-2">{t('supplies.pmma')}</h3>
-                <p className="text-sm text-gray-600">{t('supplies.pmmaDesc')}</p>
-              </div>
 
-              {/* Cera */}
-              <div className="bg-fana-white rounded-lg p-4 shadow-md text-center hover:shadow-lg transition-shadow">
-                <ArchiveBoxIcon className="h-8 w-8 text-fana-primary mx-auto mb-3" />
-                <h3 className="font-lato font-semibold text-fana-navy mb-2">{t('supplies.wax')}</h3>
-                <p className="text-sm text-gray-600">{t('supplies.waxDesc')}</p>
+            {/* Disilicato de Litio */}
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-white text-2xl">✨</span>
               </div>
-
-              {/* Composite */}
-              <div className="bg-fana-white rounded-lg p-4 shadow-md text-center hover:shadow-lg transition-shadow">
-                <ArchiveBoxIcon className="h-8 w-8 text-fana-primary mx-auto mb-3" />
-                <h3 className="font-lato font-semibold text-fana-navy mb-2">{t('supplies.composite')}</h3>
-                <p className="text-sm text-gray-600">{t('supplies.compositeDesc')}</p>
-              </div>
-
-              {/* PEEK */}
-              <div className="bg-fana-white rounded-lg p-4 shadow-md text-center hover:shadow-lg transition-shadow">
-                <ArchiveBoxIcon className="h-8 w-8 text-fana-primary mx-auto mb-3" />
-                <h3 className="font-lato font-semibold text-fana-navy mb-2">{t('supplies.peek')}</h3>
-                <p className="text-sm text-gray-600">{t('supplies.peekDesc')}</p>
-              </div>
-
-              {/* Resinas Temporales */}
-              <div className="bg-fana-white rounded-lg p-4 shadow-md text-center hover:shadow-lg transition-shadow">
-                <ArchiveBoxIcon className="h-8 w-8 text-fana-primary mx-auto mb-3" />
-                <h3 className="font-lato font-semibold text-fana-navy mb-2">{t('supplies.temporaryResins')}</h3>
-                <p className="text-sm text-gray-600">{t('supplies.temporaryResinsDesc')}</p>
-              </div>
-
-              {/* Zirconio Blanks */}
-              <div className="bg-fana-white rounded-lg p-4 shadow-md text-center hover:shadow-lg transition-shadow">
-                <ArchiveBoxIcon className="h-8 w-8 text-fana-primary mx-auto mb-3" />
-                <h3 className="font-lato font-semibold text-fana-navy mb-2">{t('supplies.zirconiaBlanks')}</h3>
-                <p className="text-sm text-gray-600">{t('supplies.zirconiaBlanksDesc')}</p>
-              </div>
-
-              {/* Disilicato Blanks */}
-              <div className="bg-fana-white rounded-lg p-4 shadow-md text-center hover:shadow-lg transition-shadow">
-                <ArchiveBoxIcon className="h-8 w-8 text-fana-primary mx-auto mb-3" />
-                <h3 className="font-lato font-semibold text-fana-navy mb-2">{t('supplies.disilicateBlanks')}</h3>
-                <p className="text-sm text-gray-600">{t('supplies.disilicateBlanksDesc')}</p>
-              </div>
-
-              {/* Titanio */}
-              <div className="bg-fana-white rounded-lg p-4 shadow-md text-center hover:shadow-lg transition-shadow">
-                <ArchiveBoxIcon className="h-8 w-8 text-fana-primary mx-auto mb-3" />
-                <h3 className="font-lato font-semibold text-fana-navy mb-2">{t('supplies.titaniumBlanks')}</h3>
-                <p className="text-sm text-gray-600">{t('supplies.titaniumBlanksDesc')}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Bloque 3: Tecnología CAD/CAM */}
-      <section className="py-16 bg-fana-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="font-playfair text-3xl md:text-4xl font-semibold text-fana-navy mb-6">
-                {t('technology.title')}
-              </h2>
-              <p className="font-lato text-lg text-gray-600 max-w-3xl mx-auto">
-                {t('technology.subtitle')}
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Disilicato de Litio</h3>
+              <p className="text-gray-600 mb-6">
+                Material estético de excelencia para restauraciones que requieren máxima naturalidad.
               </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Fresadoras 5 Ejes */}
-              <div className="card">
-                <div className="mb-4">
-                  <CubeTransparentIcon className="h-12 w-12 text-fana-primary mb-4" />
-                  <h3 className="font-playfair text-xl font-semibold text-fana-navy mb-3">
-                    {t('technology.fiveAxis.title')}
-                  </h3>
-                </div>
-                <div className="space-y-3 text-gray-700 font-lato">
-                  <p className="text-sm">• {t('technology.fiveAxis.precision')}</p>
-                  <p className="text-sm">• {t('technology.fiveAxis.multiMaterial')}</p>
-                  <p className="text-sm">• {t('technology.fiveAxis.automation')}</p>
-                  <p className="text-sm">• {t('technology.fiveAxis.maintenance')}</p>
-                </div>
-              </div>
-
-              {/* Escáneres de Alta Resolución */}
-              <div className="card">
-                <div className="mb-4">
-                  <ArrowPathIcon className="h-12 w-12 text-fana-primary mb-4" />
-                  <h3 className="font-playfair text-xl font-semibold text-fana-navy mb-3">
-                    {t('technology.scanners.title')}
-                  </h3>
-                </div>
-                <div className="space-y-3 text-gray-700 font-lato">
-                  <p className="text-sm">• {t('technology.scanners.resolution')}</p>
-                  <p className="text-sm">• {t('technology.scanners.color')}</p>
-                  <p className="text-sm">• {t('technology.scanners.processing')}</p>
-                  <p className="text-sm">• {t('technology.scanners.compatibility')}</p>
-                </div>
-              </div>
-
-              {/* Software de Diseño */}
-              <div className="card">
-                <div className="mb-4">
-                  <ServerStackIcon className="h-12 w-12 text-fana-primary mb-4" />
-                  <h3 className="font-playfair text-xl font-semibold text-fana-navy mb-3">
-                    {t('technology.software.title')}
-                  </h3>
-                </div>
-                <div className="space-y-3 text-gray-700 font-lato">
-                  <p className="text-sm">• {t('technology.software.certification')}</p>
-                  <p className="text-sm">• {t('technology.software.ai')}</p>
-                  <p className="text-sm">• {t('technology.software.simulation')}</p>
-                  <p className="text-sm">• {t('technology.software.integration')}</p>
-                </div>
-              </div>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-purple-500 rounded-full"></span>
+                  Resistencia &gt; 400 MPa
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-purple-500 rounded-full"></span>
+                  Estética superior
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-purple-500 rounded-full"></span>
+                  Mínimo desgaste
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-purple-500 rounded-full"></span>
+                  Certificación CE
+                </li>
+              </ul>
             </div>
 
-            {/* Características Adicionales */}
-            <div className="mt-12 bg-fana-secondary rounded-2xl p-8">
-              <h3 className="font-playfair text-2xl font-semibold text-fana-navy mb-6 text-center">
-                {t('technology.features.title')}
-              </h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-fana-primary rounded-full mt-2"></div>
-                    <p className="font-lato text-gray-700">{t('technology.features.cooling')}</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-fana-primary rounded-full mt-2"></div>
-                    <p className="font-lato text-gray-700">{t('technology.features.toolChange')}</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-fana-primary rounded-full mt-2"></div>
-                    <p className="font-lato text-gray-700">{t('technology.features.monitoring')}</p>
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-fana-primary rounded-full mt-2"></div>
-                    <p className="font-lato text-gray-700">{t('technology.features.isoCertification')}</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-fana-primary rounded-full mt-2"></div>
-                    <p className="font-lato text-gray-700">{t('technology.features.traceability')}</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-fana-primary rounded-full mt-2"></div>
-                    <p className="font-lato text-gray-700">{t('technology.features.support')}</p>
-                  </div>
-                </div>
+            {/* Titanio */}
+            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-gray-600 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-white text-2xl">🔩</span>
               </div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Titanio Grado 5</h3>
+              <p className="text-gray-600 mb-6">
+                Material biocompatible ideal para estructuras de implantes de larga duración.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-gray-500 rounded-full"></span>
+                  ASTM F136 certificado
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-gray-500 rounded-full"></span>
+                  Resistencia a corrosión
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-gray-500 rounded-full"></span>
+                  Biocompatibilidad
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-gray-500 rounded-full"></span>
+                  Ligereza excepcional
+                </li>
+              </ul>
+            </div>
+
+            {/* PMMA */}
+            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-white text-2xl">🦷</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">PMMA</h3>
+              <p className="text-gray-600 mb-6">
+                Material provisional de alta calidad para restauraciones temporales.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+                  Bloques provisionales
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+                  Fácil fresado
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+                  Colores variados
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+                  Económico
+                </li>
+              </ul>
+            </div>
+
+            {/* Cromo-Cobalto */}
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-orange-600 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-white text-2xl">⚙️</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Cromo-Cobalto</h3>
+              <p className="text-gray-600 mb-6">
+                Aleación metálica de alta resistencia para estructuras de prótesis removibles.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
+                  Alta resistencia
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
+                  Biocompatible
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
+                  Durabilidad
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
+                  Certificado ISO
+                </li>
+              </ul>
+            </div>
+
+            {/* Cera */}
+            <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-yellow-600 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-white text-2xl">🕯️</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Cera de Fresado</h3>
+              <p className="text-gray-600 mb-6">
+                Material para modelado y encerado de estructuras protésicas.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
+                  Modelado preciso
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
+                  Fácil fresado
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
+                  Sin residuos
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
+                  Colada directa
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Final */}
-      <section className="py-16 bg-fana-navy">
+      {/* Technology Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+              Tecnología de Fresado CNC
+            </h2>
+            <p className="text-lg text-gray-600">
+              Utilizamos maquinaria de 5 ejes con precisión micrométrica para garantizar resultados excepcionales.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="bg-white p-6 rounded-xl shadow-md text-center">
+              <div className="text-4xl mb-4">⚙️</div>
+              <h3 className="text-xl font-bold text-gray-800 mb-2">Fresadoras 5 Ejes</h3>
+              <p className="text-gray-600 text-sm">Precisión micrométrica (±5μm)</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-md text-center">
+              <div className="text-4xl mb-4">🔬</div>
+              <h3 className="text-xl font-bold text-gray-800 mb-2">Escáneres 3D</h3>
+              <p className="text-gray-600 text-sm">Resolución de 10μm</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-md text-center">
+              <div className="text-4xl mb-4">💻</div>
+              <h3 className="text-xl font-bold text-gray-800 mb-2">Software CAD/CAM</h3>
+              <p className="text-gray-600 text-sm">Certificación CE médica</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-blue-600 py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-playfair text-3xl md:text-4xl font-semibold text-fana-white mb-6">
-            {t('cta.title')}
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Solicita el Catálogo de Materiales
           </h2>
-          <p className="font-lato text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            {t('cta.description')}
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Accede a toda la información técnica y certificaciones de nuestros materiales
           </p>
-          <button className="bg-fana-primary text-fana-white px-8 py-4 rounded-lg font-lato font-semibold text-lg transition-all duration-300 hover:bg-opacity-90 hover:scale-105">
-            {t('cta.button')}
+          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors">
+            Descargar Catálogo
           </button>
         </div>
       </section>
-    </main>
+
+      <Footer />
+    </div>
   );
 }

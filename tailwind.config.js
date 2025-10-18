@@ -1,6 +1,5 @@
-import { defineConfig } from '@tailwindcss/vite'
-
-export default defineConfig({
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -15,8 +14,8 @@ export default defineConfig({
         'fana-white': '#FFFFFF',
       },
       fontFamily: {
-        'playfair': ['Playfair Display', 'serif'],
-        'lato': ['Lato', 'sans-serif'],
+        'playfair': ['Georgia', 'Times New Roman', 'serif'],
+        'lato': ['Arial', 'Helvetica', 'sans-serif'],
       },
       fontWeight: {
         'light': '300',
@@ -26,4 +25,5 @@ export default defineConfig({
       },
     },
   },
-})
+  plugins: [],
+}

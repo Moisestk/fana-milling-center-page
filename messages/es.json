@@ -3,7 +3,8 @@
     "home": "Inicio",
     "services": "Servicios",
     "materials": "Materiales",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "cta": "Obtén una cotización gratuita"
   },
   "home": {
     "hero": {
@@ -247,5 +248,318 @@
     "materialPremium": "Material Premium",
     "diagramTechnical": "Diagrama Técnico de Proceso CNC",
     "highAesthetics": "Materiales de Alta Estética"
+  },
+  "gleamer": {
+    "hero": {
+      "title": "FANA Milling Center",
+      "subtitle": "Tu socio tecnológico en fabricación dental. Laboratorio CAD/CAM especializado en prótesis de precisión y suministros de alta calidad para profesionales dentales.",
+      "cta1": "Obtén una cotización gratuita",
+      "cta2": "Comienza hoy"
+    },
+    "services": {
+      "title": "Nuestros Servicios Profesionales",
+      "subtitle": "Explora nuestros servicios eficientes de fresado diseñados para mantener la más alta calidad en fabricación dental.",
+      "service1": {
+        "title": "Estructuras de Implantes",
+        "description": "Fresado de estructuras en Titanio y CrCo con máxima precisión"
+      },
+      "service2": {
+        "title": "Estética Avanzada",
+        "description": "Zirconio multicapa y Disilicato para restauraciones naturales"
+      },
+      "service3": {
+        "title": "Suministros B2B",
+        "description": "Distribución de materiales de fresado para laboratorios"
+      },
+      "service4": {
+        "title": "Fresado CNC",
+        "description": "Maquinaria de 5 ejes con tolerancias micrométricas"
+      },
+      "service5": {
+        "title": "Diseño CAD/CAM",
+        "description": "Software especializado para modelado 3D dental"
+      },
+      "service6": {
+        "title": "Control de Calidad",
+        "description": "Verificación dimensional y estética exhaustiva"
+      },
+      "viewDetails": "Ver detalles",
+      "viewAllServices": "Ver todos los servicios"
+    },
+    "about": {
+      "title": "Dejemos que tu laboratorio brille y sea impecable",
+      "subtitle": "Las máquinas están pulidas y libres de polvo, los materiales son frescos e impecables. Cada pieza fabricada cumple con los más altos estándares de calidad y precisión.",
+      "cta": "Contáctanos",
+      "feature1": {
+        "title": "Fresado para precisión dental",
+        "description": "Tecnología CNC de 5 ejes para máxima precisión"
+      },
+      "feature2": {
+        "title": "Fabricación digital profunda",
+        "description": "Procesos completamente digitalizados"
+      },
+      "feature3": {
+        "title": "Fresado estacional",
+        "description": "Adaptado a las necesidades de cada temporada"
+      },
+      "feature4": {
+        "title": "Planes de fresado personalizados",
+        "description": "Soluciones a medida para cada laboratorio"
+      }
+    },
+    "whyChooseUs": {
+      "title": "¿Por qué elegirnos?",
+      "subtitle": "Servicio excepcional cada vez",
+      "reason1": {
+        "title": "Equipo altamente capacitado y experimentado",
+        "description": "Nuestro equipo está altamente entrenado y experimentado, garantizando fresado y fabricación profesional cada vez."
+      },
+      "reason2": {
+        "title": "Ofrecemos planes de fresado personalizados",
+        "description": "Adaptamos nuestros servicios a tus necesidades específicas y requerimientos únicos."
+      },
+      "reason3": {
+        "title": "Utilizamos materiales biocompatibles certificados",
+        "description": "Solo trabajamos con materiales certificados y biocompatibles que son seguros para tus pacientes."
+      },
+      "reason4": {
+        "title": "Proporcionamos horarios flexibles",
+        "description": "Nos adaptamos a tu estilo de vida ocupado con horarios de entrega flexibles y servicios de urgencia."
+      },
+      "reason5": {
+        "title": "Nuestra garantía de satisfacción",
+        "description": "Garantizamos que estarás satisfecho con nuestro servicio, o lo corregiremos hasta que lo estés."
+      },
+      "cta": {
+        "title": "¿Listo para experimentar la diferencia?",
+        "subtitle": "Únete a los cientos de laboratorios que ya confían en FANA para sus necesidades de fresado y fabricación digital.",
+        "button": "Comienza tu proyecto hoy"
+      }
+    },
+    "testimonials": {
+      "title": "Lo que dicen nuestros clientes",
+      "subtitle": "Obtén información sobre cómo nuestros servicios de fresado han transformado laboratorios y superado expectativas.",
+      "testimonial1": {
+        "name": "Dr. María González",
+        "role": "Odontóloga",
+        "clinic": "Clínica Dental Premium",
+        "content": "FANA transformó mi laboratorio! Altamente recomiendo su atención al detalle y precisión en cada caso."
+      },
+      "testimonial2": {
+        "name": "Dr. Carlos Rodríguez",
+        "role": "Prostodoncista",
+        "clinic": "Centro de Excelencia Dental",
+        "content": "Estoy consistentemente impresionado por la profesionalidad y minuciosidad del equipo de FANA. Mis casos nunca han lucido mejor!"
+      },
+      "testimonial3": {
+        "name": "Dra. Ana Martínez",
+        "role": "Especialista en Implantes",
+        "clinic": "Instituto Dental Avanzado",
+        "content": "Aprecio la flexibilidad y confiabilidad de los servicios de FANA. Siempre van más allá para superar mis expectativas!"
+      },
+      "testimonial4": {
+        "name": "Dr. Luis Fernández",
+        "role": "Laboratorio Dental",
+        "clinic": "Laboratorio Fernández & Asociados",
+        "content": "La calidad de los materiales y la precisión del fresado son excepcionales. FANA se ha convertido en nuestro socio de confianza."
+      },
+      "stats": {
+        "number": "408K+",
+        "title": "Personas que han comenzado a fresar",
+        "description": "Los servicios de fresado en España atienden una amplia gama de necesidades desde laboratorios dentales hasta clínicas especializadas."
+      }
+    },
+    "pricing": {
+      "title": "Precios transparentes",
+      "subtitle": "Opciones amigables con el presupuesto para un laboratorio más eficiente",
+      "plan1": {
+        "name": "Fresado Regular",
+        "description": "Fresado esencial para mantener tu laboratorio actualizado, ordenado e invitador.",
+        "price": "120€",
+        "period": "por caso",
+        "features": [
+          "Fresado básico de estructuras",
+          "Materiales estándar",
+          "Entrega en 48-72h",
+          "Soporte técnico básico",
+          "Garantía de calidad"
+        ]
+      },
+      "plan2": {
+        "name": "Fresado Profundo",
+        "description": "Fresado exhaustivo para un laboratorio impecable y brillante.",
+        "price": "150€",
+        "period": "por caso",
+        "features": [
+          "Fresado de alta precisión",
+          "Materiales premium",
+          "Entrega en 24-48h",
+          "Soporte técnico prioritario",
+          "Control de calidad exhaustivo",
+          "Certificados de calidad"
+        ]
+      },
+      "plan3": {
+        "name": "Fresado de Implantes",
+        "description": "Fresado consistente para mantener un laboratorio prístino y cómodo.",
+        "price": "200€",
+        "period": "por caso",
+        "features": [
+          "Fresado de estructuras de implantes",
+          "Materiales biocompatibles",
+          "Entrega en 24h",
+          "Soporte técnico 24/7",
+          "Trazabilidad completa",
+          "Certificados médicos"
+        ]
+      },
+      "plan4": {
+        "name": "Fresado Premium",
+        "description": "Fresado integral para ocasiones especiales y renovaciones estacionales.",
+        "price": "230€",
+        "period": "por caso",
+        "features": [
+          "Fresado de máxima precisión",
+          "Materiales de última generación",
+          "Entrega express 12h",
+          "Soporte técnico dedicado",
+          "Análisis de calidad completo",
+          "Certificados ISO 13485"
+        ]
+      },
+      "mostPopular": "Más Popular",
+      "bookService": "Reservar servicio",
+      "customQuote": {
+        "title": "¿Necesitas un presupuesto personalizado?",
+        "subtitle": "Para casos complejos o volúmenes grandes, ofrecemos precios especiales y descuentos por volumen.",
+        "button": "Solicitar presupuesto personalizado"
+      }
+    },
+    "stats": {
+      "title": "Nuestro trabajo en acción",
+      "subtitle": "Ve la diferencia que hacemos en cada proyecto de fresado y fabricación digital.",
+      "stat1": {
+        "number": "500+",
+        "label": "Casos Completados",
+        "description": "Laboratorios de toda España confían en nuestros servicios de fresado."
+      },
+      "stat2": {
+        "number": "24h",
+        "label": "Tiempo de Entrega",
+        "description": "Plazos de entrega optimizados sin comprometer la calidad."
+      },
+      "stat3": {
+        "number": "99%",
+        "label": "Satisfacción Cliente",
+        "description": "Garantizamos la satisfacción total de nuestros clientes."
+      },
+      "stat4": {
+        "number": "5μm",
+        "label": "Precisión Micrométrica",
+        "description": "Tolerancias de fresado de ±5μm con tecnología CNC de 5 ejes."
+      },
+      "cta": {
+        "title": "Obtén una cotización gratuita",
+        "subtitle": "Los servicios de fresado en España atienden una amplia gama de necesidades desde laboratorios dentales hasta clínicas especializadas.",
+        "button": "Comienza hoy"
+      }
+    },
+    "footer": {
+      "newsletter": {
+        "title": "Mantente actualizado con las últimas noticias, promociones y ofertas exclusivas.",
+        "placeholder": "Tu email",
+        "button": "Suscribirse",
+        "disclaimer": "Al suscribirte, aceptas recibir nuestros emails promocionales. Puedes darte de baja en cualquier momento."
+      },
+      "company": {
+        "name": "FANA Milling Center",
+        "description": "Un laboratorio más eficiente está a solo una llamada de distancia - comienza tu viaje hoy."
+      },
+      "contact": "Contacto",
+      "quickLinks": "Enlaces Rápidos",
+      "links": {
+        "home": "Inicio",
+        "about": "Sobre nosotros",
+        "quote": "Obtener cotización",
+        "pricing": "Planes de precios",
+        "404": "Página 404"
+      },
+      "copyright": "© 2025 FANA Milling Center - Diseñado y Desarrollado por FANA.",
+      "legal": {
+        "terms": "Términos de servicio",
+        "privacy": "Política de privacidad"
+      }
+    }
+  },
+  "newDesign": {
+    "header": {
+      "phone": "+34 91 123 45 67",
+      "email": "info@fanamilling.com",
+      "address": "Polígono Industrial Norte, Madrid 28050",
+      "cta": "Obtén Cotización"
+    },
+    "hero": {
+      "badge": "Tecnología de Vanguardia en Fabricación Dental, Justo Para Ti",
+      "title": {
+        "part1": "Tu Mejor ",
+        "part2": "Experiencia de Fresado Dental",
+        "part3": " Te Espera"
+      },
+      "description": "Laboratorio CAD/CAM especializado en prótesis de precisión y suministros de alta calidad para profesionales dentales. Tecnología CNC de 5 ejes con tolerancias micrométricas para resultados excepcionales en cada proyecto.",
+      "cta1": "Explora Nuestros Servicios",
+      "cta2": "Ver Video",
+      "quickInfo": {
+        "name": "Nombre",
+        "nameValue": "Tu Lab",
+        "phone": "Teléfono",
+        "phoneValue": "Contacto",
+        "date": "Fecha Preferida",
+        "dateValue": "Selecciona",
+        "time": "Tiempo Estimado",
+        "timeValue": "24-48h"
+      },
+      "ctaButton": "Solicita tu Cotización"
+    },
+    "about": {
+      "badge": "SOBRE NOSOTROS",
+      "title": {
+        "part1": "15 Años de Experiencia",
+        "part2": "en Fabricación Dental"
+      },
+      "description": "Especialistas en tecnología CAD/CAM y fresado CNC de alta precisión. Nuestro laboratorio combina la experiencia de más de una década con la tecnología más avanzada para ofrecer prótesis dentales de máxima calidad y precisión micrométrica.",
+      "features": {
+        "feature1": "Servicios de Fresado Premium en los que Puedes Confiar",
+        "feature2": "Experiencia Galardonada en Fabricación Dental",
+        "feature3": "Expertos Dedicados detrás de Cada Sonrisa"
+      },
+      "cta": "Conoce Más"
+    },
+    "servicesNav": {
+      "service1": "Fresado General",
+      "service2": "Estética Avanzada",
+      "service3": "Estructuras Implantes",
+      "service4": "Control Calidad"
+    },
+    "services": {
+      "badge": "NUESTROS SERVICIOS",
+      "title": {
+        "part1": "Una Amplia Gama de Servicios",
+        "part2": "para tu Mejor Sonrisa"
+      },
+      "cta": "Explora Todos los Servicios",
+      "service1": {
+        "title": "Fresado General",
+        "description": "Servicios de fresado CNC de alta precisión para prótesis dentales. Utilizamos tecnología de 5 ejes con tolerancias micrométricas para garantizar resultados excepcionales en cada proyecto."
+      },
+      "service2": {
+        "title": "Estructuras de Implantes",
+        "description": "Fresado especializado de estructuras en Titanio y Cromo-Cobalto con máxima precisión. Cada estructura es diseñada y fabricada siguiendo los más estrictos estándares de calidad."
+      },
+      "service3": {
+        "title": "Estética Avanzada",
+        "description": "Especialistas en materiales de alta estética como Zirconio multicapa y Disilicato de Litio, ofreciendo la máxima naturalidad y resistencia en restauraciones dentales."
+      },
+      "learnMore": "Conoce más"
+    }
   }
 }

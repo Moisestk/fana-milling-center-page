@@ -53,7 +53,6 @@ Sitio web profesional para FANA Milling Center, laboratorio dental de precisión
 │   ├── layout.tsx           # Layout principal con fuentes y metadata
 │   └── page.tsx             # Página principal
 ├── components/
-│   ├── CustomCursor.tsx     # Cursor personalizado con Framer Motion
 │   ├── HeroSection.tsx      # Sección hero con diseño B2B
 │   ├── ValueProposition.tsx # Propuesta de valor (4 elementos)
 │   ├── ServiceCategories.tsx # Categorías de servicios
@@ -69,10 +68,6 @@ Sitio web profesional para FANA Milling Center, laboratorio dental de precisión
 - Navegación clara y funcional
 - Contenido orientado a profesionales dentales
 
-### 🖱️ Cursor Personalizado
-- Cursor circular personalizado con Framer Motion
-- Efectos de hover en botones y enlaces
-- Cambio de tamaño y color según el contexto
 
 ### 📱 Totalmente Responsivo
 - Diseño adaptativo para todos los dispositivos

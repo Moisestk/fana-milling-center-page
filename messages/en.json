@@ -3,7 +3,8 @@
     "home": "Home",
     "services": "Services",
     "materials": "Materials",
-    "contact": "Contact"
+    "contact": "Contact",
+    "cta": "Get a free quote"
   },
   "home": {
     "hero": {
@@ -247,5 +248,318 @@
     "materialPremium": "Premium Material",
     "diagramTechnical": "CNC Process Technical Diagram",
     "highAesthetics": "High Aesthetic Materials"
+  },
+  "gleamer": {
+    "hero": {
+      "title": "FANA Milling Center",
+      "subtitle": "Your technological partner in dental manufacturing. CAD/CAM laboratory specialized in precision prosthetics and high-quality supplies for dental professionals.",
+      "cta1": "Get a free quote",
+      "cta2": "Get started today"
+    },
+    "services": {
+      "title": "Our Professional Services",
+      "subtitle": "Explore our efficient milling services designed to maintain the highest quality in dental manufacturing.",
+      "service1": {
+        "title": "Implant Structures",
+        "description": "Titanium and CrCo structure milling with maximum precision"
+      },
+      "service2": {
+        "title": "Advanced Aesthetics",
+        "description": "Multilayer Zirconia and Disilicate for natural restorations"
+      },
+      "service3": {
+        "title": "B2B Supplies",
+        "description": "Distribution of milling materials for laboratories"
+      },
+      "service4": {
+        "title": "CNC Milling",
+        "description": "5-axis machinery with micrometric tolerances"
+      },
+      "service5": {
+        "title": "CAD/CAM Design",
+        "description": "Specialized software for dental 3D modeling"
+      },
+      "service6": {
+        "title": "Quality Control",
+        "description": "Exhaustive dimensional and aesthetic verification"
+      },
+      "viewDetails": "View details",
+      "viewAllServices": "View all services"
+    },
+    "about": {
+      "title": "Let us make your laboratory shine & spotless",
+      "subtitle": "The machines are polished and dust-free, the materials are fresh and spotless. Every manufactured piece meets the highest standards of quality and precision.",
+      "cta": "Contact Us",
+      "feature1": {
+        "title": "Milling for dental precision",
+        "description": "5-axis CNC technology for maximum precision"
+      },
+      "feature2": {
+        "title": "Deep digital manufacturing",
+        "description": "Completely digitized processes"
+      },
+      "feature3": {
+        "title": "Seasonal milling",
+        "description": "Adapted to the needs of each season"
+      },
+      "feature4": {
+        "title": "Customized milling plans",
+        "description": "Tailored solutions for each laboratory"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Why choose us?",
+      "subtitle": "Exceptional service every time",
+      "reason1": {
+        "title": "Highly trained and experienced team",
+        "description": "Our team is highly trained and experienced, ensuring professional milling and manufacturing every time."
+      },
+      "reason2": {
+        "title": "We offer customized milling plans",
+        "description": "We adapt our services to your specific needs and unique requirements."
+      },
+      "reason3": {
+        "title": "We use certified biocompatible materials",
+        "description": "We only work with certified and biocompatible materials that are safe for your patients."
+      },
+      "reason4": {
+        "title": "We provide flexible schedules",
+        "description": "We adapt to your busy lifestyle with flexible delivery schedules and emergency services."
+      },
+      "reason5": {
+        "title": "Our satisfaction guarantee",
+        "description": "We guarantee you'll be satisfied with our service, or we'll make it right until you are."
+      },
+      "cta": {
+        "title": "Ready to experience the difference?",
+        "subtitle": "Join the hundreds of laboratories that already trust FANA for their milling and digital manufacturing needs.",
+        "button": "Start your project today"
+      }
+    },
+    "testimonials": {
+      "title": "What our clients say",
+      "subtitle": "Gain insight into how our milling services have transformed laboratories and exceeded expectations.",
+      "testimonial1": {
+        "name": "Dr. María González",
+        "role": "Dentist",
+        "clinic": "Premium Dental Clinic",
+        "content": "FANA transformed my laboratory! Highly recommend their attention to detail and precision in every case."
+      },
+      "testimonial2": {
+        "name": "Dr. Carlos Rodríguez",
+        "role": "Prosthodontist",
+        "clinic": "Dental Excellence Center",
+        "content": "I'm consistently impressed by the professionalism and thoroughness of FANA's team. My cases have never looked better!"
+      },
+      "testimonial3": {
+        "name": "Dr. Ana Martínez",
+        "role": "Implant Specialist",
+        "clinic": "Advanced Dental Institute",
+        "content": "I appreciate the flexibility and reliability of FANA's services. They always go above and beyond to exceed my expectations!"
+      },
+      "testimonial4": {
+        "name": "Dr. Luis Fernández",
+        "role": "Dental Laboratory",
+        "clinic": "Fernández & Associates Laboratory",
+        "content": "The quality of materials and milling precision are exceptional. FANA has become our trusted partner."
+      },
+      "stats": {
+        "number": "408K+",
+        "title": "People who have started milling",
+        "description": "Milling services in Spain cater to a wide range of needs from dental laboratories to specialized clinics."
+      }
+    },
+    "pricing": {
+      "title": "Transparent pricing",
+      "subtitle": "Budget-friendly options for a more efficient laboratory",
+      "plan1": {
+        "name": "Regular Milling",
+        "description": "Essential milling to keep your laboratory fresh, tidy, and inviting.",
+        "price": "120€",
+        "period": "per case",
+        "features": [
+          "Basic structure milling",
+          "Standard materials",
+          "Delivery in 48-72h",
+          "Basic technical support",
+          "Quality guarantee"
+        ]
+      },
+      "plan2": {
+        "name": "Deep Milling",
+        "description": "Thorough milling for a spotless, sparkling laboratory.",
+        "price": "150€",
+        "period": "per case",
+        "features": [
+          "High-precision milling",
+          "Premium materials",
+          "Delivery in 24-48h",
+          "Priority technical support",
+          "Exhaustive quality control",
+          "Quality certificates"
+        ]
+      },
+      "plan3": {
+        "name": "Implant Milling",
+        "description": "Consistent milling to maintain a pristine, comfortable laboratory.",
+        "price": "200€",
+        "period": "per case",
+        "features": [
+          "Implant structure milling",
+          "Biocompatible materials",
+          "24h delivery",
+          "24/7 technical support",
+          "Complete traceability",
+          "Medical certificates"
+        ]
+      },
+      "plan4": {
+        "name": "Premium Milling",
+        "description": "Comprehensive milling for special occasions and seasonal refreshes.",
+        "price": "230€",
+        "period": "per case",
+        "features": [
+          "Maximum precision milling",
+          "Latest generation materials",
+          "Express 12h delivery",
+          "Dedicated technical support",
+          "Complete quality analysis",
+          "ISO 13485 certificates"
+        ]
+      },
+      "mostPopular": "Most Popular",
+      "bookService": "Book a service",
+      "customQuote": {
+        "title": "Need a custom quote?",
+        "subtitle": "For complex cases or large volumes, we offer special prices and volume discounts.",
+        "button": "Request custom quote"
+      }
+    },
+    "stats": {
+      "title": "Our work in action",
+      "subtitle": "See the difference we make in every milling and digital manufacturing project.",
+      "stat1": {
+        "number": "500+",
+        "label": "Cases Completed",
+        "description": "Laboratories throughout Spain trust our milling services."
+      },
+      "stat2": {
+        "number": "24h",
+        "label": "Delivery Time",
+        "description": "Optimized delivery times without compromising quality."
+      },
+      "stat3": {
+        "number": "99%",
+        "label": "Customer Satisfaction",
+        "description": "We guarantee total satisfaction of our customers."
+      },
+      "stat4": {
+        "number": "5μm",
+        "label": "Micrometric Precision",
+        "description": "Milling tolerances of ±5μm with 5-axis CNC technology."
+      },
+      "cta": {
+        "title": "Get a free quote",
+        "subtitle": "Milling services in Spain cater to a wide range of needs from dental laboratories to specialized clinics.",
+        "button": "Get started today"
+      }
+    },
+    "footer": {
+      "newsletter": {
+        "title": "Stay updated with the latest news, promotions, and exclusive offers.",
+        "placeholder": "Your email",
+        "button": "Subscribe",
+        "disclaimer": "By subscribing, you agree to receive our promotional emails. You can unsubscribe at any time."
+      },
+      "company": {
+        "name": "FANA Milling Center",
+        "description": "A more efficient laboratory is just a call away - start your journey today."
+      },
+      "contact": "Contact",
+      "quickLinks": "Quick Links",
+      "links": {
+        "home": "Home",
+        "about": "About us",
+        "quote": "Get a quote",
+        "pricing": "Pricing plans",
+        "404": "404 Page"
+      },
+      "copyright": "© 2025 FANA Milling Center - Design & Developed by FANA.",
+      "legal": {
+        "terms": "Terms of service",
+        "privacy": "Privacy policy"
+      }
+    }
+  },
+  "newDesign": {
+    "header": {
+      "phone": "+34 91 123 45 67",
+      "email": "info@fanamilling.com",
+      "address": "Industrial Park North, Madrid 28050",
+      "cta": "Get Quote"
+    },
+    "hero": {
+      "badge": "Cutting-Edge Technology in Dental Manufacturing, Just For You",
+      "title": {
+        "part1": "Your Best ",
+        "part2": "Dental Milling Experience",
+        "part3": " Awaits"
+      },
+      "description": "CAD/CAM laboratory specialized in precision prosthetics and high-quality supplies for dental professionals. 5-axis CNC technology with micrometric tolerances for exceptional results in every project.",
+      "cta1": "Explore Our Services",
+      "cta2": "Watch Video",
+      "quickInfo": {
+        "name": "Name",
+        "nameValue": "Your Lab",
+        "phone": "Phone",
+        "phoneValue": "Contact",
+        "date": "Preferred Date",
+        "dateValue": "Select",
+        "time": "Estimated Time",
+        "timeValue": "24-48h"
+      },
+      "ctaButton": "Request Your Quote"
+    },
+    "about": {
+      "badge": "ABOUT US",
+      "title": {
+        "part1": "15 Years of Experience",
+        "part2": "in Dental Manufacturing"
+      },
+      "description": "Specialists in CAD/CAM technology and high-precision CNC milling. Our laboratory combines over a decade of experience with the most advanced technology to offer dental prosthetics of maximum quality and micrometric precision.",
+      "features": {
+        "feature1": "Premium Milling Services You Can Trust",
+        "feature2": "Award-Winning Experience in Dental Manufacturing",
+        "feature3": "Dedicated Experts Behind Every Smile"
+      },
+      "cta": "Learn More"
+    },
+    "servicesNav": {
+      "service1": "General Milling",
+      "service2": "Advanced Aesthetics",
+      "service3": "Implant Structures",
+      "service4": "Quality Control"
+    },
+    "services": {
+      "badge": "OUR SERVICES",
+      "title": {
+        "part1": "A Wide Range of Services",
+        "part2": "for Your Best Smile"
+      },
+      "cta": "Explore All Services",
+      "service1": {
+        "title": "General Milling",
+        "description": "High-precision CNC milling services for dental prosthetics. We use 5-axis technology with micrometric tolerances to guarantee exceptional results in every project."
+      },
+      "service2": {
+        "title": "Implant Structures",
+        "description": "Specialized milling of structures in Titanium and Chromium-Cobalt with maximum precision. Each structure is designed and manufactured following the strictest quality standards."
+      },
+      "service3": {
+        "title": "Advanced Aesthetics",
+        "description": "Specialists in high-aesthetic materials such as multilayer Zirconia and Lithium Disilicate, offering maximum naturalness and resistance in dental restorations."
+      },
+      "learnMore": "Learn more"
+    }
   }
 }
