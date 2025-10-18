@@ -1,4 +1,4 @@
-// File: C:\Users\ismaa\OneDrive\Escritorio\artica\fana\app\[locale]\contacto\page.tsx
+// File: C:\Users\moise\Desktop\artica\fana\app\[locale]\contacto\page.tsx
 import * as entry from '../../../../../app/[locale]/contacto/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

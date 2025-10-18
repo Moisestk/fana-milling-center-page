@@ -3,12 +3,16 @@
 import { CheckIcon } from '@heroicons/react/24/outline';
 import { Sparkles, Star } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { fadeInUp, slideInLeft, slideInRight, staggerContainer, staggerItem, viewportOptions } from '@/lib/animations';
 
 export default function AboutSection() {
   const t = useTranslations('newDesign.about');
+  const params = useParams();
+  const locale = params.locale as string || 'es';
   
   const features = [
     t('features.feature1'),
@@ -161,13 +165,15 @@ export default function AboutSection() {
               className="pt-2"
               variants={fadeInUp}
             >
-              <motion.button 
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm shadow-md hover:shadow-lg"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {t('cta')}
-              </motion.button>
+              <Link href={`/${locale}/servicios`}>
+                <motion.button 
+                  className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm shadow-md hover:shadow-lg"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {t('cta')}
+                </motion.button>
+              </Link>
             </motion.div>
           </motion.div>
         </div>

@@ -9,9 +9,13 @@ import PageTransition from '@/components/PageTransition';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer, staggerItem, viewportOptions } from '@/lib/animations';
 import { CubeIcon, StarIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
 
 export default function ServiciosPage() {
   const t = useTranslations('newDesign.servicesPage');
+  const params = useParams();
+  const locale = params.locale as string;
   
   return (
     <PageTransition>
@@ -135,21 +139,23 @@ export default function ServiciosPage() {
                   <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 overflow-hidden">
                     <div className="aspect-square bg-white rounded-2xl overflow-hidden relative group">
                       {/* Real Service Image */}
-                      <div className="relative w-full h-full">
-                        <Image
-                          src="/images/services/service-detail-structures.png"
-                          alt={t('millingStructures.imageAlt')}
-                          fill
-                          className="object-cover transition-transform duration-300 group-hover:scale-110"
-                          sizes="(max-width: 768px) 100vw, 600px"
-                          onError={(e) => {
-                            e.currentTarget.style.display = 'none';
-                          }}
-                        />
-                      </div>
+                      <Image
+                        src="/images/services/services-Structure Milling.jpg"
+                        alt={t('millingStructures.imageAlt')}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-110"
+                        sizes="(max-width: 768px) 100vw, 600px"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                          const placeholder = e.currentTarget.nextElementSibling as HTMLElement;
+                          if (placeholder) {
+                            placeholder.style.display = 'flex';
+                          }
+                        }}
+                      />
                       
                       {/* Placeholder (shows if image not available) */}
-                      <div className="absolute inset-0 flex items-center justify-center bg-white">
+                      <div className="absolute inset-0 flex items-center justify-center bg-white" style={{display: 'none'}}>
                         <div className="text-center">
                           <div className="w-32 h-32 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                             <CubeIcon className="w-16 h-16 text-white" />
@@ -174,26 +180,29 @@ export default function ServiciosPage() {
             <div className="mb-20">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="order-2 lg:order-1">
-                  <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl p-8 overflow-hidden">
+                  <div className="bg-gradient-to-br from-fana-secondary to-fana-white rounded-3xl p-8 overflow-hidden">
                     <div className="aspect-square bg-white rounded-2xl overflow-hidden relative group">
                       {/* Real Service Image */}
-                      <div className="relative w-full h-full">
-                        <Image
-                          src="/images/services/service-detail-aesthetics.png"
-                          alt={t('advancedAesthetics.imageAlt')}
-                          fill
-                          className="object-cover transition-transform duration-300 group-hover:scale-110"
-                          sizes="(max-width: 768px) 100vw, 600px"
-                          onError={(e) => {
-                            e.currentTarget.style.display = 'none';
-                          }}
-                        />
-                      </div>
+                      <Image
+                        src="/images/services/services-Advanced Aesthetics.jpg"
+                        alt={t('advancedAesthetics.imageAlt')}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-110"
+                        sizes="(max-width: 768px) 100vw, 600px"
+                        priority
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                          const placeholder = e.currentTarget.nextElementSibling as HTMLElement;
+                          if (placeholder) {
+                            placeholder.style.display = 'flex';
+                          }
+                        }}
+                      />
                       
                       {/* Placeholder (shows if image not available) */}
-                      <div className="absolute inset-0 flex items-center justify-center bg-white">
+                      <div className="absolute inset-0 flex items-center justify-center bg-white" style={{display: 'none'}}>
                         <div className="text-center">
-                          <div className="w-32 h-32 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <div className="w-32 h-32 bg-fana-primary rounded-full flex items-center justify-center mx-auto mb-4">
                             <StarIcon className="w-16 h-16 text-white" />
                           </div>
                           <h4 className="text-xl font-bold text-gray-800">{t('advancedAesthetics.imageAlt')}</h4>
@@ -212,12 +221,12 @@ export default function ServiciosPage() {
                 
                 <div className="order-1 lg:order-2">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center">
+                    <div className="w-16 h-16 bg-fana-primary rounded-2xl flex items-center justify-center">
                       <StarIcon className="w-8 h-8 text-white" />
                     </div>
                     <div>
                       <h3 className="text-3xl font-bold text-gray-800">{t('advancedAesthetics.title')}</h3>
-                      <p className="text-purple-600 font-medium">{t('advancedAesthetics.subtitle')}</p>
+                      <p className="text-fana-primary font-medium">{t('advancedAesthetics.subtitle')}</p>
                     </div>
                   </div>
                   
@@ -226,12 +235,12 @@ export default function ServiciosPage() {
                   </p>
                   
                   <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="bg-purple-50 p-4 rounded-xl">
-                      <div className="text-2xl font-bold text-purple-600 mb-1">{t('advancedAesthetics.colorSystem.value')}</div>
+                    <div className="bg-fana-secondary/30 p-4 rounded-xl">
+                      <div className="text-2xl font-bold text-fana-primary mb-1">{t('advancedAesthetics.colorSystem.value')}</div>
                       <div className="text-sm text-gray-600">{t('advancedAesthetics.colorSystem.label')}</div>
                     </div>
-                    <div className="bg-purple-50 p-4 rounded-xl">
-                      <div className="text-2xl font-bold text-purple-600 mb-1">{t('advancedAesthetics.biocompatible.value')}</div>
+                    <div className="bg-fana-secondary/30 p-4 rounded-xl">
+                      <div className="text-2xl font-bold text-fana-primary mb-1">{t('advancedAesthetics.biocompatible.value')}</div>
                       <div className="text-sm text-gray-600">{t('advancedAesthetics.biocompatible.label')}</div>
                     </div>
                   </div>
@@ -240,19 +249,19 @@ export default function ServiciosPage() {
                     <h4 className="text-lg font-bold text-gray-800">{t('advancedAesthetics.restorationsTitle')}</h4>
                     <div className="space-y-2">
                       <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                        <div className="w-2 h-2 bg-fana-primary rounded-full"></div>
                         <span className="text-gray-600 text-sm">{t('advancedAesthetics.restorations.crowns')}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                        <div className="w-2 h-2 bg-fana-primary rounded-full"></div>
                         <span className="text-gray-600 text-sm">{t('advancedAesthetics.restorations.bridges')}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                        <div className="w-2 h-2 bg-fana-primary rounded-full"></div>
                         <span className="text-gray-600 text-sm">{t('advancedAesthetics.restorations.veneers')}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                        <div className="w-2 h-2 bg-fana-primary rounded-full"></div>
                         <span className="text-gray-600 text-sm">{t('advancedAesthetics.restorations.inlaysOnlays')}</span>
                       </div>
                     </div>
@@ -274,18 +283,18 @@ export default function ServiciosPage() {
             {t('cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/contacto" 
+            <Link 
+              href={`/${locale}/contacto`} 
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors"
             >
               {t('cta.contactButton')}
-            </a>
-            <a 
-              href="/materiales" 
+            </Link>
+            <Link 
+              href={`/${locale}/materiales`} 
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors"
             >
               {t('cta.materialsButton')}
-            </a>
+            </Link>
           </div>
         </div>
       </section>

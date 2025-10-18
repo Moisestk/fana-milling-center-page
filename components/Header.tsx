@@ -151,13 +151,15 @@ export default function Header() {
               transition={{ delay: 0.5 }}
             >
               <LanguageSwitcher currentLocale={locale} />
-              <motion.button 
-                className="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium text-sm"
-                whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(37, 99, 235, 0.5)" }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {t('cta')}
-              </motion.button>
+              <Link href={`/${locale}/contacto`}>
+                <motion.button 
+                  className="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium text-sm"
+                  whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(37, 99, 235, 0.5)" }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {t('cta')}
+                </motion.button>
+              </Link>
             </motion.div>
 
             {/* Mobile Menu Button */}
@@ -244,17 +246,19 @@ export default function Header() {
                 <LanguageSwitcher currentLocale={locale} />
               </motion.div>
 
-              <motion.button 
-                className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium w-fit"
-                variants={{
-                  initial: { opacity: 0, x: -20 },
-                  animate: { opacity: 1, x: 0 }
-                }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {t('cta')}
-              </motion.button>
+              <Link href={`/${locale}/contacto`}>
+                <motion.button 
+                  className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium w-fit"
+                  variants={{
+                    initial: { opacity: 0, x: -20 },
+                    animate: { opacity: 1, x: 0 }
+                  }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {t('cta')}
+                </motion.button>
+              </Link>
             </motion.div>
           </motion.div>
         )}

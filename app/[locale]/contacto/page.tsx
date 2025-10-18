@@ -7,8 +7,10 @@ import PageTransition from '@/components/PageTransition';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer, staggerItem } from '@/lib/animations';
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline';
+import { useTranslations } from 'next-intl';
 
 export default function ContactoPage() {
+  const t = useTranslations('contact');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -56,13 +58,13 @@ export default function ContactoPage() {
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight"
                 variants={fadeInUp}
               >
-                <span className="text-blue-600">Hablemos</span> de tu Próximo Proyecto
+                {t('title')}
               </motion.h1>
               <motion.p 
                 className="text-lg md:text-xl text-gray-600 leading-relaxed"
                 variants={fadeInUp}
               >
-                El camino más rápido y fiable para obtener tus prótesis. Contáctanos o sube tus archivos digitales directamente.
+                {t('subtitle')}
               </motion.p>
             </motion.div>
           </div>

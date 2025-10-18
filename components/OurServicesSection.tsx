@@ -1,13 +1,17 @@
 'use client';
 
-import { CircleStackIcon, CogIcon, StarIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
+import { CircleStackIcon, CogIcon, StarIcon } from '@heroicons/react/24/outline';
 import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { fadeInUp, staggerContainer, staggerItem, scaleIn, viewportOptions } from '@/lib/animations';
 
 export default function OurServicesSection() {
   const t = useTranslations('newDesign.services');
+  const params = useParams();
+  const locale = params.locale as string || 'es';
   const services = [
     {
       icon: CircleStackIcon,
@@ -64,13 +68,15 @@ export default function OurServicesSection() {
             className="flex justify-center mt-6"
             variants={fadeInUp}
           >
-            <motion.button 
-              className="bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm shadow-md hover:shadow-lg"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {t('cta')}
-            </motion.button>
+            <Link href={`/${locale}/servicios`}>
+              <motion.button 
+                className="bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm shadow-md hover:shadow-lg"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {t('cta')}
+              </motion.button>
+            </Link>
           </motion.div>
         </motion.div>
 
@@ -140,27 +146,13 @@ export default function OurServicesSection() {
                   {service.title}
                 </motion.h3>
                 <motion.p 
-                  className="text-sm text-gray-600 leading-relaxed mb-4"
+                  className="text-sm text-gray-600 leading-relaxed"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
                 >
                   {service.description}
                 </motion.p>
-                <motion.a 
-                  href="#" 
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm"
-                  whileHover={{ x: 5 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  {t('learnMore')}
-                  <motion.div
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    <ArrowRightIcon className="w-4 h-4 ml-1.5" />
-                  </motion.div>
-                </motion.a>
               </div>
             </motion.div>
           ))}

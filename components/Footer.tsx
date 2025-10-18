@@ -191,20 +191,21 @@ export default function Footer() {
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              {[
-                footer('legal.privacy'), 
-                footer('legal.terms'), 
-                footer('legal.cookies')
-              ].map((link, index) => (
-                <motion.div
-                  key={index}
-                  whileHover={{ y: -2 }}
-                >
-                  <Link href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                    {link}
-                  </Link>
-                </motion.div>
-              ))}
+              <motion.div whileHover={{ y: -2 }}>
+                <Link href={`/${locale}/politica-privacidad`} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                  {footer('legal.privacy')}
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ y: -2 }}>
+                <Link href={`/${locale}/terminos-servicio`} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                  {footer('legal.terms')}
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ y: -2 }}>
+                <Link href={`/${locale}/politica-cookies`} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                  {footer('legal.cookies')}
+                </Link>
+              </motion.div>
             </motion.div>
           </motion.div>
         </div>
