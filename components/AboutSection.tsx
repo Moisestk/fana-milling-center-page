@@ -40,42 +40,20 @@ export default function AboutSection() {
                 
                 {/* Main image circle */}
                 <motion.div 
-                  className="absolute inset-4 rounded-full overflow-hidden"
+                  className="absolute inset-4 rounded-full overflow-hidden bg-gradient-to-br from-blue-200 to-white"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 >
                   {/* Real Laboratory Image */}
-                  <div className="relative w-full h-full">
+                  <div className="relative w-full h-full z-10">
                     <Image
                       src="/images/about/about-laboratory.png"
                       alt="Laboratorio dental CAD/CAM FANA con equipos de fresado"
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, 400px"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                      }}
+                      priority
                     />
-                  </div>
-                  
-                  {/* Professional Placeholder (shows if image not available) */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-white flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <motion.div 
-                        className="w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4"
-                        animate={{ 
-                          boxShadow: [
-                            "0 0 0 0 rgba(37, 99, 235, 0.4)",
-                            "0 0 0 20px rgba(37, 99, 235, 0)",
-                          ]
-                        }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        <span className="text-white text-3xl font-bold">F</span>
-                      </motion.div>
-                      <p className="text-blue-600 font-semibold text-lg">FANA Milling</p>
-                      <p className="text-gray-600 text-sm">Tecnología CNC</p>
-                    </div>
                   </div>
                 </motion.div>
 
