@@ -8,6 +8,7 @@ import Footer from '@/components/Footer';
 import PageTransition from '@/components/PageTransition';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer, staggerItem, viewportOptions } from '@/lib/animations';
+import { CubeIcon, StarIcon } from '@heroicons/react/24/outline';
 
 export default function ServiciosPage() {
   const t = useTranslations('newDesign.servicesPage');
@@ -84,7 +85,7 @@ export default function ServiciosPage() {
                 <div>
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center">
-                      <span className="text-white text-2xl">🦷</span>
+                      <CubeIcon className="w-8 h-8 text-white" />
                     </div>
                     <div>
                       <h3 className="text-3xl font-bold text-gray-800">{t('millingStructures.title')}</h3>
@@ -151,7 +152,7 @@ export default function ServiciosPage() {
                       <div className="absolute inset-0 flex items-center justify-center bg-white">
                         <div className="text-center">
                           <div className="w-32 h-32 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span className="text-white text-4xl">🦷</span>
+                            <CubeIcon className="w-16 h-16 text-white" />
                           </div>
                           <h4 className="text-xl font-bold text-gray-800">{t('millingStructures.imageAlt')}</h4>
                           <p className="text-gray-600">{t('millingStructures.imageSubtitle')}</p>
@@ -193,7 +194,7 @@ export default function ServiciosPage() {
                       <div className="absolute inset-0 flex items-center justify-center bg-white">
                         <div className="text-center">
                           <div className="w-32 h-32 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span className="text-white text-4xl">💎</span>
+                            <StarIcon className="w-16 h-16 text-white" />
                           </div>
                           <h4 className="text-xl font-bold text-gray-800">{t('advancedAesthetics.imageAlt')}</h4>
                           <p className="text-gray-600">{t('advancedAesthetics.imageSubtitle')}</p>
@@ -212,7 +213,7 @@ export default function ServiciosPage() {
                 <div className="order-1 lg:order-2">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center">
-                      <span className="text-white text-2xl">💎</span>
+                      <StarIcon className="w-8 h-8 text-white" />
                     </div>
                     <div>
                       <h3 className="text-3xl font-bold text-gray-800">{t('advancedAesthetics.title')}</h3>
