@@ -1,6 +1,6 @@
 'use client';
 
-import { CircleStackIcon, BeakerIcon, CogIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
+import { CircleStackIcon, StarIcon, CogIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { staggerContainer, staggerItem, viewportOptions } from '@/lib/animations';
@@ -13,7 +13,7 @@ export default function ServicesNavigation() {
       name: t('service1')
     },
     {
-      icon: BeakerIcon,
+      icon: StarIcon,
       name: t('service2')
     },
     {

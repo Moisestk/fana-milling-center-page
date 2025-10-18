@@ -1,6 +1,6 @@
 'use client';
 
-import { CircleStackIcon, CogIcon, BeakerIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
+import { CircleStackIcon, CogIcon, StarIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -26,7 +26,7 @@ export default function OurServicesSection() {
       imageAlt: 'Estructuras de implantes dentales en titanio'
     },
     {
-      icon: BeakerIcon,
+      icon: StarIcon,
       title: t('service3.title'),
       description: t('service3.description'),
       bgColor: 'from-purple-50 to-purple-100',
