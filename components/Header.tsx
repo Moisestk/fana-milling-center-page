@@ -6,6 +6,8 @@ import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,105 +16,244 @@ export default function Header() {
   const params = useParams();
   const locale = params.locale as string || 'es';
 
+  const navItems = [
+    { href: `/${locale}`, label: nav('home') },
+    { href: `/${locale}/nosotros`, label: nav('about') },
+    { href: `/${locale}/servicios`, label: nav('services') },
+    { href: `/${locale}/materiales`, label: nav('materials') },
+    { href: `/${locale}/contacto`, label: nav('contact') }
+  ];
+
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="bg-blue-600 text-white py-2.5">
+      <motion.div 
+        className="bg-blue-600 text-white py-2.5"
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center text-xs">
               <div className="flex items-center space-x-6">
-              <div className="flex items-center space-x-1.5">
+              <motion.div 
+                className="flex items-center space-x-1.5"
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1 }}
+              >
                 <PhoneIcon className="w-3.5 h-3.5" />
                 <span>{t('phone')}</span>
-              </div>
-              <div className="flex items-center space-x-1.5">
+              </motion.div>
+              <motion.div 
+                className="flex items-center space-x-1.5"
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 }}
+              >
                 <EnvelopeIcon className="w-3.5 h-3.5" />
                 <span>{t('email')}</span>
-              </div>
-              <div className="flex items-center space-x-1.5">
+              </motion.div>
+              <motion.div 
+                className="flex items-center space-x-1.5"
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3 }}
+              >
                 <MapPinIcon className="w-3.5 h-3.5" />
                 <span>{t('address')}</span>
-              </div>
+              </motion.div>
             </div>
-            <div className="flex items-center space-x-3">
-              <a href="#" className="hover:opacity-80 transition-opacity">
+            <motion.div 
+              className="flex items-center space-x-3"
+              initial={{ opacity: 0, x: 10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              <motion.a href="#" whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} className="hover:opacity-80 transition-opacity">
                 <Facebook className="w-3.5 h-3.5" fill="white" />
-              </a>
-              <a href="#" className="hover:opacity-80 transition-opacity">
+              </motion.a>
+              <motion.a href="#" whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} className="hover:opacity-80 transition-opacity">
                 <Twitter className="w-3.5 h-3.5" fill="white" />
-              </a>
-              <a href="#" className="hover:opacity-80 transition-opacity">
+              </motion.a>
+              <motion.a href="#" whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} className="hover:opacity-80 transition-opacity">
                 <Instagram className="w-3.5 h-3.5" />
-              </a>
-              <a href="#" className="hover:opacity-80 transition-opacity">
+              </motion.a>
+              <motion.a href="#" whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} className="hover:opacity-80 transition-opacity">
                 <Linkedin className="w-3.5 h-3.5" fill="white" />
-              </a>
-              <a href="#" className="hover:opacity-80 transition-opacity">
+              </motion.a>
+              <motion.a href="#" whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} className="hover:opacity-80 transition-opacity">
                 <Youtube className="w-3.5 h-3.5" fill="white" />
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Main Navigation */}
-      <nav className="bg-white shadow-sm border-b">
+      <motion.nav 
+        className="bg-white shadow-sm border-b sticky top-0 z-50 backdrop-blur-sm bg-white/95"
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-3">
             {/* Logo */}
-            <div className="flex items-center space-x-2">
-              <div className="w-9 h-9 bg-blue-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">F</span>
-              </div>
-              <span className="text-xl font-bold text-gray-800">FANA</span>
-            </div>
+            <Link href={`/${locale}`}>
+              <motion.div 
+                className="flex items-center space-x-2 cursor-pointer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <div className="w-9 h-9 bg-blue-600 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">F</span>
+                </div>
+                <span className="text-xl font-bold text-gray-800">FANA</span>
+              </motion.div>
+            </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-7">
-              <Link href={`/${locale}`} className="text-gray-700 hover:text-blue-600 font-medium text-sm transition-colors">{nav('home')}</Link>
-              <Link href={`/${locale}/nosotros`} className="text-gray-700 hover:text-blue-600 font-medium text-sm transition-colors">Nosotros</Link>
-              <Link href={`/${locale}/servicios`} className="text-gray-700 hover:text-blue-600 font-medium text-sm transition-colors">{nav('services')}</Link>
-              <Link href={`/${locale}/materiales`} className="text-gray-700 hover:text-blue-600 font-medium text-sm transition-colors">{nav('materials')}</Link>
-              <Link href={`/${locale}/contacto`} className="text-gray-700 hover:text-blue-600 font-medium text-sm transition-colors">{nav('contact')}</Link>
-            </div>
+            <motion.div 
+              className="hidden lg:flex items-center space-x-7"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              {navItems.map((item, index) => (
+                <Link key={item.href} href={item.href}>
+                  <motion.span 
+                    className="text-gray-700 hover:text-blue-600 font-medium text-sm transition-colors cursor-pointer relative group"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 + index * 0.05 }}
+                    whileHover={{ y: -2 }}
+                  >
+                    {item.label}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                  </motion.span>
+                </Link>
+              ))}
+            </motion.div>
 
-            {/* CTA Button */}
-            <div className="hidden lg:block">
-              <button className="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium text-sm">
+            {/* CTA Button & Language Switcher */}
+            <motion.div 
+              className="hidden lg:flex items-center gap-4"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              <LanguageSwitcher currentLocale={locale} />
+              <motion.button 
+                className="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium text-sm"
+                whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(37, 99, 235, 0.5)" }}
+                whileTap={{ scale: 0.95 }}
+              >
                 {t('cta')}
-              </button>
-            </div>
+              </motion.button>
+            </motion.div>
 
             {/* Mobile Menu Button */}
-            <button
+            <motion.button
               className="lg:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
             >
-              {isMenuOpen ? (
-                <XMarkIcon className="w-6 h-6" />
-              ) : (
-                <Bars3Icon className="w-6 h-6" />
-              )}
-            </button>
+              <AnimatePresence mode="wait" initial={false}>
+                {isMenuOpen ? (
+                  <motion.div
+                    key="close"
+                    initial={{ rotate: -90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <XMarkIcon className="w-6 h-6" />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="menu"
+                    initial={{ rotate: 90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: -90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Bars3Icon className="w-6 h-6" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.button>
           </div>
 
           {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <div className="lg:hidden py-4 border-t">
-              <div className="flex flex-col space-y-4">
-                <Link href={`/${locale}`} className="text-gray-700 hover:text-blue-600 font-medium transition-colors">{nav('home')}</Link>
-                <Link href={`/${locale}/nosotros`} className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Nosotros</Link>
-                <Link href={`/${locale}/servicios`} className="text-gray-700 hover:text-blue-600 font-medium transition-colors">{nav('services')}</Link>
-                <Link href={`/${locale}/materiales`} className="text-gray-700 hover:text-blue-600 font-medium transition-colors">{nav('materials')}</Link>
-                <Link href={`/${locale}/contacto`} className="text-gray-700 hover:text-blue-600 font-medium transition-colors">{nav('contact')}</Link>
-                <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium w-fit">
-                  {t('cta')}
-                </button>
-              </div>
-            </div>
-          )}
-        </div>
-      </nav>
-    </>
-  );
+          <AnimatePresence>
+            {isMenuOpen && (
+              <motion.div 
+                className="lg:hidden py-4 border-t overflow-hidden"
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <motion.div 
+                  className="flex flex-col space-y-4"
+                  initial="initial"
+                  animate="animate"
+                  variants={{
+                    animate: {
+                      transition: {
+                        staggerChildren: 0.05
+                      }
+                    }
+                  }}
+                >
+                  {navItems.map((item) => (
+                    <motion.div
+                      key={item.href}
+                      variants={{
+                        initial: { opacity: 0, x: -20 },
+                        animate: { opacity: 1, x: 0 }
+                      }}
+                    >
+                      <Link 
+                        href={item.href}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="text-gray-700 hover:text-blue-600 font-medium transition-colors block"
+                      >
+                        {item.label}
+                  </Link>
+                </motion.div>
+              ))}
+              
+              {/* Language Switcher Mobile */}
+              <motion.div
+                variants={{
+                  initial: { opacity: 0, x: -20 },
+                  animate: { opacity: 1, x: 0 }
+                }}
+                className="py-2"
+              >
+                <LanguageSwitcher currentLocale={locale} />
+              </motion.div>
+
+              <motion.button 
+                className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium w-fit"
+                variants={{
+                  initial: { opacity: 0, x: -20 },
+                  animate: { opacity: 1, x: 0 }
+                }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {t('cta')}
+              </motion.button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  </motion.nav>
+</>
+);
 }

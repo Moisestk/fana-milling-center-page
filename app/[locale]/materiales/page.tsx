@@ -1,26 +1,46 @@
+'use client';
+
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import PageTransition from '@/components/PageTransition';
+import { motion } from 'framer-motion';
+import { fadeInUp, staggerContainer, staggerItem, viewportOptions } from '@/lib/animations';
 
 export default function MaterialesPage() {
   return (
-    <div className="min-h-screen">
-      <Header />
+    <PageTransition>
+      <div className="min-h-screen">
+        <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-16 md:py-24">
+      <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-16 md:py-24 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <motion.div 
+            className="text-center max-w-4xl mx-auto"
+            initial="initial"
+            animate="animate"
+            variants={staggerContainer}
+          >
+            <motion.div 
+              className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-6"
+              variants={fadeInUp}
+            >
               <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
               Materiales Premium
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight">
+            </motion.div>
+            <motion.h1 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight"
+              variants={fadeInUp}
+            >
               <span className="text-blue-600">Materiales</span> de Alta Calidad
-            </h1>
-            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+            </motion.h1>
+            <motion.p 
+              className="text-lg md:text-xl text-gray-600 leading-relaxed"
+              variants={fadeInUp}
+            >
               Solo trabajamos con materiales certificados y biocompatibles de las mejores marcas internacionales.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </div>
       </section>
 
@@ -255,6 +275,7 @@ export default function MaterialesPage() {
       </section>
 
       <Footer />
-    </div>
+      </div>
+    </PageTransition>
   );
 }

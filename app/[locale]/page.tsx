@@ -2,6 +2,7 @@
 
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
@@ -9,331 +10,373 @@ import ServicesNavigation from '@/components/ServicesNavigation';
 import OurServicesSection from '@/components/OurServicesSection';
 import Footer from '@/components/Footer';
 import { CheckIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
+import { motion } from 'framer-motion';
+import { fadeInUp, staggerContainer, staggerItem, counterAnimation, viewportOptions } from '@/lib/animations';
+import PageTransition from '@/components/PageTransition';
 
 export default function Home() {
   const params = useParams();
   const locale = params.locale as string || 'es';
+  const t = useTranslations('newDesign.homePage');
+
+  const stats = [
+    { value: t('stats.completedCases.value'), label: t('stats.completedCases.label') },
+    { value: t('stats.deliveryTime.value'), label: t('stats.deliveryTime.label') },
+    { value: t('stats.customerSatisfaction.value'), label: t('stats.customerSatisfaction.label') },
+    { value: t('stats.precision.value'), label: t('stats.precision.label') }
+  ];
 
   return (
-    <div className="min-h-screen">
-      <Header />
-      <HeroSection />
-      <AboutSection />
-      <ServicesNavigation />
-      <OurServicesSection />
-      
-      {/* Stats Section */}
-      <section className="bg-blue-600 py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-white">
-            <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">500+</div>
-              <div className="text-blue-100">Casos Completados</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">24h</div>
-              <div className="text-blue-100">Tiempo de Entrega</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">99%</div>
-              <div className="text-blue-100">Satisfacción Cliente</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">5μm</div>
-              <div className="text-blue-100">Precisión Micrométrica</div>
-            </div>
+    <PageTransition>
+      <div className="min-h-screen">
+        <Header />
+        <HeroSection />
+        <AboutSection />
+        <ServicesNavigation />
+        <OurServicesSection />
+        
+        {/* Stats Section */}
+        <section className="bg-blue-600 py-16 overflow-hidden">
+          <div className="container mx-auto px-4">
+            <motion.div 
+              className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-white"
+              initial="initial"
+              whileInView="animate"
+              viewport={viewportOptions}
+              variants={staggerContainer}
+            >
+              {stats.map((stat, index) => (
+                <motion.div 
+                  key={index}
+                  variants={counterAnimation}
+                  whileHover={{ scale: 1.1, y: -10 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <motion.div 
+                    className="text-4xl md:text-5xl font-bold mb-2"
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                  >
+                    {stat.value}
+                  </motion.div>
+                  <motion.div 
+                    className="text-blue-100"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 + index * 0.1 }}
+                  >
+                    {stat.label}
+                  </motion.div>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Why Choose Us Section */}
-      <section className="bg-white py-16 md:py-20">
+      <section className="bg-white py-16 md:py-20 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-              ¿Por Qué Elegir <span className="text-blue-600">FANA?</span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Tecnología de vanguardia al servicio de la excelencia dental
-            </p>
-          </div>
+          <motion.div 
+            className="text-center mb-12"
+            initial="initial"
+            whileInView="animate"
+            viewport={viewportOptions}
+            variants={staggerContainer}
+          >
+            <motion.h2 
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4"
+              variants={fadeInUp}
+            >
+              {t('whyChooseUs.title').split(' FANA?')[0]} <span className="text-blue-600">FANA?</span>
+            </motion.h2>
+            <motion.p 
+              className="text-lg text-gray-600 max-w-3xl mx-auto"
+              variants={fadeInUp}
+            >
+              {t('whyChooseUs.subtitle')}
+            </motion.p>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-6">
-                <CheckIcon className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Precisión Micrométrica</h3>
-              <p className="text-gray-600">
-                Fresado CNC de 5 ejes con tolerancias de ±5μm para resultados perfectos en cada pieza.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-6">
-                <CheckIcon className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Entrega Rápida</h3>
-              <p className="text-gray-600">
-                Plazos de entrega optimizados de 24-48h sin comprometer la calidad del trabajo.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-6">
-                <CheckIcon className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Materiales Premium</h3>
-              <p className="text-gray-600">
-                Solo trabajamos con materiales certificados y biocompatibles de las mejores marcas.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-6">
-                <CheckIcon className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Tecnología Avanzada</h3>
-              <p className="text-gray-600">
-                Equipamiento de última generación con software CAD/CAM certificado.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-6">
-                <CheckIcon className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Soporte Técnico 24/7</h3>
-              <p className="text-gray-600">
-                Nuestro equipo está disponible para resolver cualquier consulta en tiempo real.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-6">
-                <CheckIcon className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Garantía de Calidad</h3>
-              <p className="text-gray-600">
-                Certificación ISO 13485 y control de calidad exhaustivo en cada proyecto.
-              </p>
-            </div>
-          </div>
+          <motion.div 
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
+            initial="initial"
+            whileInView="animate"
+            viewport={viewportOptions}
+            variants={staggerContainer}
+          >
+            {[
+              {
+                title: t('whyChooseUs.features.precision.title'),
+                description: t('whyChooseUs.features.precision.description')
+              },
+              {
+                title: t('whyChooseUs.features.delivery.title'),
+                description: t('whyChooseUs.features.delivery.description')
+              },
+              {
+                title: t('whyChooseUs.features.materials.title'),
+                description: t('whyChooseUs.features.materials.description')
+              },
+              {
+                title: t('whyChooseUs.features.technology.title'),
+                description: t('whyChooseUs.features.technology.description')
+              },
+              {
+                title: t('whyChooseUs.features.support.title'),
+                description: t('whyChooseUs.features.support.description')
+              },
+              {
+                title: t('whyChooseUs.features.quality.title'),
+                description: t('whyChooseUs.features.quality.description')
+              }
+            ].map((item, index) => (
+              <motion.div 
+                key={index}
+                className="bg-gray-50 p-8 rounded-2xl"
+                variants={staggerItem}
+                whileHover={{ 
+                  y: -10,
+                  boxShadow: "0 20px 50px -10px rgba(0, 0, 0, 0.15)"
+                }}
+                transition={{ duration: 0.3 }}
+              >
+                <motion.div 
+                  className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-6"
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <CheckIcon className="w-6 h-6 text-white" />
+                </motion.div>
+                <h3 className="text-xl font-bold text-gray-800 mb-3">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-gray-50 py-16 md:py-20">
+      <section className="bg-gray-50 py-16 md:py-20 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-              Lo Que Dicen <span className="text-blue-600">Nuestros Clientes</span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              La satisfacción de nuestros clientes es nuestra mayor recompensa
-            </p>
-          </div>
+          <motion.div 
+            className="text-center mb-12"
+            initial="initial"
+            whileInView="animate"
+            viewport={viewportOptions}
+            variants={staggerContainer}
+          >
+            <motion.h2 
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4"
+              variants={fadeInUp}
+            >
+              {t('testimonials.title').split(' Nuestros Clientes')[0]} <span className="text-blue-600">{t('testimonials.title').split(' ').slice(-2).join(' ')}</span>
+            </motion.h2>
+            <motion.p 
+              className="text-lg text-gray-600 max-w-3xl mx-auto"
+              variants={fadeInUp}
+            >
+              {t('testimonials.subtitle')}
+            </motion.p>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                  M
+          <motion.div 
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
+            initial="initial"
+            whileInView="animate"
+            viewport={viewportOptions}
+            variants={staggerContainer}
+          >
+            {[
+              {
+                initial: 'M',
+                name: t('testimonials.items.maria.name'),
+                position: t('testimonials.items.maria.position'),
+                text: t('testimonials.items.maria.text')
+              },
+              {
+                initial: 'C',
+                name: t('testimonials.items.carlos.name'),
+                position: t('testimonials.items.carlos.position'),
+                text: t('testimonials.items.carlos.text')
+              },
+              {
+                initial: 'A',
+                name: t('testimonials.items.ana.name'),
+                position: t('testimonials.items.ana.position'),
+                text: t('testimonials.items.ana.text')
+              }
+            ].map((testimonial, index) => (
+              <motion.div 
+                key={index}
+                className="bg-white p-8 rounded-2xl shadow-md"
+                variants={staggerItem}
+                whileHover={{ 
+                  y: -10,
+                  boxShadow: "0 20px 50px -10px rgba(0, 0, 0, 0.15)"
+                }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="flex items-center mb-6">
+                  <motion.div 
+                    className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg"
+                    whileHover={{ scale: 1.2, rotate: 360 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    {testimonial.initial}
+                  </motion.div>
+                  <div className="ml-4">
+                    <h4 className="font-bold text-gray-800">{testimonial.name}</h4>
+                    <p className="text-sm text-gray-500">{testimonial.position}</p>
+                  </div>
                 </div>
-                <div className="ml-4">
-                  <h4 className="font-bold text-gray-800">Dr. María González</h4>
-                  <p className="text-sm text-gray-500">Clínica Dental Premium</p>
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <motion.span 
+                      key={i} 
+                      className="text-yellow-400 text-xl"
+                      initial={{ opacity: 0, scale: 0 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: i * 0.1 }}
+                    >
+                      ★
+                    </motion.span>
+                  ))}
                 </div>
-              </div>
-              <div className="flex mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-xl">★</span>
-                ))}
-              </div>
-              <p className="text-gray-600 italic">
-                "La calidad y precisión de FANA es excepcional. Sus estructuras de zirconio son perfectas y el tiempo de entrega es increíble."
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                  C
-                </div>
-                <div className="ml-4">
-                  <h4 className="font-bold text-gray-800">Dr. Carlos Ruiz</h4>
-                  <p className="text-sm text-gray-500">Laboratorio Dental Ruiz</p>
-                </div>
-              </div>
-              <div className="flex mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-xl">★</span>
-                ))}
-              </div>
-              <p className="text-gray-600 italic">
-                "El servicio técnico de FANA es excepcional. Siempre están disponibles para resolver cualquier duda."
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                  A
-                </div>
-                <div className="ml-4">
-                  <h4 className="font-bold text-gray-800">Dra. Ana Martínez</h4>
-                  <p className="text-sm text-gray-500">Centro Odontológico Avanzado</p>
-                </div>
-              </div>
-              <div className="flex mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-xl">★</span>
-                ))}
-              </div>
-              <p className="text-gray-600 italic">
-                "La precisión de 5 micras que ofrecen es impresionante. Nuestros pacientes notan la diferencia."
-              </p>
-            </div>
-          </div>
+                <p className="text-gray-600 italic">
+                  "{testimonial.text}"
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
       {/* CTA Section 1 - Services */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-700 py-16">
+      <section className="bg-gradient-to-br from-blue-600 to-blue-700 py-16 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              ¿Listo para Transformar tu Práctica Dental?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Únete a más de 500 laboratorios que ya confían en FANA para sus necesidades de fresado dental.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href={`/${locale}/servicios`}
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-medium text-lg shadow-lg hover:shadow-xl inline-flex items-center justify-center"
-              >
-                Ver Nuestros Servicios
-                <ArrowRightIcon className="w-5 h-5 ml-2" />
-              </Link>
-              <Link 
-                href={`/${locale}/contacto`}
-                className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium text-lg inline-flex items-center justify-center"
-              >
-                Solicitar Cotización
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Materials Preview Section */}
-      <section className="bg-white py-16 md:py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-              Materiales de <span className="text-blue-600">Alta Calidad</span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Solo trabajamos con materiales certificados y biocompatibles
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-2xl text-center">
-              <div className="text-4xl mb-4">💎</div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Zirconio Multicapa</h3>
-              <p className="text-gray-600 text-sm mb-4">Resistencia superior y estética natural</p>
-              <div className="text-blue-600 font-semibold text-sm">Resistencia &gt; 1200 MPa</div>
-            </div>
-
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-2xl text-center">
-              <div className="text-4xl mb-4">✨</div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Disilicato de Litio</h3>
-              <p className="text-gray-600 text-sm mb-4">Máxima estética y translucidez</p>
-              <div className="text-purple-600 font-semibold text-sm">Resistencia &gt; 400 MPa</div>
-            </div>
-
-            <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-2xl text-center">
-              <div className="text-4xl mb-4">🔩</div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Titanio Grado 5</h3>
-              <p className="text-gray-600 text-sm mb-4">Biocompatibilidad total</p>
-              <div className="text-gray-600 font-semibold text-sm">ASTM F136 certificado</div>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <Link 
-              href={`/${locale}/materiales`}
-              className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-lg"
+          <motion.div 
+            className="max-w-4xl mx-auto text-center text-white"
+            initial="initial"
+            whileInView="animate"
+            viewport={viewportOptions}
+            variants={staggerContainer}
+          >
+            <motion.h2 
+              className="text-3xl md:text-4xl font-bold mb-6"
+              variants={fadeInUp}
             >
-              Ver Todos los Materiales
-              <ArrowRightIcon className="w-5 h-5 ml-2" />
-            </Link>
-          </div>
+              {t('cta1.title')}
+            </motion.h2>
+            <motion.p 
+              className="text-xl text-blue-100 mb-8"
+              variants={fadeInUp}
+            >
+              {t('cta1.subtitle')}
+            </motion.p>
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+              variants={fadeInUp}
+            >
+              <Link href={`/${locale}/servicios`}>
+                <motion.div 
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-medium text-lg shadow-lg inline-flex items-center justify-center cursor-pointer"
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {t('cta1.viewServicesButton')}
+                  <ArrowRightIcon className="w-5 h-5 ml-2" />
+                </motion.div>
+              </Link>
+              <Link href={`/${locale}/contacto`}>
+                <motion.div 
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium text-lg inline-flex items-center justify-center cursor-pointer"
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {t('cta1.requestQuoteButton')}
+                </motion.div>
+              </Link>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
+
+     
 
       {/* CTA Section 2 - Contact */}
-      <section className="bg-gradient-to-br from-gray-800 to-gray-900 py-16 text-white">
+      <section className="bg-gradient-to-br from-gray-800 to-gray-900 py-16 text-white overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              ¿Tienes un Proyecto en Mente?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Nuestro equipo de expertos está listo para ayudarte a elegir la mejor solución para tu laboratorio
-            </p>
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <div className="text-3xl mb-3">📞</div>
-                <h3 className="font-bold mb-2">Llámanos</h3>
-                <p className="text-gray-300 text-sm">+34 91 123 45 67</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <div className="text-3xl mb-3">✉️</div>
-                <h3 className="font-bold mb-2">Escríbenos</h3>
-                <p className="text-gray-300 text-sm">info@fanamilling.com</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <div className="text-3xl mb-3">📍</div>
-                <h3 className="font-bold mb-2">Visítanos</h3>
-                <p className="text-gray-300 text-sm">Madrid, España</p>
-              </div>
-            </div>
-            <Link 
-              href={`/${locale}/contacto`}
-              className="bg-blue-600 text-white px-10 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium text-lg shadow-lg hover:shadow-xl inline-flex items-center"
+          <motion.div 
+            className="max-w-4xl mx-auto text-center"
+            initial="initial"
+            whileInView="animate"
+            viewport={viewportOptions}
+            variants={staggerContainer}
+          >
+            <motion.h2 
+              className="text-3xl md:text-4xl font-bold mb-6"
+              variants={fadeInUp}
             >
-              Contactar Ahora
-              <ArrowRightIcon className="w-5 h-5 ml-2" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA - About */}
-      <section className="bg-blue-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-              Conoce Más Sobre FANA Milling Center
-            </h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Descubre nuestra historia, nuestro equipo y por qué somos líderes en fabricación dental CAD/CAM
-            </p>
-            <Link 
-              href={`/${locale}/nosotros`}
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium inline-flex items-center"
+              {t('cta2.title')}
+            </motion.h2>
+            <motion.p 
+              className="text-xl text-gray-300 mb-8"
+              variants={fadeInUp}
             >
-              Sobre Nosotros
-              <ArrowRightIcon className="w-5 h-5 ml-2" />
-            </Link>
-          </div>
+              {t('cta2.subtitle')}
+            </motion.p>
+            <motion.div 
+              className="grid md:grid-cols-3 gap-6 mb-8"
+              variants={staggerContainer}
+            >
+              {[
+                { emoji: '📞', title: t('cta2.contact.phone.title'), text: t('cta2.contact.phone.value') },
+                { emoji: '✉️', title: t('cta2.contact.email.title'), text: t('cta2.contact.email.value') },
+                { emoji: '📍', title: t('cta2.contact.location.title'), text: t('cta2.contact.location.value') }
+              ].map((item, index) => (
+                <motion.div 
+                  key={index}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
+                  variants={staggerItem}
+                  whileHover={{ 
+                    scale: 1.05,
+                    backgroundColor: 'rgba(255, 255, 255, 0.15)'
+                  }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <motion.div 
+                    className="text-3xl mb-3"
+                    animate={{ scale: [1, 1.2, 1] }}
+                    transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
+                  >
+                    {item.emoji}
+                  </motion.div>
+                  <h3 className="font-bold mb-2">{item.title}</h3>
+                  <p className="text-gray-300 text-sm">{item.text}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+            <motion.div variants={fadeInUp}>
+              <Link href={`/${locale}/contacto`}>
+                <motion.div 
+                  className="bg-blue-600 text-white px-10 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium text-lg shadow-lg inline-flex items-center cursor-pointer"
+                  whileHover={{ scale: 1.05, y: -5, boxShadow: "0 20px 40px -10px rgba(37, 99, 235, 0.5)" }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {t('cta2.contactButton')}
+                  <ArrowRightIcon className="w-5 h-5 ml-2" />
+                </motion.div>
+              </Link>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
       <Footer />
-    </div>
+      </div>
+    </PageTransition>
   );
 }

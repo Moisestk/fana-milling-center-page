@@ -23,7 +23,7 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className="scroll-smooth">
       <body className="antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}

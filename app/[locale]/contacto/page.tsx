@@ -3,6 +3,9 @@
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import PageTransition from '@/components/PageTransition';
+import { motion } from 'framer-motion';
+import { fadeInUp, staggerContainer, staggerItem } from '@/lib/animations';
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
 export default function ContactoPage() {
@@ -29,26 +32,41 @@ export default function ContactoPage() {
   };
 
   return (
-    <div className="min-h-screen">
-      <Header />
-      
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
-              Contacto Directo
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight">
-              <span className="text-blue-600">Hablemos</span> de tu Próximo Proyecto
-            </h1>
-            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-              El camino más rápido y fiable para obtener tus prótesis. Contáctanos o sube tus archivos digitales directamente.
-            </p>
+    <PageTransition>
+      <div className="min-h-screen">
+        <Header />
+        
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-16 md:py-24 overflow-hidden">
+          <div className="container mx-auto px-4">
+            <motion.div 
+              className="text-center max-w-4xl mx-auto"
+              initial="initial"
+              animate="animate"
+              variants={staggerContainer}
+            >
+              <motion.div 
+                className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-6"
+                variants={fadeInUp}
+              >
+                <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+                Contacto Directo
+              </motion.div>
+              <motion.h1 
+                className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight"
+                variants={fadeInUp}
+              >
+                <span className="text-blue-600">Hablemos</span> de tu Próximo Proyecto
+              </motion.h1>
+              <motion.p 
+                className="text-lg md:text-xl text-gray-600 leading-relaxed"
+                variants={fadeInUp}
+              >
+                El camino más rápido y fiable para obtener tus prótesis. Contáctanos o sube tus archivos digitales directamente.
+              </motion.p>
+            </motion.div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Contact Section */}
       <section className="bg-white py-16">
@@ -213,6 +231,7 @@ export default function ContactoPage() {
       </section>
 
       <Footer />
-    </div>
+      </div>
+    </PageTransition>
   );
 }

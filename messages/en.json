@@ -1,6 +1,7 @@
 {
   "navigation": {
     "home": "Home",
+    "about": "About Us",
     "services": "Services",
     "materials": "Materials",
     "contact": "Contact",
@@ -499,26 +500,42 @@
       "cta": "Get Quote"
     },
     "hero": {
-      "badge": "Cutting-Edge Technology in Dental Manufacturing, Just For You",
-      "title": {
-        "part1": "Your Best ",
-        "part2": "Dental Milling Experience",
-        "part3": " Awaits"
+      "badge": "Professional CAD/CAM Milling",
+      "title": "Precision Dental Milling Laboratory",
+      "description": "5-axis CNC technology with 5-micron precision. Request your quote now and get exceptional results in 24-48h.",
+      "stats": {
+        "precision": {
+          "value": "5μm",
+          "label": "Precision"
+        },
+        "delivery": {
+          "value": "24h",
+          "label": "Delivery"
+        },
+        "satisfaction": {
+          "value": "99%",
+          "label": "Satisfaction"
+        }
       },
-      "description": "CAD/CAM laboratory specialized in precision prosthetics and high-quality supplies for dental professionals. 5-axis CNC technology with micrometric tolerances for exceptional results in every project.",
-      "cta1": "Explore Our Services",
-      "cta2": "Watch Video",
-      "quickInfo": {
-        "name": "Name",
-        "nameValue": "Your Lab",
-        "phone": "Phone",
-        "phoneValue": "Contact",
-        "date": "Preferred Date",
-        "dateValue": "Select",
-        "time": "Estimated Time",
-        "timeValue": "24-48h"
-      },
-      "ctaButton": "Request Your Quote"
+      "form": {
+        "title": "Get a Free Quote",
+        "fullName": "Full name *",
+        "phone": "Phone *",
+        "email": "Email *",
+        "serviceOptions": "Service Options *",
+        "services": {
+          "implantStructures": "Implant Structures",
+          "crownsAndBridges": "Crowns and Bridges",
+          "advancedAesthetics": "Advanced Aesthetics",
+          "provisionalRestorations": "Provisional Restorations"
+        },
+        "submitButton": "Get Started Now",
+        "successMessage": "Thank you! We'll contact you soon.",
+        "trust": {
+          "iso": "ISO 13485",
+          "shipping": "Secure Shipping"
+        }
+      }
     },
     "about": {
       "badge": "ABOUT US",
@@ -560,6 +577,206 @@
         "description": "Specialists in high-aesthetic materials such as multilayer Zirconia and Lithium Disilicate, offering maximum naturalness and resistance in dental restorations."
       },
       "learnMore": "Learn more"
+    },
+    "homePage": {
+      "stats": {
+        "completedCases": {
+          "value": "500+",
+          "label": "Completed Cases"
+        },
+        "deliveryTime": {
+          "value": "24h",
+          "label": "Delivery Time"
+        },
+        "customerSatisfaction": {
+          "value": "99%",
+          "label": "Customer Satisfaction"
+        },
+        "precision": {
+          "value": "5μm",
+          "label": "Micrometric Precision"
+        }
+      },
+      "whyChooseUs": {
+        "title": "Why Choose FANA?",
+        "subtitle": "Cutting-edge technology at the service of dental excellence",
+        "features": {
+          "precision": {
+            "title": "Micrometric Precision",
+            "description": "5-axis CNC milling with ±5μm tolerances for perfect results in every piece."
+          },
+          "delivery": {
+            "title": "Fast Delivery",
+            "description": "Optimized delivery times of 24-48h without compromising work quality."
+          },
+          "materials": {
+            "title": "Premium Materials",
+            "description": "We only work with certified and biocompatible materials from the best brands."
+          },
+          "technology": {
+            "title": "Advanced Technology",
+            "description": "State-of-the-art equipment with certified CAD/CAM software."
+          },
+          "support": {
+            "title": "24/7 Technical Support",
+            "description": "Our team is available to answer any questions in real time."
+          },
+          "quality": {
+            "title": "Quality Guarantee",
+            "description": "ISO 13485 certification and exhaustive quality control in every project."
+          }
+        }
+      },
+      "testimonials": {
+        "title": "What Our Clients Say",
+        "subtitle": "The satisfaction of our clients is our greatest reward",
+        "items": {
+          "maria": {
+            "name": "Dr. María González",
+            "position": "Premium Dental Clinic",
+            "text": "FANA's quality and precision are exceptional. Their zirconia structures are perfect and the delivery time is incredible."
+          },
+          "carlos": {
+            "name": "Dr. Carlos Ruiz",
+            "position": "Ruiz Dental Laboratory",
+            "text": "FANA's technical service is exceptional. They are always available to answer any questions."
+          },
+          "ana": {
+            "name": "Dr. Ana Martínez",
+            "position": "Advanced Dental Center",
+            "text": "The 5-micron precision they offer is impressive. Our patients notice the difference."
+          }
+        }
+      },
+      "cta1": {
+        "title": "Ready to Transform Your Dental Practice?",
+        "subtitle": "Join over 500 laboratories that already trust FANA for their dental milling needs.",
+        "viewServicesButton": "View Our Services",
+        "requestQuoteButton": "Request Quote"
+      },
+      "cta2": {
+        "title": "Have a Project in Mind?",
+        "subtitle": "Our team of experts is ready to help you choose the best solution for your laboratory",
+        "contact": {
+          "phone": {
+            "title": "Call Us",
+            "value": "+34 91 123 45 67"
+          },
+          "email": {
+            "title": "Email Us",
+            "value": "info@fanamilling.com"
+          },
+          "location": {
+            "title": "Visit Us",
+            "value": "Madrid, Spain"
+          }
+        },
+        "contactButton": "Contact Now"
+      }
+    },
+    "servicesPage": {
+      "hero": {
+        "badge": "Specialized Services",
+        "title": "Our Dental Milling Services",
+        "description": "We offer a complete range of specialized dental milling services, with cutting-edge technology and the highest quality materials.",
+        "stats": {
+          "experience": {
+            "value": "15+",
+            "label": "Years of experience"
+          },
+          "cases": {
+            "value": "500+",
+            "label": "Completed cases"
+          },
+          "satisfaction": {
+            "value": "99%",
+            "label": "Customer satisfaction"
+          }
+        }
+      },
+      "millingStructures": {
+        "title": "Structure Milling",
+        "subtitle": "For Dental Implants",
+        "description": "We manufacture implant structures with 5-axis milling technology and 5-micron precision. We use ISO certified materials and guarantee the highest quality in every piece.",
+        "precision": {
+          "value": "5μm",
+          "label": "Maximum precision"
+        },
+        "delivery": {
+          "value": "24h",
+          "label": "Delivery time"
+        },
+        "materialsTitle": "Available Materials:",
+        "materials": {
+          "zirconia": "Zirconia",
+          "titanium": "Titanium",
+          "chromeCobalt": "Chrome-Cobalt",
+          "pmma": "PMMA"
+        },
+        "imageAlt": "Implant Structure",
+        "imageSubtitle": "5-micron precision"
+      },
+      "advancedAesthetics": {
+        "title": "Advanced Aesthetics",
+        "subtitle": "Natural Restorations",
+        "description": "We create high-quality aesthetic restorations using multilayer zirconia and lithium disilicate. Our process guarantees perfect natural results.",
+        "colorSystem": {
+          "value": "VITA 3D",
+          "label": "Color system"
+        },
+        "biocompatible": {
+          "value": "100%",
+          "label": "Biocompatible"
+        },
+        "restorationsTitle": "Types of Restorations:",
+        "restorations": {
+          "crowns": "Individual crowns",
+          "bridges": "Fixed bridges",
+          "veneers": "Aesthetic veneers",
+          "inlaysOnlays": "Inlays and Onlays"
+        },
+        "imageAlt": "Aesthetic Crown",
+        "imageSubtitle": "Multilayer zirconia"
+      },
+      "cta": {
+        "title": "Need More Information?",
+        "subtitle": "Our team of experts is ready to help you",
+        "contactButton": "Contact Now",
+        "materialsButton": "View Materials"
+      }
+    }
+  },
+  "footer": {
+    "description": "Your technological partner in dental manufacturing. CAD/CAM laboratory specialized in precision prosthetics and high-quality supplies.",
+    "quickLinks": "Quick Links",
+    "servicesTitle": "Services",
+    "services": {
+      "generalMilling": "General Milling",
+      "implantStructures": "Implant Structures",
+      "advancedAesthetics": "Advanced Aesthetics",
+      "b2bSupplies": "B2B Supplies",
+      "qualityControl": "Quality Control"
+    },
+    "contactTitle": "Contact",
+    "contact": {
+      "phone": {
+        "number": "+34 91 123 45 67",
+        "hours": "Mon-Fri: 8:00 - 18:00"
+      },
+      "email": {
+        "address": "info@fanamilling.com",
+        "response": "Response in 24h"
+      },
+      "address": {
+        "street": "North Industrial Park",
+        "city": "28050 Madrid, Spain"
+      }
+    },
+    "copyright": "All rights reserved.",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookies"
     }
   }
 }

@@ -1,11 +1,15 @@
+'use client';
+
 import Header from '@/components/Header';
 import AboutSection from '@/components/AboutSection';
 import Footer from '@/components/Footer';
+import PageTransition from '@/components/PageTransition';
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen">
-      <Header />
+    <PageTransition>
+      <div className="min-h-screen">
+        <Header />
       <AboutSection />
       
       {/* Additional About Content */}
@@ -79,7 +83,8 @@ export default function AboutPage() {
       </section>
 
       <Footer />
-    </div>
+      </div>
+    </PageTransition>
   );
 }
 

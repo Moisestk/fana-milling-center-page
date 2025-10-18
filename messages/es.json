@@ -1,6 +1,7 @@
 {
   "navigation": {
     "home": "Inicio",
+    "about": "Nosotros",
     "services": "Servicios",
     "materials": "Materiales",
     "contact": "Contacto",
@@ -499,26 +500,42 @@
       "cta": "Obtén Cotización"
     },
     "hero": {
-      "badge": "Tecnología de Vanguardia en Fabricación Dental, Justo Para Ti",
-      "title": {
-        "part1": "Tu Mejor ",
-        "part2": "Experiencia de Fresado Dental",
-        "part3": " Te Espera"
+      "badge": "Fresado CAD/CAM Profesional",
+      "title": "Laboratorio de Fresado Dental de Precisión",
+      "description": "Tecnología CNC de 5 ejes con precisión de 5 micras. Solicita tu cotización ahora y obtén resultados excepcionales en 24-48h.",
+      "stats": {
+        "precision": {
+          "value": "5μm",
+          "label": "Precisión"
+        },
+        "delivery": {
+          "value": "24h",
+          "label": "Entrega"
+        },
+        "satisfaction": {
+          "value": "99%",
+          "label": "Satisfacción"
+        }
       },
-      "description": "Laboratorio CAD/CAM especializado en prótesis de precisión y suministros de alta calidad para profesionales dentales. Tecnología CNC de 5 ejes con tolerancias micrométricas para resultados excepcionales en cada proyecto.",
-      "cta1": "Explora Nuestros Servicios",
-      "cta2": "Ver Video",
-      "quickInfo": {
-        "name": "Nombre",
-        "nameValue": "Tu Lab",
-        "phone": "Teléfono",
-        "phoneValue": "Contacto",
-        "date": "Fecha Preferida",
-        "dateValue": "Selecciona",
-        "time": "Tiempo Estimado",
-        "timeValue": "24-48h"
-      },
-      "ctaButton": "Solicita tu Cotización"
+      "form": {
+        "title": "Obtén una Cotización Gratuita",
+        "fullName": "Nombre completo *",
+        "phone": "Teléfono *",
+        "email": "Correo electrónico *",
+        "serviceOptions": "Opciones de Servicio *",
+        "services": {
+          "implantStructures": "Estructuras de Implantes",
+          "crownsAndBridges": "Coronas y Puentes",
+          "advancedAesthetics": "Estética Avanzada",
+          "provisionalRestorations": "Restauraciones Provisionales"
+        },
+        "submitButton": "Comenzar Ahora",
+        "successMessage": "¡Gracias! Nos pondremos en contacto contigo pronto.",
+        "trust": {
+          "iso": "ISO 13485",
+          "shipping": "Envío Seguro"
+        }
+      }
     },
     "about": {
       "badge": "SOBRE NOSOTROS",
@@ -560,6 +577,206 @@
         "description": "Especialistas en materiales de alta estética como Zirconio multicapa y Disilicato de Litio, ofreciendo la máxima naturalidad y resistencia en restauraciones dentales."
       },
       "learnMore": "Conoce más"
+    },
+    "homePage": {
+      "stats": {
+        "completedCases": {
+          "value": "500+",
+          "label": "Casos Completados"
+        },
+        "deliveryTime": {
+          "value": "24h",
+          "label": "Tiempo de Entrega"
+        },
+        "customerSatisfaction": {
+          "value": "99%",
+          "label": "Satisfacción Cliente"
+        },
+        "precision": {
+          "value": "5μm",
+          "label": "Precisión Micrométrica"
+        }
+      },
+      "whyChooseUs": {
+        "title": "¿Por Qué Elegir FANA?",
+        "subtitle": "Tecnología de vanguardia al servicio de la excelencia dental",
+        "features": {
+          "precision": {
+            "title": "Precisión Micrométrica",
+            "description": "Fresado CNC de 5 ejes con tolerancias de ±5μm para resultados perfectos en cada pieza."
+          },
+          "delivery": {
+            "title": "Entrega Rápida",
+            "description": "Plazos de entrega optimizados de 24-48h sin comprometer la calidad del trabajo."
+          },
+          "materials": {
+            "title": "Materiales Premium",
+            "description": "Solo trabajamos con materiales certificados y biocompatibles de las mejores marcas."
+          },
+          "technology": {
+            "title": "Tecnología Avanzada",
+            "description": "Equipamiento de última generación con software CAD/CAM certificado."
+          },
+          "support": {
+            "title": "Soporte Técnico 24/7",
+            "description": "Nuestro equipo está disponible para resolver cualquier consulta en tiempo real."
+          },
+          "quality": {
+            "title": "Garantía de Calidad",
+            "description": "Certificación ISO 13485 y control de calidad exhaustivo en cada proyecto."
+          }
+        }
+      },
+      "testimonials": {
+        "title": "Lo Que Dicen Nuestros Clientes",
+        "subtitle": "La satisfacción de nuestros clientes es nuestra mayor recompensa",
+        "items": {
+          "maria": {
+            "name": "Dr. María González",
+            "position": "Clínica Dental Premium",
+            "text": "La calidad y precisión de FANA es excepcional. Sus estructuras de zirconio son perfectas y el tiempo de entrega es increíble."
+          },
+          "carlos": {
+            "name": "Dr. Carlos Ruiz",
+            "position": "Laboratorio Dental Ruiz",
+            "text": "El servicio técnico de FANA es excepcional. Siempre están disponibles para resolver cualquier duda."
+          },
+          "ana": {
+            "name": "Dra. Ana Martínez",
+            "position": "Centro Odontológico Avanzado",
+            "text": "La precisión de 5 micras que ofrecen es impresionante. Nuestros pacientes notan la diferencia."
+          }
+        }
+      },
+      "cta1": {
+        "title": "¿Listo para Transformar tu Práctica Dental?",
+        "subtitle": "Únete a más de 500 laboratorios que ya confían en FANA para sus necesidades de fresado dental.",
+        "viewServicesButton": "Ver Nuestros Servicios",
+        "requestQuoteButton": "Solicitar Cotización"
+      },
+      "cta2": {
+        "title": "¿Tienes un Proyecto en Mente?",
+        "subtitle": "Nuestro equipo de expertos está listo para ayudarte a elegir la mejor solución para tu laboratorio",
+        "contact": {
+          "phone": {
+            "title": "Llámanos",
+            "value": "+34 91 123 45 67"
+          },
+          "email": {
+            "title": "Escríbenos",
+            "value": "info@fanamilling.com"
+          },
+          "location": {
+            "title": "Visítanos",
+            "value": "Madrid, España"
+          }
+        },
+        "contactButton": "Contactar Ahora"
+      }
+    },
+    "servicesPage": {
+      "hero": {
+        "badge": "Servicios Especializados",
+        "title": "Nuestros Servicios de Fresado Dental",
+        "description": "Ofrecemos una gama completa de servicios especializados en fresado dental, con tecnología de vanguardia y materiales de la más alta calidad.",
+        "stats": {
+          "experience": {
+            "value": "15+",
+            "label": "Años de experiencia"
+          },
+          "cases": {
+            "value": "500+",
+            "label": "Casos completados"
+          },
+          "satisfaction": {
+            "value": "99%",
+            "label": "Satisfacción cliente"
+          }
+        }
+      },
+      "millingStructures": {
+        "title": "Fresado de Estructuras",
+        "subtitle": "Para Implantes Dentales",
+        "description": "Fabricamos estructuras para implantes con tecnología de fresado de 5 ejes y precisión de 5 micras. Utilizamos materiales certificados ISO y garantizamos la máxima calidad en cada pieza.",
+        "precision": {
+          "value": "5μm",
+          "label": "Precisión máxima"
+        },
+        "delivery": {
+          "value": "24h",
+          "label": "Tiempo de entrega"
+        },
+        "materialsTitle": "Materiales Disponibles:",
+        "materials": {
+          "zirconia": "Zirconio",
+          "titanium": "Titanio",
+          "chromeCobalt": "Cromo-Cobalto",
+          "pmma": "PMMA"
+        },
+        "imageAlt": "Estructura de Implante",
+        "imageSubtitle": "Precisión de 5 micras"
+      },
+      "advancedAesthetics": {
+        "title": "Estética Avanzada",
+        "subtitle": "Restauraciones Naturales",
+        "description": "Creamos restauraciones estéticas de alta calidad utilizando zirconio multilaminado y disilicato de litio. Nuestro proceso garantiza resultados naturales perfectos.",
+        "colorSystem": {
+          "value": "VITA 3D",
+          "label": "Sistema de colores"
+        },
+        "biocompatible": {
+          "value": "100%",
+          "label": "Biocompatible"
+        },
+        "restorationsTitle": "Tipos de Restauraciones:",
+        "restorations": {
+          "crowns": "Coronas individuales",
+          "bridges": "Puentes fijos",
+          "veneers": "Carillas estéticas",
+          "inlaysOnlays": "Inlays y Onlays"
+        },
+        "imageAlt": "Corona Estética",
+        "imageSubtitle": "Zirconio multilaminado"
+      },
+      "cta": {
+        "title": "¿Necesitas más información?",
+        "subtitle": "Nuestro equipo de expertos está listo para ayudarte",
+        "contactButton": "Contactar Ahora",
+        "materialsButton": "Ver Materiales"
+      }
+    }
+  },
+  "footer": {
+    "description": "Tu socio tecnológico en fabricación dental. Laboratorio CAD/CAM especializado en prótesis de precisión y suministros de alta calidad.",
+    "quickLinks": "Enlaces Rápidos",
+    "servicesTitle": "Servicios",
+    "services": {
+      "generalMilling": "Fresado General",
+      "implantStructures": "Estructuras de Implantes",
+      "advancedAesthetics": "Estética Avanzada",
+      "b2bSupplies": "Suministros B2B",
+      "qualityControl": "Control de Calidad"
+    },
+    "contactTitle": "Contacto",
+    "contact": {
+      "phone": {
+        "number": "+34 91 123 45 67",
+        "hours": "Lun-Vie: 8:00 - 18:00"
+      },
+      "email": {
+        "address": "info@fanamilling.com",
+        "response": "Respuesta en 24h"
+      },
+      "address": {
+        "street": "Polígono Industrial Norte",
+        "city": "28050 Madrid, España"
+      }
+    },
+    "copyright": "Todos los derechos reservados.",
+    "legal": {
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio",
+      "cookies": "Cookies"
     }
   }
 }

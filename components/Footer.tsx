@@ -5,160 +5,202 @@ import Link from 'next/link';
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline';
 import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
+import { fadeInUp, staggerContainer, staggerItem, viewportOptions } from '@/lib/animations';
 
 export default function Footer() {
   const params = useParams();
   const locale = params.locale as string || 'es';
   const nav = useTranslations('navigation');
+  const footer = useTranslations('footer');
+
+  const socialLinks = [
+    { Icon: Facebook, href: '#' },
+    { Icon: Twitter, href: '#' },
+    { Icon: Instagram, href: '#' },
+    { Icon: Linkedin, href: '#' },
+    { Icon: Youtube, href: '#' }
+  ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white overflow-hidden">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          initial="initial"
+          whileInView="animate"
+          viewport={viewportOptions}
+          variants={staggerContainer}
+        >
           {/* Company Info */}
-          <div>
-            <div className="flex items-center space-x-2 mb-6">
+          <motion.div variants={fadeInUp}>
+            <motion.div 
+              className="flex items-center space-x-2 mb-6"
+              whileHover={{ scale: 1.05 }}
+            >
               <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
                 <span className="text-white font-bold text-xl">F</span>
               </div>
               <span className="text-xl font-bold">FANA</span>
-            </div>
+            </motion.div>
             <p className="text-gray-400 mb-6 text-sm leading-relaxed">
-              Tu socio tecnológico en fabricación dental. Laboratorio CAD/CAM especializado en prótesis de precisión y suministros de alta calidad.
+              {footer('description')}
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
-                <Linkedin className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
-                <Youtube className="w-4 h-4" />
-              </a>
+              {socialLinks.map(({ Icon, href }, index) => (
+                <motion.a 
+                  key={index}
+                  href={href}
+                  className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
+                  whileHover={{ scale: 1.2, y: -3 }}
+                  whileTap={{ scale: 0.9 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <Icon className="w-4 h-4" />
+                </motion.a>
+              ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-bold mb-6">Enlaces Rápidos</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href={`/${locale}`} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                  {nav('home')}
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${locale}/nosotros`} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                  Nosotros
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${locale}/servicios`} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                  {nav('services')}
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${locale}/materiales`} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                  {nav('materials')}
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${locale}/contacto`} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                  {nav('contact')}
-                </Link>
-              </li>
-            </ul>
-          </div>
+          <motion.div variants={fadeInUp}>
+            <h3 className="text-lg font-bold mb-6">{footer('quickLinks')}</h3>
+            <motion.ul 
+              className="space-y-3"
+              variants={staggerContainer}
+            >
+              {[
+                { href: `/${locale}`, label: nav('home') },
+                { href: `/${locale}/nosotros`, label: nav('about') },
+                { href: `/${locale}/servicios`, label: nav('services') },
+                { href: `/${locale}/materiales`, label: nav('materials') },
+                { href: `/${locale}/contacto`, label: nav('contact') }
+              ].map((link, index) => (
+                <motion.li
+                  key={index}
+                  variants={staggerItem}
+                  whileHover={{ x: 5 }}
+                >
+                  <Link href={link.href} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                    {link.label}
+                  </Link>
+                </motion.li>
+              ))}
+            </motion.ul>
+          </motion.div>
 
           {/* Services */}
-          <div>
-            <h3 className="text-lg font-bold mb-6">Servicios</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href={`/${locale}/servicios`} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                  Fresado General
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${locale}/servicios`} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                  Estructuras de Implantes
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${locale}/servicios`} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                  Estética Avanzada
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${locale}/materiales`} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                  Suministros B2B
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${locale}/servicios`} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                  Control de Calidad
-                </Link>
-              </li>
-            </ul>
-          </div>
+          <motion.div variants={fadeInUp}>
+            <h3 className="text-lg font-bold mb-6">{footer('servicesTitle')}</h3>
+            <motion.ul 
+              className="space-y-3"
+              variants={staggerContainer}
+            >
+              {[
+                { href: `/${locale}/servicios`, label: footer('services.generalMilling') },
+                { href: `/${locale}/servicios`, label: footer('services.implantStructures') },
+                { href: `/${locale}/servicios`, label: footer('services.advancedAesthetics') },
+                { href: `/${locale}/materiales`, label: footer('services.b2bSupplies') },
+                { href: `/${locale}/servicios`, label: footer('services.qualityControl') }
+              ].map((link, index) => (
+                <motion.li
+                  key={index}
+                  variants={staggerItem}
+                  whileHover={{ x: 5 }}
+                >
+                  <Link href={link.href} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                    {link.label}
+                  </Link>
+                </motion.li>
+              ))}
+            </motion.ul>
+          </motion.div>
 
           {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-bold mb-6">Contacto</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start space-x-3">
-                <PhoneIcon className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-gray-400 text-sm">+34 91 123 45 67</p>
-                  <p className="text-gray-500 text-xs">Lun-Vie: 8:00 - 18:00</p>
-                </div>
-              </li>
-              <li className="flex items-start space-x-3">
-                <EnvelopeIcon className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-gray-400 text-sm">info@fanamilling.com</p>
-                  <p className="text-gray-500 text-xs">Respuesta en 24h</p>
-                </div>
-              </li>
-              <li className="flex items-start space-x-3">
-                <MapPinIcon className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-gray-400 text-sm">Polígono Industrial Norte</p>
-                  <p className="text-gray-400 text-sm">28050 Madrid, España</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
+          <motion.div variants={fadeInUp}>
+            <h3 className="text-lg font-bold mb-6">{footer('contactTitle')}</h3>
+            <motion.ul 
+              className="space-y-4"
+              variants={staggerContainer}
+            >
+              {[
+                { 
+                  Icon: PhoneIcon, 
+                  primary: footer('contact.phone.number'),
+                  secondary: footer('contact.phone.hours')
+                },
+                {
+                  Icon: EnvelopeIcon,
+                  primary: footer('contact.email.address'),
+                  secondary: footer('contact.email.response')
+                },
+                {
+                  Icon: MapPinIcon,
+                  primary: footer('contact.address.street'),
+                  secondary: footer('contact.address.city')
+                }
+              ].map((item, index) => (
+                <motion.li 
+                  key={index}
+                  className="flex items-start space-x-3"
+                  variants={staggerItem}
+                  whileHover={{ x: 5 }}
+                >
+                  <item.Icon className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-gray-400 text-sm">{item.primary}</p>
+                    <p className="text-gray-500 text-xs">{item.secondary}</p>
+                  </div>
+                </motion.li>
+              ))}
+            </motion.ul>
+          </motion.div>
+        </motion.div>
       </div>
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm text-center md:text-left">
-              © {new Date().getFullYear()} FANA Milling Center. Todos los derechos reservados.
-            </p>
-            <div className="flex space-x-6">
-              <Link href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                Política de Privacidad
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                Términos de Servicio
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                Cookies
-              </Link>
-            </div>
-          </div>
+          <motion.div 
+            className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            <motion.p 
+              className="text-gray-400 text-sm text-center md:text-left"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              © {new Date().getFullYear()} FANA Milling Center. {footer('copyright')}
+            </motion.p>
+            <motion.div 
+              className="flex space-x-6"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+            >
+              {[
+                footer('legal.privacy'), 
+                footer('legal.terms'), 
+                footer('legal.cookies')
+              ].map((link, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ y: -2 }}
+                >
+                  <Link href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                    {link}
+                  </Link>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </footer>
