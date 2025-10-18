@@ -2,6 +2,7 @@
 
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline';
 import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
 import { useTranslations } from 'next-intl';
@@ -36,13 +37,18 @@ export default function Footer() {
           {/* Company Info */}
           <motion.div variants={fadeInUp}>
             <motion.div 
-              className="flex items-center space-x-2 mb-6"
+              className="mb-6"
               whileHover={{ scale: 1.05 }}
             >
-              <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">F</span>
+              <div className="relative h-10 w-32">
+                <Image
+                  src="/images/logo/logo-fana-1.png"
+                  alt="FANA Milling Center Logo"
+                  fill
+                  className="object-contain"
+                  sizes="128px"
+                />
               </div>
-              <span className="text-xl font-bold">FANA</span>
             </motion.div>
             <p className="text-gray-400 mb-6 text-sm leading-relaxed">
               {footer('description')}

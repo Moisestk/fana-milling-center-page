@@ -136,7 +136,7 @@ export default function ServiciosPage() {
                       {/* Real Service Image */}
                       <div className="relative w-full h-full">
                         <Image
-                          src="/images/services/service-detail-structures.jpg"
+                          src="/images/services/service-detail-structures.png"
                           alt={t('millingStructures.imageAlt')}
                           fill
                           className="object-cover transition-transform duration-300 group-hover:scale-110"
@@ -178,7 +178,7 @@ export default function ServiciosPage() {
                       {/* Real Service Image */}
                       <div className="relative w-full h-full">
                         <Image
-                          src="/images/services/service-detail-aesthetics.jpg"
+                          src="/images/services/service-detail-aesthetics.png"
                           alt={t('advancedAesthetics.imageAlt')}
                           fill
                           className="object-cover transition-transform duration-300 group-hover:scale-110"

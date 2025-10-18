@@ -14,7 +14,7 @@ export default function OurServicesSection() {
       title: t('service1.title'),
       description: t('service1.description'),
       bgColor: 'from-blue-50 to-blue-100',
-      image: '/images/services/service-general-milling.jpg',
+      image: '/images/services/service-general-milling.png',
       imageAlt: 'Fresado CNC de materiales dentales'
     },
     {
@@ -22,7 +22,7 @@ export default function OurServicesSection() {
       title: t('service2.title'),
       description: t('service2.description'),
       bgColor: 'from-green-50 to-green-100',
-      image: '/images/services/service-implant-structures.jpg',
+      image: '/images/services/service-implant-structures.png',
       imageAlt: 'Estructuras de implantes dentales en titanio'
     },
     {
@@ -30,7 +30,7 @@ export default function OurServicesSection() {
       title: t('service3.title'),
       description: t('service3.description'),
       bgColor: 'from-purple-50 to-purple-100',
-      image: '/images/services/service-advanced-aesthetics.jpg',
+      image: '/images/services/service-advanced-aesthetics.png',
       imageAlt: 'Coronas de zirconio estéticas'
     }
   ];

@@ -6,6 +6,7 @@ import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import LanguageSwitcher from './LanguageSwitcher';
 
@@ -102,14 +103,20 @@ export default function Header() {
             {/* Logo */}
             <Link href={`/${locale}`}>
               <motion.div 
-                className="flex items-center space-x-2 cursor-pointer"
+                className="flex items-center cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <div className="w-9 h-9 bg-blue-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">F</span>
+                <div className="relative h-10 w-32">
+                  <Image
+                    src="/images/logo/logo-fana-2.png"
+                    alt="FANA Milling Center Logo"
+                    fill
+                    className="object-contain"
+                    priority
+                    sizes="128px"
+                  />
                 </div>
-                <span className="text-xl font-bold text-gray-800">FANA</span>
               </motion.div>
             </Link>
 

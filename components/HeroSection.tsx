@@ -51,7 +51,7 @@ export default function HeroSection() {
         {/* Real Image (will show when image is available) */}
         <div className="absolute inset-0">
           <Image
-            src="/images/hero/hero-background.jpg"
+            src="/images/hero/hero-background.png"
             alt="Fresadora CNC de 5 ejes para prótesis dentales FANA"
             fill
             priority

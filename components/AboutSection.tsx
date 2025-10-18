@@ -47,7 +47,7 @@ export default function AboutSection() {
                   {/* Real Laboratory Image */}
                   <div className="relative w-full h-full">
                     <Image
-                      src="/images/about/about-laboratory.jpg"
+                      src="/images/about/about-laboratory.png"
                       alt="Laboratorio dental CAD/CAM FANA con equipos de fresado"
                       fill
                       className="object-cover"
