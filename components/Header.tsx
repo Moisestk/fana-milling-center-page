@@ -109,7 +109,7 @@ export default function Header() {
               >
                 <div className="relative h-10 w-32">
                   <Image
-                    src="/images/logo/logo-fana-2.png"
+                    src="/images/logo/logo-fana-1.png"
                     alt="FANA Milling Center Logo"
                     fill
                     className="object-contain"
