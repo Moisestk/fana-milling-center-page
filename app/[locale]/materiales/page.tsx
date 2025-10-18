@@ -11,7 +11,10 @@ import {
   BoltIcon, 
   CubeIcon, 
   CogIcon, 
-  BeakerIcon 
+  BeakerIcon,
+  Cog6ToothIcon,
+  MagnifyingGlassCircleIcon,
+  ComputerDesktopIcon
 } from '@heroicons/react/24/outline';
 
 export default function MaterialesPage() {
@@ -247,19 +250,25 @@ export default function MaterialesPage() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <div className="text-4xl mb-4">⚙️</div>
+              <div className="flex justify-center mb-4">
+                <Cog6ToothIcon className="w-16 h-16 text-blue-600" />
+              </div>
               <h3 className="text-xl font-bold text-gray-800 mb-2">Fresadoras 5 Ejes</h3>
               <p className="text-gray-600 text-sm">Precisión micrométrica (±5μm)</p>
             </div>
             
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <div className="text-4xl mb-4">🔬</div>
+              <div className="flex justify-center mb-4">
+                <MagnifyingGlassCircleIcon className="w-16 h-16 text-blue-600" />
+              </div>
               <h3 className="text-xl font-bold text-gray-800 mb-2">Escáneres 3D</h3>
               <p className="text-gray-600 text-sm">Resolución de 10μm</p>
             </div>
             
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <div className="text-4xl mb-4">💻</div>
+              <div className="flex justify-center mb-4">
+                <ComputerDesktopIcon className="w-16 h-16 text-blue-600" />
+              </div>
               <h3 className="text-xl font-bold text-gray-800 mb-2">Software CAD/CAM</h3>
               <p className="text-gray-600 text-sm">Certificación CE médica</p>
             </div>
