@@ -1,6 +1,6 @@
 'use client';
 
-import { WrenchScrewdriverIcon, SparklesIcon, CogIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
+import { CubeIcon, StarIcon, CogIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { staggerContainer, staggerItem, viewportOptions } from '@/lib/animations';
@@ -9,11 +9,11 @@ export default function ServicesNavigation() {
   const t = useTranslations('newDesign.servicesNav');
   const services = [
     {
-      icon: WrenchScrewdriverIcon,
+      icon: CubeIcon,
       name: t('service1')
     },
     {
-      icon: SparklesIcon,
+      icon: StarIcon,
       name: t('service2')
     },
     {

@@ -1,6 +1,6 @@
 'use client';
 
-import { WrenchScrewdriverIcon, CogIcon, SparklesIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
+import { CubeIcon, CogIcon, TruckIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -10,7 +10,7 @@ export default function OurServicesSection() {
   const t = useTranslations('newDesign.services');
   const services = [
     {
-      icon: WrenchScrewdriverIcon,
+      icon: CubeIcon,
       title: t('service1.title'),
       description: t('service1.description'),
       bgColor: 'from-blue-50 to-blue-100',
@@ -26,7 +26,7 @@ export default function OurServicesSection() {
       imageAlt: 'Estructuras de implantes dentales en titanio'
     },
     {
-      icon: SparklesIcon,
+      icon: TruckIcon,
       title: t('service3.title'),
       description: t('service3.description'),
       bgColor: 'from-purple-50 to-purple-100',
