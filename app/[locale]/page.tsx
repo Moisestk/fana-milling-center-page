@@ -339,7 +339,7 @@ export default function Home() {
               ].map((item, index) => (
                 <motion.div 
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center"
                   variants={staggerItem}
                   whileHover={{ 
                     scale: 1.05,
@@ -348,7 +348,7 @@ export default function Home() {
                   transition={{ duration: 0.3 }}
                 >
                   <motion.div 
-                    className="mb-3"
+                    className="mb-3 flex items-center justify-center"
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
                   >
