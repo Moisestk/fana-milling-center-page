@@ -39,7 +39,7 @@ export default function Home() {
         <section className="bg-fana-primary py-16 overflow-hidden">
           <div className="container mx-auto px-4">
             <motion.div 
-              className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-white"
+              className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 text-center text-white"
               initial="initial"
               whileInView="animate"
               viewport={viewportOptions}
@@ -101,7 +101,7 @@ export default function Home() {
           </motion.div>
 
           <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto"
             initial="initial"
             whileInView="animate"
             viewport={viewportOptions}
@@ -183,7 +183,7 @@ export default function Home() {
           </motion.div>
 
           <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto"
             initial="initial"
             whileInView="animate"
             viewport={viewportOptions}
@@ -265,7 +265,7 @@ export default function Home() {
             variants={staggerContainer}
           >
             <motion.h2 
-              className="text-3xl md:text-4xl font-bold mb-6"
+              className="text-3xl md:text-4xl font-bold mb-6 text-white"
               variants={fadeInUp}
             >
               {t('cta1.title')}
@@ -307,7 +307,7 @@ export default function Home() {
      
 
       {/* CTA Section 2 - Contact */}
-      <section className="bg-gradient-to-br from-gray-800 to-gray-900 py-16 text-white overflow-hidden">
+      <section className="bg-gradient-to-br from-fana-secondary to-fana-white py-16 text-gray-800 overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.div 
             className="max-w-4xl mx-auto text-center"
@@ -323,27 +323,33 @@ export default function Home() {
               {t('cta2.title')}
             </motion.h2>
             <motion.p 
-              className="text-xl text-gray-300 mb-8"
+              className="text-xl text-fana-primary mb-8"
               variants={fadeInUp}
             >
               {t('cta2.subtitle')}
             </motion.p>
             <motion.div 
-              className="grid md:grid-cols-3 gap-6 mb-8"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8"
               variants={staggerContainer}
             >
               {[
-                { Icon: PhoneIcon, title: t('cta2.contact.phone.title'), text: t('cta2.contact.phone.value') },
+                { 
+                  Icon: PhoneIcon, 
+                  title: t('cta2.contact.phone.title'), 
+                  text: t('cta2.contact.phone.value'),
+                  text2: t('cta2.contact.phone.value2')
+                },
                 { Icon: EnvelopeIcon, title: t('cta2.contact.email.title'), text: t('cta2.contact.email.value') },
                 { Icon: MapPinIcon, title: t('cta2.contact.location.title'), text: t('cta2.contact.location.value') }
               ].map((item, index) => (
                 <motion.div 
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center"
+                  className="bg-white/80 backdrop-blur-sm rounded-xl p-6 text-center shadow-lg"
                   variants={staggerItem}
                   whileHover={{ 
                     scale: 1.05,
-                    backgroundColor: 'rgba(255, 255, 255, 0.15)'
+                    backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                    boxShadow: '0 10px 30px -5px rgba(0, 0, 0, 0.1)'
                   }}
                   transition={{ duration: 0.3 }}
                 >
@@ -352,17 +358,18 @@ export default function Home() {
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
                   >
-                    <item.Icon className="w-12 h-12 text-white" />
+                    <item.Icon className="w-12 h-12 text-fana-primary" />
                   </motion.div>
-                  <h3 className="font-bold mb-2">{item.title}</h3>
-                  <p className="text-gray-300 text-sm">{item.text}</p>
+                  <h3 className="font-bold mb-2 text-fana-primary">{item.title}</h3>
+                  <p className="text-fana-navy text-sm">{item.text}</p>
+                  {item.text2 && <p className="text-fana-navy text-sm mt-1">{item.text2}</p>}
                 </motion.div>
               ))}
             </motion.div>
             <motion.div variants={fadeInUp}>
               <Link href={`/${locale}/contacto`}>
                 <motion.div 
-                  className="bg-fana-primary text-white px-10 py-4 rounded-lg hover:bg-fana-navy transition-colors font-medium text-lg shadow-lg inline-flex items-center cursor-pointer"
+                  className="bg-fana-primary text-white px-10 py-4 rounded-lg hover:bg-fana-navy hover:text-white transition-colors font-medium text-lg shadow-lg inline-flex items-center cursor-pointer"
                   whileHover={{ scale: 1.05, y: -5, boxShadow: "0 20px 40px -10px rgba(37, 99, 235, 0.5)" }}
                   whileTap={{ scale: 0.95 }}
                 >

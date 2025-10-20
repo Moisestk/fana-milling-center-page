@@ -1,7 +1,6 @@
 'use client';
 
 import { CheckIcon } from '@heroicons/react/24/outline';
-import { Sparkles, Star } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
@@ -23,7 +22,7 @@ export default function AboutSection() {
   return (
     <section className="bg-white py-16 md:py-20 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Image */}
           <motion.div 
             className="relative"
@@ -61,27 +60,6 @@ export default function AboutSection() {
                   </div>
                 </motion.div>
 
-                {/* Decorative stars */}
-                <motion.div 
-                  className="absolute -top-4 -left-4 z-20"
-                  animate={{ 
-                    rotate: [0, 15, -15, 0],
-                    scale: [1, 1.1, 1]
-                  }}
-                  transition={{ duration: 3, repeat: Infinity }}
-                >
-                  <Sparkles className="w-8 h-8 text-fana-primary" />
-                </motion.div>
-                <motion.div 
-                  className="absolute top-8 -left-6 z-20"
-                  animate={{ 
-                    rotate: [0, 360],
-                    scale: [1, 1.2, 1]
-                  }}
-                  transition={{ duration: 4, repeat: Infinity }}
-                >
-                  <Star className="w-6 h-6 text-blue-400 fill-blue-400" />
-                </motion.div>
 
                 {/* Quality Badge */}
                 <motion.div 
@@ -91,9 +69,9 @@ export default function AboutSection() {
                   transition={{ y: { duration: 3, repeat: Infinity } }}
                 >
                   <div className="text-center">
-                    <p className="text-xs font-semibold">CALIDAD</p>
-                    <p className="text-2xl font-bold">ISO</p>
-                    <p className="text-xs">13485</p>
+                    <p className="text-xs font-semibold text-white">CALIDAD</p>
+                    <p className="text-2xl font-bold text-white">ISO</p>
+                    <p className="text-xs text-white">13485</p>
                   </div>
                 </motion.div>
               </div>
@@ -167,7 +145,7 @@ export default function AboutSection() {
             >
               <Link href={`/${locale}/servicios`}>
                 <motion.button 
-                  className="bg-fana-primary text-white px-8 py-3 rounded-lg hover:bg-fana-navy transition-colors font-semibold text-sm shadow-md hover:shadow-lg font-body tracking-wide"
+                  className="bg-fana-primary text-white px-8 py-3 rounded-lg hover:bg-fana-navy hover:text-white transition-colors font-semibold text-sm shadow-md hover:shadow-lg font-body tracking-wide"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >

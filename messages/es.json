@@ -210,7 +210,7 @@
       "subtitle": "Múltiples canales de contacto para atenderte de la mejor manera",
       "phone": {
         "title": "Teléfono B2B",
-        "number": "+34 91 123 45 67",
+        "number": "+1 (832) 897-6805",
         "hours": "Lunes a Viernes: 8:00 - 18:00"
       },
       "email": {
@@ -494,7 +494,7 @@
   },
   "newDesign": {
     "header": {
-      "phone": "+1 (305) 123-4567",
+      "phone": "+1 (832) 897-6805",
       "email": "info@fanamilling.com",
       "address": "8501 NW 107TH CT. UNIT 3, MIAMI, FL 33178",
       "cta": "Obtén Cotización"
@@ -660,7 +660,8 @@
         "contact": {
           "phone": {
             "title": "Llámanos",
-            "value": "+34 91 123 45 67"
+            "value": "+1 (832) 897-6805",
+            "value2": "+1 (832) 897-8335"
           },
           "email": {
             "title": "Escríbenos",
@@ -668,7 +669,7 @@
           },
           "location": {
             "title": "Visítanos",
-            "value": "Madrid, España"
+            "value": "MIAMI, FL 33178"
           }
         },
         "contactButton": "Contactar Ahora"
@@ -760,7 +761,8 @@
     "contactTitle": "Contacto",
     "contact": {
       "phone": {
-        "number": "+1 (305) 123-4567",
+        "number": "+1 (832) 897-6805",
+        "number2": "+1 (832) 897-8335",
         "hours": "Lun-Vie: 8:00 - 18:00 EST"
       },
       "email": {
@@ -777,6 +779,20 @@
       "privacy": "Política de Privacidad",
       "terms": "Términos de Servicio",
       "cookies": "Cookies"
+    }
+  },
+  "about": {
+    "history": {
+      "title": "Nuestra Historia",
+      "paragraph1": "FANA Milling Center nació hace más de 15 años con una visión clara: revolucionar la fabricación dental mediante la tecnología CAD/CAM más avanzada. Desde nuestros inicios, hemos estado comprometidos con la excelencia y la innovación constante.",
+      "paragraph2": "Hoy en día, somos líderes en el sector, ofreciendo servicios de fresado CNC de 5 ejes con precisión micrométrica. Nuestro equipo de expertos trabaja día a día para garantizar que cada prótesis dental que sale de nuestro laboratorio cumpla con los más altos estándares de calidad.",
+      "paragraph3": "Con más de 500 casos completados exitosamente y una tasa de satisfacción del 99%, nos enorgullece ser el socio tecnológico de confianza para laboratorios y clínicas dentales en toda España."
+    },
+    "cta": {
+      "title": "¿Interesado en Nuestros Servicios?",
+      "subtitle": "Descubre cómo podemos ayudarte a mejorar la calidad de tus prótesis dentales.",
+      "contactButton": "Contactar Ahora",
+      "servicesButton": "Ver Servicios"
     }
   }
 }

@@ -260,8 +260,8 @@ export default function PoliticaCookiesPage() {
                   className="bg-fana-primary text-white p-8 rounded-2xl text-center"
                   variants={fadeInUp}
                 >
-                  <h3 className="text-2xl font-bold mb-4">¿Tienes Preguntas sobre Cookies?</h3>
-                  <p className="text-fana-secondary mb-6">
+                  <h3 className="text-2xl font-bold mb-4 text-white">¿Tienes Preguntas sobre Cookies?</h3>
+                  <p className="text-white mb-6">
                     Si necesitas más información sobre nuestra política de cookies o quieres gestionar tus preferencias, 
                     nuestro equipo está disponible para ayudarte.
                   </p>

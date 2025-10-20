@@ -73,12 +73,12 @@ export default function ContactoPage() {
       {/* Contact Section */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
             <div>
               <h2 className="text-3xl font-bold text-gray-800 mb-6">Envíanos un Mensaje</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Nombre Completo
@@ -108,7 +108,7 @@ export default function ContactoPage() {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Teléfono
@@ -188,7 +188,8 @@ export default function ContactoPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-gray-800 mb-2">Teléfono</h3>
-                      <p className="text-gray-600">+34 91 123 45 67</p>
+                      <p className="text-gray-600">+1 (832) 897-6805</p>
+                      <p className="text-gray-600">+1 (832) 897-8335</p>
                       <p className="text-sm text-gray-500 mt-1">Lunes a Viernes: 8:00 - 18:00</p>
                     </div>
                   </div>
@@ -214,9 +215,8 @@ export default function ContactoPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-gray-800 mb-2">Dirección</h3>
-                      <p className="text-gray-600">Polígono Industrial Norte</p>
-                      <p className="text-gray-600">Calle Tecnología, 15</p>
-                      <p className="text-gray-600">28050 Madrid, España</p>
+                      <p className="text-gray-600">8501 NW 107TH CT. UNIT 3</p>
+                      <p className="text-gray-600">MIAMI, FL 33178</p>
                       <p className="text-sm text-gray-500 mt-1">Visitas con cita previa</p>
                     </div>
                   </div>

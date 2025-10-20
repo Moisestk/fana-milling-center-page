@@ -226,8 +226,8 @@ export default function TerminosServicioPage() {
                   className="bg-fana-primary text-white p-8 rounded-2xl text-center"
                   variants={fadeInUp}
                 >
-                  <h3 className="text-2xl font-bold mb-4">¿Necesitas Aclaraciones?</h3>
-                  <p className="text-fana-secondary mb-6">
+                  <h3 className="text-2xl font-bold mb-4 text-white">¿Necesitas Aclaraciones?</h3>
+                  <p className="text-white mb-6">
                     Si tienes alguna consulta sobre nuestros términos y condiciones o necesitas más información sobre nuestros servicios B2B, 
                     nuestro equipo está disponible para ayudarte.
                   </p>

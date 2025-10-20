@@ -264,8 +264,8 @@ export default function PoliticaPrivacidadPage() {
                   className="bg-fana-primary text-white p-8 rounded-2xl text-center"
                   variants={fadeInUp}
                 >
-                  <h3 className="text-2xl font-bold mb-4">¿Tienes Preguntas?</h3>
-                  <p className="text-fana-secondary mb-6">
+                  <h3 className="text-2xl font-bold mb-4 text-white">¿Tienes Preguntas?</h3>
+                  <p className="text-white mb-6">
                     Si tienes alguna consulta sobre nuestra política de privacidad o el tratamiento de tus datos, 
                     no dudes en contactarnos.
                   </p>

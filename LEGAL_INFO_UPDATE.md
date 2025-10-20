@@ -17,7 +17,7 @@ Se ha actualizado toda la información legal y de contacto de FANA con los datos
 - **Condado:** MIAMI-DADE
 
 ### Información de Contacto Actualizada
-- **Teléfono:** +1 (305) 123-4567
+- **Teléfono:** +1 (832) 897-6805
 - **Email:** info@fanamilling.com
 - **Dirección física:** 8501 NW 107TH CT. UNIT 3, MIAMI, FL 33178, USA
 - **Condado:** MIAMI-DADE COUNTY, USA
@@ -40,7 +40,7 @@ Se ha actualizado toda la información legal y de contacto de FANA con los datos
 ## Cambios Específicos Realizados
 
 ### Información de Contacto
-- ✅ Teléfono actualizado a +1 (305) 123-4567
+- ✅ Teléfono actualizado a +1 (832) 897-6805
 - ✅ Dirección actualizada a Miami, FL
 - ✅ Zona horaria actualizada a EST
 - ✅ Condado especificado como Miami-Dade

@@ -1,5 +1,8 @@
 {
-  "/[locale]/servicios/page": "app/[locale]/servicios/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/[locale]/politica-privacidad/page": "app/[locale]/politica-privacidad/page.js",
+  "/[locale]/terminos-servicio/page": "app/[locale]/terminos-servicio/page.js",
+  "/[locale]/politica-cookies/page": "app/[locale]/politica-cookies/page.js",
   "/[locale]/page": "app/[locale]/page.js",
-  "/[locale]/contacto/page": "app/[locale]/contacto/page.js"
+  "/[locale]/servicios/page": "app/[locale]/servicios/page.js"
 }

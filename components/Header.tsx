@@ -2,7 +2,21 @@
 
 import { useState } from 'react';
 import { PhoneIcon, EnvelopeIcon, MapPinIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
+
+// Instagram Icon Component
+const InstagramIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="white">
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+  </svg>
+);
+
+// TikTok Icon Component
+const TikTokIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="white">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+  </svg>
+);
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
@@ -29,64 +43,92 @@ export default function Header() {
     <>
       {/* Top Contact Bar */}
       <motion.div 
-        className="bg-fana-primary text-white py-2.5"
+        className="bg-fana-primary text-white py-2 sm:py-2.5"
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center text-xs">
-              <div className="flex items-center space-x-6">
+          {/* Mobile Layout */}
+          <div className="block sm:hidden">
+            <div className="flex justify-between items-center text-xs">
               <motion.div 
                 className="flex items-center space-x-1.5"
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1 }}
               >
-                <PhoneIcon className="w-3.5 h-3.5" />
-                <span>{t('phone')}</span>
+                <PhoneIcon className="w-3 h-3" />
+                <span className="text-xs">{t('phone')}</span>
               </motion.div>
               <motion.div 
                 className="flex items-center space-x-1.5"
-                initial={{ opacity: 0, x: -10 }}
+                initial={{ opacity: 0, x: 10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                <EnvelopeIcon className="w-3.5 h-3.5" />
-                <span>{t('email')}</span>
-              </motion.div>
-              <motion.div 
-                className="flex items-center space-x-1.5"
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3 }}
-              >
-                <MapPinIcon className="w-3.5 h-3.5" />
-                <span>{t('address')}</span>
+                <motion.a href="#" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="bg-white/20 hover:bg-white/30 rounded-full p-1.5 transition-all duration-200">
+                  <InstagramIcon className="w-3 h-3" />
+                </motion.a>
+                <motion.a href="#" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="bg-white/20 hover:bg-white/30 rounded-full p-1.5 transition-all duration-200">
+                  <TikTokIcon className="w-3 h-3" />
+                </motion.a>
+                <motion.a href="#" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="bg-white/20 hover:bg-white/30 rounded-full p-1.5 transition-all duration-200">
+                  <Linkedin className="w-3 h-3 text-white" fill="white" />
+                </motion.a>
               </motion.div>
             </div>
-            <motion.div 
-              className="flex items-center space-x-3"
-              initial={{ opacity: 0, x: 10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
-            >
-              <motion.a href="#" whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} className="hover:opacity-80 transition-opacity">
-                <Facebook className="w-3.5 h-3.5" fill="white" />
-              </motion.a>
-              <motion.a href="#" whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} className="hover:opacity-80 transition-opacity">
-                <Twitter className="w-3.5 h-3.5" fill="white" />
-              </motion.a>
-              <motion.a href="#" whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} className="hover:opacity-80 transition-opacity">
-                <Instagram className="w-3.5 h-3.5" />
-              </motion.a>
-              <motion.a href="#" whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} className="hover:opacity-80 transition-opacity">
-                <Linkedin className="w-3.5 h-3.5" fill="white" />
-              </motion.a>
-              <motion.a href="#" whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} className="hover:opacity-80 transition-opacity">
-                <Youtube className="w-3.5 h-3.5" fill="white" />
-              </motion.a>
-            </motion.div>
+          </div>
+
+          {/* Tablet and Desktop Layout */}
+          <div className="hidden sm:block">
+            <div className="flex justify-between items-center text-xs">
+              <div className="flex items-center space-x-4 lg:space-x-6">
+                <motion.div 
+                  className="flex items-center space-x-1.5"
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.1 }}
+                >
+                  <PhoneIcon className="w-3.5 h-3.5" />
+                  <span>{t('phone')}</span>
+                </motion.div>
+                <motion.div 
+                  className="flex items-center space-x-1.5"
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <EnvelopeIcon className="w-3.5 h-3.5" />
+                  <span className="hidden md:inline">{t('email')}</span>
+                </motion.div>
+                <motion.div 
+                  className="flex items-center space-x-1.5"
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  <MapPinIcon className="w-3.5 h-3.5" />
+                  <span className="hidden lg:inline">{t('address')}</span>
+                </motion.div>
+              </div>
+              <motion.div 
+                className="flex items-center space-x-2"
+                initial={{ opacity: 0, x: 10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 }}
+              >
+                <motion.a href="#" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="bg-white/20 hover:bg-white/30 rounded-full p-2 transition-all duration-200">
+                  <InstagramIcon className="w-3.5 h-3.5" />
+                </motion.a>
+                <motion.a href="#" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="bg-white/20 hover:bg-white/30 rounded-full p-2 transition-all duration-200">
+                  <TikTokIcon className="w-3.5 h-3.5" />
+                </motion.a>
+                <motion.a href="#" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="bg-white/20 hover:bg-white/30 rounded-full p-2 transition-all duration-200">
+                  <Linkedin className="w-3.5 h-3.5 text-white" fill="white" />
+                </motion.a>
+              </motion.div>
+            </div>
           </div>
         </div>
       </motion.div>
@@ -107,14 +149,14 @@ export default function Header() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <div className="relative h-14 w-44">
+                <div className="relative h-12 w-36 sm:h-14 sm:w-40 lg:h-16 lg:w-48">
                   <Image
                     src="/images/logo/logo-fana-1.png"
                     alt="FANA Milling Center Logo"
                     fill
                     className="object-contain"
                     priority
-                    sizes="176px"
+                    sizes="192px"
                   />
                 </div>
               </motion.div>

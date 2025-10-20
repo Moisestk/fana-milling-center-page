@@ -45,7 +45,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[80vh] sm:min-h-[85vh] lg:min-h-[90vh] flex items-center overflow-hidden">
       {/* Background Video with Overlay */}
       <div className="absolute inset-0 z-0">
         {/* Background Video */}
@@ -95,7 +95,7 @@ export default function HeroSection() {
 
             {/* Main Title */}
             <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight text-white font-heading tracking-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight text-white font-heading tracking-tight"
               variants={fadeInUp}
             >
               {t('title').split(' de Precisión')[0]}{' '}
@@ -121,7 +121,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <motion.div 
-              className="bg-white rounded-2xl shadow-2xl p-8"
+              className="bg-white rounded-2xl shadow-2xl p-4 sm:p-6 lg:p-8"
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
