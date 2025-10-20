@@ -149,7 +149,7 @@ export default function Header() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <div className="relative h-12 w-36 sm:h-14 sm:w-40 lg:h-16 lg:w-48">
+                <div className="relative h-14 w-40 sm:h-16 sm:w-48 lg:h-20 lg:w-56">
                   <Image
                     src="/images/logo/logo-fana-1.png"
                     alt="FANA Milling Center Logo"

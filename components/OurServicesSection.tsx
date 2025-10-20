@@ -8,7 +8,11 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { fadeInUp, staggerContainer, staggerItem, scaleIn, viewportOptions } from '@/lib/animations';
 
-export default function OurServicesSection() {
+interface OurServicesSectionProps {
+  showCTA?: boolean;
+}
+
+export default function OurServicesSection({ showCTA = true }: OurServicesSectionProps) {
   const t = useTranslations('newDesign.services');
   const params = useParams();
   const locale = params.locale as string || 'es';
@@ -64,20 +68,6 @@ export default function OurServicesSection() {
             <br />
             <span className="text-fana-primary">{t('title.part2')}</span>
           </motion.h2>
-          <motion.div 
-            className="flex justify-center mt-6"
-            variants={fadeInUp}
-          >
-            <Link href={`/${locale}/servicios`}>
-                <motion.button 
-                  className="bg-fana-primary text-white px-6 py-2.5 rounded-lg hover:bg-fana-navy transition-colors font-semibold text-sm shadow-md hover:shadow-lg font-body tracking-wide"
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                {t('cta')}
-              </motion.button>
-            </Link>
-          </motion.div>
         </motion.div>
 
         {/* Services Grid */}
@@ -157,6 +147,27 @@ export default function OurServicesSection() {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* CTA Button */}
+        {showCTA && (
+          <motion.div 
+            className="flex justify-center mt-12"
+            initial="initial"
+            whileInView="animate"
+            viewport={viewportOptions}
+            variants={fadeInUp}
+          >
+            <Link href={`/${locale}/servicios`}>
+              <motion.button 
+                className="bg-fana-primary text-white px-8 py-3 rounded-lg hover:bg-fana-navy transition-colors font-semibold text-sm shadow-md hover:shadow-lg font-body tracking-wide"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {t('cta')}
+              </motion.button>
+            </Link>
+          </motion.div>
+        )}
       </div>
     </section>
   );

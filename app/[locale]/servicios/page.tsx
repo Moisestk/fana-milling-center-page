@@ -77,7 +77,7 @@ export default function ServiciosPage() {
       </section>
 
       {/* Services Section */}
-      <OurServicesSection />
+      <OurServicesSection showCTA={false} />
 
       {/* Detailed Services */}
       <section className="bg-white py-16">

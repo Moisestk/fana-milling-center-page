@@ -540,13 +540,13 @@
     "about": {
       "badge": "ABOUT US",
       "title": {
-        "part1": "15 Years of Experience",
+        "part1": "Experts and Professionals",
         "part2": "in Dental Manufacturing"
       },
-      "description": "Specialists in CAD/CAM technology and high-precision CNC milling. Our laboratory combines over a decade of experience with the most advanced technology to offer dental prosthetics of maximum quality and micrometric precision.",
+      "description": "Specialists in CAD/CAM technology and high-precision CNC milling. Our team of highly trained professionals uses the most advanced technology to offer dental prosthetics of maximum quality and micrometric precision.",
       "features": {
         "feature1": "Premium Milling Services You Can Trust",
-        "feature2": "Award-Winning Experience in Dental Manufacturing",
+        "feature2": "Certified Professionals in Dental Manufacturing",
         "feature3": "Dedicated Experts Behind Every Smile"
       },
       "cta": "Learn More"
@@ -655,7 +655,7 @@
         "requestQuoteButton": "Request Quote"
       },
       "cta2": {
-        "title": "Have a Project in Mind?",
+        "title": "Want a Quote?",
         "subtitle": "Our team of experts is ready to help you choose the best solution for your laboratory",
         "contact": {
           "phone": {
@@ -669,7 +669,7 @@
           },
           "location": {
             "title": "Visit Us",
-            "value": "MIAMI, FL 33178"
+            "value": "8501 NW 107TH CT. UNIT 3, MIAMI, FL 33178"
           }
         },
         "contactButton": "Contact Now"

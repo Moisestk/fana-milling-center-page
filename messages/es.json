@@ -540,13 +540,13 @@
     "about": {
       "badge": "SOBRE NOSOTROS",
       "title": {
-        "part1": "15 Años de Experiencia",
+        "part1": "Expertos y Profesionales",
         "part2": "en Fabricación Dental"
       },
-      "description": "Especialistas en tecnología CAD/CAM y fresado CNC de alta precisión. Nuestro laboratorio combina la experiencia de más de una década con la tecnología más avanzada para ofrecer prótesis dentales de máxima calidad y precisión micrométrica.",
+      "description": "Especialistas en tecnología CAD/CAM y fresado CNC de alta precisión. Nuestro equipo de profesionales altamente capacitados utiliza la tecnología más avanzada para ofrecer prótesis dentales de máxima calidad y precisión micrométrica.",
       "features": {
         "feature1": "Servicios de Fresado Premium en los que Puedes Confiar",
-        "feature2": "Experiencia Galardonada en Fabricación Dental",
+        "feature2": "Profesionales Certificados en Fabricación Dental",
         "feature3": "Expertos Dedicados detrás de Cada Sonrisa"
       },
       "cta": "Conoce Más"
@@ -655,7 +655,7 @@
         "requestQuoteButton": "Solicitar Cotización"
       },
       "cta2": {
-        "title": "¿Tienes un Proyecto en Mente?",
+        "title": "¿Quieres una Cotización?",
         "subtitle": "Nuestro equipo de expertos está listo para ayudarte a elegir la mejor solución para tu laboratorio",
         "contact": {
           "phone": {
@@ -669,7 +669,7 @@
           },
           "location": {
             "title": "Visítanos",
-            "value": "MIAMI, FL 33178"
+            "value": "8501 NW 107TH CT. UNIT 3, MIAMI, FL 33178"
           }
         },
         "contactButton": "Contactar Ahora"

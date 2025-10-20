@@ -52,7 +52,7 @@ export default function Footer() {
               className="mb-6"
               whileHover={{ scale: 1.05 }}
             >
-              <div className="relative h-16 w-48">
+              <div className="relative h-20 w-56">
                 <Image
                   src="/images/logo/logo-fana-2.png"
                   alt="FANA Milling Center Logo"

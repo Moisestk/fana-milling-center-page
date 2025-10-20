@@ -59,21 +59,6 @@ export default function AboutSection() {
                     />
                   </div>
                 </motion.div>
-
-
-                {/* Quality Badge */}
-                <motion.div 
-                  className="absolute bottom-8 -right-4 bg-blue-900 text-white rounded-full w-24 h-24 flex items-center justify-center shadow-lg z-20"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ y: { duration: 3, repeat: Infinity } }}
-                >
-                  <div className="text-center">
-                    <p className="text-xs font-semibold text-white">CALIDAD</p>
-                    <p className="text-2xl font-bold text-white">ISO</p>
-                    <p className="text-xs text-white">13485</p>
-                  </div>
-                </motion.div>
               </div>
             </div>
           </motion.div>
