@@ -95,7 +95,7 @@ export default function HeroSection() {
 
             {/* Main Title */}
             <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white"
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight text-white font-heading tracking-tight"
               variants={fadeInUp}
             >
               {t('title').split(' de Precisión')[0]}{' '}
@@ -106,7 +106,7 @@ export default function HeroSection() {
 
             {/* Description */}
             <motion.p 
-              className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl"
+              className="text-lg md:text-xl lg:text-2xl text-gray-200 leading-relaxed max-w-2xl font-body"
               variants={fadeInUp}
             >
             {t('description')}
@@ -125,7 +125,7 @@ export default function HeroSection() {
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 font-heading tracking-tight">
                 {t('form.title')}
               </h2>
 
@@ -139,7 +139,7 @@ export default function HeroSection() {
                     onChange={handleInputChange}
                     placeholder={t('form.fullName')}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fana-primary focus:border-transparent transition-all outline-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fana-primary focus:border-transparent transition-all outline-none font-body text-gray-700 placeholder-gray-500"
                   />
                 </div>
 
@@ -152,7 +152,7 @@ export default function HeroSection() {
                     onChange={handleInputChange}
                     placeholder={t('form.phone')}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fana-primary focus:border-transparent transition-all outline-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fana-primary focus:border-transparent transition-all outline-none font-body text-gray-700 placeholder-gray-500"
                   />
                 </div>
 
@@ -165,13 +165,13 @@ export default function HeroSection() {
                     onChange={handleInputChange}
                     placeholder={t('form.email')}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fana-primary focus:border-transparent transition-all outline-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fana-primary focus:border-transparent transition-all outline-none font-body text-gray-700 placeholder-gray-500"
                   />
                 </div>
 
                 {/* Service Options */}
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-3">
+                  <label className="block text-sm font-semibold text-gray-700 mb-3 font-body">
                     {t('form.serviceOptions')}
                   </label>
                   <div className="grid grid-cols-2 gap-3">
@@ -192,7 +192,7 @@ export default function HeroSection() {
                           onChange={() => handleServiceToggle(service.id)}
                           className="w-4 h-4 text-fana-primary rounded focus:ring-2 focus:ring-fana-primary"
                         />
-                        <span className="ml-2 text-sm text-gray-700">{service.label}</span>
+                        <span className="ml-2 text-sm text-gray-700 font-body">{service.label}</span>
                       </motion.label>
                     ))}
                   </div>
@@ -201,7 +201,7 @@ export default function HeroSection() {
                 {/* Submit Button */}
               <motion.button
                 type="submit"
-                className="w-full bg-fana-primary text-white py-4 rounded-lg font-semibold text-lg shadow-lg hover:bg-fana-navy transition-colors"
+                className="w-full bg-fana-primary text-white py-4 rounded-lg font-semibold text-lg shadow-lg hover:bg-fana-navy transition-colors font-body tracking-wide"
                 whileHover={{ scale: 1.02, boxShadow: "0 20px 40px -10px rgba(18, 93, 163, 0.5)" }}
                 whileTap={{ scale: 0.98 }}
               >

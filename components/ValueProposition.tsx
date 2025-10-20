@@ -78,8 +78,8 @@ export default function ValueProposition() {
             viewport={{ once: true }}
           >
             <div className="bg-fana-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <ComputerDesktopIcon className="w-8 h-8 text-blue-600" />
+              <div className="w-16 h-16 bg-fana-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                <ComputerDesktopIcon className="w-8 h-8 text-fana-primary" />
               </div>
               <h3 className="font-playfair text-2xl font-semibold text-fana-navy mb-4">
                 {t('quality.title')}

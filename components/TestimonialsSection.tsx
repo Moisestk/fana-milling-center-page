@@ -17,7 +17,7 @@ export default function TestimonialsSection() {
       clinic: t('testimonial1.clinic'),
       content: t('testimonial1.content'),
       rating: 5,
-      gradient: "from-blue-500 to-blue-600"
+      gradient: "from-fana-primary to-fana-navy"
     },
     {
       id: 2,

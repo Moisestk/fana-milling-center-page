@@ -1,4 +1,4 @@
-// File: C:\Users\moise\Desktop\artica\fana\app\[locale]\layout.tsx
+// File: C:\Users\ismaa\OneDrive\Escritorio\artica\fana\app\[locale]\layout.tsx
 import * as entry from '../../../../app/[locale]/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

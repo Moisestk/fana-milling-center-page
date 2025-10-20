@@ -23,7 +23,7 @@ export default function ServiciosPage() {
         <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-16 md:py-24 overflow-hidden">
+      <section className="bg-gradient-to-br from-gray-50 to-fana-secondary py-16 md:py-24 overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center max-w-4xl mx-auto"
@@ -32,17 +32,17 @@ export default function ServiciosPage() {
             variants={staggerContainer}
           >
             <motion.div 
-              className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-6"
+              className="inline-flex items-center gap-2 bg-fana-secondary text-fana-primary px-4 py-2 rounded-full text-sm font-medium mb-6"
               variants={fadeInUp}
             >
-              <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+              <span className="w-2 h-2 bg-fana-primary rounded-full"></span>
               {t('hero.badge')}
             </motion.div>
             <motion.h1 
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight"
               variants={fadeInUp}
             >
-              <span className="text-blue-600">{t('hero.title').split(' de Fresado Dental')[0]}</span> {t('hero.title').includes(' de Fresado Dental') ? 'de Fresado Dental' : t('hero.title').split(' ').slice(-3).join(' ')}
+              <span className="text-fana-primary">{t('hero.title').split(' de Fresado Dental')[0]}</span> {t('hero.title').includes(' de Fresado Dental') ? 'de Fresado Dental' : t('hero.title').split(' ').slice(-3).join(' ')}
             </motion.h1>
             <motion.p 
               className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8"
@@ -67,7 +67,7 @@ export default function ServiciosPage() {
                   variants={staggerItem}
                   whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
                 >
-                  <div className="text-3xl font-bold text-blue-600 mb-2">{stat.value}</div>
+                  <div className="text-3xl font-bold text-fana-primary mb-2">{stat.value}</div>
                   <div className="text-gray-600">{stat.label}</div>
                 </motion.div>
               ))}
@@ -88,12 +88,12 @@ export default function ServiciosPage() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center">
+                    <div className="w-16 h-16 bg-fana-primary rounded-2xl flex items-center justify-center">
                       <CubeIcon className="w-8 h-8 text-white" />
                     </div>
                     <div>
                       <h3 className="text-3xl font-bold text-gray-800">{t('millingStructures.title')}</h3>
-                      <p className="text-blue-600 font-medium">{t('millingStructures.subtitle')}</p>
+                      <p className="text-fana-primary font-medium">{t('millingStructures.subtitle')}</p>
                     </div>
                   </div>
                   
@@ -102,12 +102,12 @@ export default function ServiciosPage() {
                   </p>
                   
                   <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="bg-blue-50 p-4 rounded-xl">
-                      <div className="text-2xl font-bold text-blue-600 mb-1">{t('millingStructures.precision.value')}</div>
+                    <div className="bg-fana-secondary p-4 rounded-xl">
+                      <div className="text-2xl font-bold text-fana-primary mb-1">{t('millingStructures.precision.value')}</div>
                       <div className="text-sm text-gray-600">{t('millingStructures.precision.label')}</div>
                     </div>
-                    <div className="bg-blue-50 p-4 rounded-xl">
-                      <div className="text-2xl font-bold text-blue-600 mb-1">{t('millingStructures.delivery.value')}</div>
+                    <div className="bg-fana-secondary p-4 rounded-xl">
+                      <div className="text-2xl font-bold text-fana-primary mb-1">{t('millingStructures.delivery.value')}</div>
                       <div className="text-sm text-gray-600">{t('millingStructures.delivery.label')}</div>
                     </div>
                   </div>
@@ -116,19 +116,19 @@ export default function ServiciosPage() {
                     <h4 className="text-lg font-bold text-gray-800">{t('millingStructures.materialsTitle')}</h4>
                     <div className="grid grid-cols-2 gap-3">
                       <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <div className="w-2 h-2 bg-fana-secondary0 rounded-full"></div>
                         <span className="text-gray-600 text-sm">{t('millingStructures.materials.zirconia')}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <div className="w-2 h-2 bg-fana-secondary0 rounded-full"></div>
                         <span className="text-gray-600 text-sm">{t('millingStructures.materials.titanium')}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <div className="w-2 h-2 bg-fana-secondary0 rounded-full"></div>
                         <span className="text-gray-600 text-sm">{t('millingStructures.materials.chromeCobalt')}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <div className="w-2 h-2 bg-fana-secondary0 rounded-full"></div>
                         <span className="text-gray-600 text-sm">{t('millingStructures.materials.pmma')}</span>
                       </div>
                     </div>
@@ -136,7 +136,7 @@ export default function ServiciosPage() {
                 </div>
                 
                 <div>
-                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 overflow-hidden">
+                  <div className="bg-gradient-to-br from-fana-secondary to-blue-100 rounded-3xl p-8 overflow-hidden">
                     <div className="aspect-square bg-white rounded-2xl overflow-hidden relative group">
                       {/* Real Service Image */}
                       <Image
@@ -157,7 +157,7 @@ export default function ServiciosPage() {
                       {/* Placeholder (shows if image not available) */}
                       <div className="absolute inset-0 flex items-center justify-center bg-white" style={{display: 'none'}}>
                         <div className="text-center">
-                          <div className="w-32 h-32 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <div className="w-32 h-32 bg-fana-primary rounded-full flex items-center justify-center mx-auto mb-4">
                             <CubeIcon className="w-16 h-16 text-white" />
                           </div>
                           <h4 className="text-xl font-bold text-gray-800">{t('millingStructures.imageAlt')}</h4>
@@ -274,7 +274,7 @@ export default function ServiciosPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-600 py-16">
+      <section className="bg-fana-primary py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             {t('cta.title')}
@@ -285,13 +285,13 @@ export default function ServiciosPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href={`/${locale}/contacto`} 
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors"
+              className="bg-white text-fana-primary px-8 py-3 rounded-lg font-medium hover:bg-fana-secondary transition-colors"
             >
               {t('cta.contactButton')}
             </Link>
             <Link 
               href={`/${locale}/materiales`} 
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-fana-primary transition-colors"
             >
               {t('cta.materialsButton')}
             </Link>

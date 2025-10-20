@@ -15,7 +15,7 @@ export default function ServicesCarousel() {
       title: t('service1.title'),
       description: t('service1.description'),
       icon: "🔧",
-      gradient: "from-blue-500 to-blue-600"
+      gradient: "from-fana-primary to-fana-navy"
     },
     {
       id: 2,

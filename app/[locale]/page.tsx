@@ -36,7 +36,7 @@ export default function Home() {
         <OurServicesSection />
         
         {/* Stats Section */}
-        <section className="bg-blue-600 py-16 overflow-hidden">
+        <section className="bg-fana-primary py-16 overflow-hidden">
           <div className="container mx-auto px-4">
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-white"
@@ -90,7 +90,7 @@ export default function Home() {
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4"
               variants={fadeInUp}
             >
-              {t('whyChooseUs.title').split(' FANA?')[0]} <span className="text-blue-600">FANA?</span>
+              {t('whyChooseUs.title').split(' FANA?')[0]} <span className="text-fana-primary">FANA?</span>
             </motion.h2>
             <motion.p 
               className="text-lg text-gray-600 max-w-3xl mx-auto"
@@ -144,7 +144,7 @@ export default function Home() {
                 transition={{ duration: 0.3 }}
               >
                 <motion.div 
-                  className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-6"
+                  className="w-12 h-12 bg-fana-primary rounded-full flex items-center justify-center mb-6"
                   whileHover={{ scale: 1.2, rotate: 360 }}
                   transition={{ duration: 0.5 }}
                 >
@@ -172,7 +172,7 @@ export default function Home() {
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4"
               variants={fadeInUp}
             >
-              {t('testimonials.title').split(' Nuestros Clientes')[0]} <span className="text-blue-600">{t('testimonials.title').split(' ').slice(-2).join(' ')}</span>
+              {t('testimonials.title').split(' Nuestros Clientes')[0]} <span className="text-fana-primary">{t('testimonials.title').split(' ').slice(-2).join(' ')}</span>
             </motion.h2>
             <motion.p 
               className="text-lg text-gray-600 max-w-3xl mx-auto"
@@ -221,7 +221,7 @@ export default function Home() {
               >
                 <div className="flex items-center mb-6">
                   <motion.div 
-                    className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg"
+                    className="w-12 h-12 bg-fana-primary rounded-full flex items-center justify-center text-white font-bold text-lg"
                     whileHover={{ scale: 1.2, rotate: 360 }}
                     transition={{ duration: 0.5 }}
                   >
@@ -255,7 +255,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section 1 - Services */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-700 py-16 overflow-hidden">
+      <section className="bg-gradient-to-br from-fana-primary to-fana-navy py-16 overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.div 
             className="max-w-4xl mx-auto text-center text-white"
@@ -282,7 +282,7 @@ export default function Home() {
             >
               <Link href={`/${locale}/servicios`}>
                 <motion.div 
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-medium text-lg shadow-lg inline-flex items-center justify-center cursor-pointer"
+                  className="bg-white text-fana-primary px-8 py-4 rounded-lg hover:bg-fana-secondary transition-colors font-medium text-lg shadow-lg inline-flex items-center justify-center cursor-pointer"
                   whileHover={{ scale: 1.05, y: -5 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -292,7 +292,7 @@ export default function Home() {
               </Link>
               <Link href={`/${locale}/contacto`}>
                 <motion.div 
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium text-lg inline-flex items-center justify-center cursor-pointer"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-fana-primary transition-colors font-medium text-lg inline-flex items-center justify-center cursor-pointer"
                   whileHover={{ scale: 1.05, y: -5 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -362,7 +362,7 @@ export default function Home() {
             <motion.div variants={fadeInUp}>
               <Link href={`/${locale}/contacto`}>
                 <motion.div 
-                  className="bg-blue-600 text-white px-10 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium text-lg shadow-lg inline-flex items-center cursor-pointer"
+                  className="bg-fana-primary text-white px-10 py-4 rounded-lg hover:bg-fana-navy transition-colors font-medium text-lg shadow-lg inline-flex items-center cursor-pointer"
                   whileHover={{ scale: 1.05, y: -5, boxShadow: "0 20px 40px -10px rgba(37, 99, 235, 0.5)" }}
                   whileTap={{ scale: 0.95 }}
                 >

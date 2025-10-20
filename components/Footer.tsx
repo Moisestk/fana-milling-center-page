@@ -50,7 +50,7 @@ export default function Footer() {
                 />
               </div>
             </motion.div>
-            <p className="text-gray-400 mb-6 text-sm leading-relaxed">
+            <p className="text-gray-400 mb-6 text-sm leading-relaxed font-body">
               {footer('description')}
             </p>
             <div className="flex space-x-4">
@@ -58,7 +58,7 @@ export default function Footer() {
                 <motion.a 
                   key={index}
                   href={href}
-                  className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
+                  className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-fana-primary transition-colors"
                   whileHover={{ scale: 1.2, y: -3 }}
                   whileTap={{ scale: 0.9 }}
                   initial={{ opacity: 0, y: 20 }}
@@ -73,7 +73,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <motion.div variants={fadeInUp}>
-            <h3 className="text-lg font-bold mb-6">{footer('quickLinks')}</h3>
+            <h3 className="text-lg font-bold mb-6 font-heading tracking-tight">{footer('quickLinks')}</h3>
             <motion.ul 
               className="space-y-3"
               variants={staggerContainer}
@@ -90,7 +90,7 @@ export default function Footer() {
                   variants={staggerItem}
                   whileHover={{ x: 5 }}
                 >
-                  <Link href={link.href} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                  <Link href={link.href} className="text-gray-400 hover:text-blue-400 transition-colors text-sm font-body">
                     {link.label}
                   </Link>
                 </motion.li>
@@ -100,7 +100,7 @@ export default function Footer() {
 
           {/* Services */}
           <motion.div variants={fadeInUp}>
-            <h3 className="text-lg font-bold mb-6">{footer('servicesTitle')}</h3>
+            <h3 className="text-lg font-bold mb-6 font-heading tracking-tight">{footer('servicesTitle')}</h3>
             <motion.ul 
               className="space-y-3"
               variants={staggerContainer}
@@ -117,7 +117,7 @@ export default function Footer() {
                   variants={staggerItem}
                   whileHover={{ x: 5 }}
                 >
-                  <Link href={link.href} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                  <Link href={link.href} className="text-gray-400 hover:text-blue-400 transition-colors text-sm font-body">
                     {link.label}
                   </Link>
                 </motion.li>
@@ -127,7 +127,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <motion.div variants={fadeInUp}>
-            <h3 className="text-lg font-bold mb-6">{footer('contactTitle')}</h3>
+            <h3 className="text-lg font-bold mb-6 font-heading tracking-tight">{footer('contactTitle')}</h3>
             <motion.ul 
               className="space-y-4"
               variants={staggerContainer}
@@ -157,8 +157,8 @@ export default function Footer() {
                 >
                   <item.Icon className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-gray-400 text-sm">{item.primary}</p>
-                    <p className="text-gray-500 text-xs">{item.secondary}</p>
+                    <p className="text-gray-400 text-sm font-body">{item.primary}</p>
+                    <p className="text-gray-500 text-xs font-body">{item.secondary}</p>
                   </div>
                 </motion.li>
               ))}
@@ -178,7 +178,7 @@ export default function Footer() {
             transition={{ delay: 0.2 }}
           >
             <motion.p 
-              className="text-gray-400 text-sm text-center md:text-left"
+              className="text-gray-400 text-sm text-center md:text-left font-body"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
@@ -192,17 +192,17 @@ export default function Footer() {
               transition={{ delay: 0.4 }}
             >
               <motion.div whileHover={{ y: -2 }}>
-                <Link href={`/${locale}/politica-privacidad`} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                <Link href={`/${locale}/politica-privacidad`} className="text-gray-400 hover:text-blue-400 transition-colors text-sm font-body">
                   {footer('legal.privacy')}
                 </Link>
               </motion.div>
               <motion.div whileHover={{ y: -2 }}>
-                <Link href={`/${locale}/terminos-servicio`} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                <Link href={`/${locale}/terminos-servicio`} className="text-gray-400 hover:text-blue-400 transition-colors text-sm font-body">
                   {footer('legal.terms')}
                 </Link>
               </motion.div>
               <motion.div whileHover={{ y: -2 }}>
-                <Link href={`/${locale}/politica-cookies`} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                <Link href={`/${locale}/politica-cookies`} className="text-gray-400 hover:text-blue-400 transition-colors text-sm font-body">
                   {footer('legal.cookies')}
                 </Link>
               </motion.div>

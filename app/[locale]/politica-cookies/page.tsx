@@ -62,8 +62,11 @@ export default function PoliticaCookiesPage() {
                   <h2 className="text-2xl font-bold text-fana-navy mb-2">
                     POLÍTICA DE COOKIES
                   </h2>
-                  <p className="text-fana-primary font-semibold mb-2">FANA MILLING CENTER</p>
+                  <p className="text-fana-primary font-semibold mb-2">FANA GROUP CORP (Nombre ficticio: FANA MILLING CENTER)</p>
                   <p className="text-gray-600">
+                    <strong>Número de registro:</strong> G25000131466<br/>
+                    <strong>Domicilio:</strong> 8501 NW 107TH CT. UNIT 3, MIAMI, FL 33178, USA<br/>
+                    <strong>Condado:</strong> MIAMI-DADE<br/>
                     <strong>Fecha de última actualización:</strong> Octubre de 2025
                   </p>
                 </motion.div>

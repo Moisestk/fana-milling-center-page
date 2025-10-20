@@ -63,6 +63,13 @@ export default function TerminosServicioPage() {
                     TÉRMINOS Y CONDICIONES DEL SERVICIO B2B
                   </h2>
                   <p className="text-gray-600">
+                    <strong>Empresa:</strong> FANA GROUP CORP (Nombre ficticio: FANA MILLING CENTER)<br/>
+                    <strong>Número de registro:</strong> G25000131466<br/>
+                    <strong>Estado:</strong> ACTIVO<br/>
+                    <strong>Fecha de registro:</strong> 09/10/2025<br/>
+                    <strong>Fecha de vencimiento:</strong> 31/12/2030<br/>
+                    <strong>Domicilio:</strong> 8501 NW 107TH CT. UNIT 3, MIAMI, FL 33178, USA<br/>
+                    <strong>Condado:</strong> MIAMI-DADE<br/>
                     <strong>Fecha de última actualización:</strong> Octubre de 2025
                   </p>
                 </motion.div>

@@ -17,7 +17,7 @@ export default function PricingSection() {
       features: t('plan1.features'),
       popular: false,
       icon: "🔧",
-      gradient: "from-blue-500 to-blue-600"
+      gradient: "from-fana-primary to-fana-navy"
     },
     {
       id: 2,

@@ -51,29 +51,29 @@ export default function OurServicesSection() {
           variants={staggerContainer}
         >
           <motion.div 
-            className="text-blue-600 font-semibold text-sm uppercase tracking-wider mb-3"
+            className="text-fana-primary font-semibold text-sm uppercase tracking-wider mb-3 font-body"
             variants={fadeInUp}
           >
             {t('badge')}
           </motion.div>
           <motion.h2 
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-4 font-heading tracking-tight"
             variants={fadeInUp}
           >
             <span className="text-gray-800">{t('title.part1')}</span>
             <br />
-            <span className="text-blue-600">{t('title.part2')}</span>
+            <span className="text-fana-primary">{t('title.part2')}</span>
           </motion.h2>
           <motion.div 
             className="flex justify-center mt-6"
             variants={fadeInUp}
           >
             <Link href={`/${locale}/servicios`}>
-              <motion.button 
-                className="bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm shadow-md hover:shadow-lg"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-              >
+                <motion.button 
+                  className="bg-fana-primary text-white px-6 py-2.5 rounded-lg hover:bg-fana-navy transition-colors font-semibold text-sm shadow-md hover:shadow-lg font-body tracking-wide"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                 {t('cta')}
               </motion.button>
             </Link>
@@ -123,7 +123,7 @@ export default function OurServicesSection() {
                 
                 {/* Icon Circle */}
                 <motion.div 
-                  className="absolute bottom-6 left-6 w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center shadow-lg z-10"
+                  className="absolute bottom-6 left-6 w-16 h-16 bg-fana-primary rounded-full flex items-center justify-center shadow-lg z-10"
                   whileHover={{ 
                     scale: 1.2, 
                     rotate: 360,
@@ -138,7 +138,7 @@ export default function OurServicesSection() {
               {/* Service Content */}
               <div className="p-6">
                 <motion.h3 
-                  className="text-xl font-bold text-gray-800 mb-3"
+                  className="text-xl font-bold text-gray-800 mb-3 font-heading tracking-tight"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 }}
@@ -146,7 +146,7 @@ export default function OurServicesSection() {
                   {service.title}
                 </motion.h3>
                 <motion.p 
-                  className="text-sm text-gray-600 leading-relaxed"
+                  className="text-sm text-gray-600 leading-relaxed font-body"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}

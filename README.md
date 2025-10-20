@@ -128,10 +128,15 @@ npm run lint
 
 ## 📞 Información de Contacto
 
-**FANA Milling Center**
-- Teléfono: +1 (234) 567-890
-- Email: info@fanamilling.com
-- Dirección: Av. Tecnología Dental 123, Zona Industrial, Ciudad, CP 12345, México
+**FANA GROUP CORP (Nombre ficticio: FANA MILLING CENTER)**
+- **Número de registro:** G25000131466
+- **Estado:** ACTIVO
+- **Fecha de registro:** 09/10/2025
+- **Fecha de vencimiento:** 31/12/2030
+- **Teléfono:** +1 (305) 123-4567
+- **Email:** info@fanamilling.com
+- **Dirección:** 8501 NW 107TH CT. UNIT 3, MIAMI, FL 33178, USA
+- **Condado:** MIAMI-DADE
 
 ---
 

@@ -78,8 +78,9 @@ export default function PoliticaPrivacidadPage() {
                   </h3>
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <p className="text-gray-700 leading-relaxed">
-                      El Responsable del tratamiento de sus datos es <strong>FANA Milling Center</strong>, con domicilio en 
-                      Polígono Industrial Norte, 28050 Madrid, España, y correo electrónico de contacto: 
+                      El Responsable del tratamiento de sus datos es <strong>FANA MILLING CENTER</strong> (Nombre ficticio de FANA GROUP CORP), 
+                      con domicilio en 8501 NW 107TH CT. UNIT 3, MIAMI, FL 33178, USA, Condado de Miami-Dade, 
+                      y correo electrónico de contacto: 
                       <a href="mailto:info@fanamilling.com" className="text-fana-primary hover:text-fana-navy font-medium">
                         info@fanamilling.com
                       </a>.

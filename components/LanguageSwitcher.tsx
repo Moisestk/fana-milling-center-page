@@ -32,7 +32,7 @@ export default function LanguageSwitcher({ currentLocale }: LanguageSwitcherProp
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-3 py-2 rounded-lg border border-gray-200 hover:border-blue-500 hover:bg-blue-50 transition-all duration-200"
+        className="flex items-center space-x-2 px-3 py-2 rounded-lg border border-gray-200 hover:border-fana-secondary0 hover:bg-fana-secondary transition-all duration-200"
         aria-label="Change language"
       >
         <GlobeAltIcon className="h-4 w-4 text-gray-600" />
@@ -54,14 +54,14 @@ export default function LanguageSwitcher({ currentLocale }: LanguageSwitcherProp
             <button
               key={language.code}
               onClick={() => handleLanguageChange(language.code)}
-              className={`w-full flex items-center space-x-3 px-4 py-3 text-left hover:bg-blue-50 transition-colors duration-200 ${
-                currentLocale === language.code ? 'bg-blue-50 border-l-4 border-blue-600' : 'border-l-4 border-transparent'
+              className={`w-full flex items-center space-x-3 px-4 py-3 text-left hover:bg-fana-secondary transition-colors duration-200 ${
+                currentLocale === language.code ? 'bg-fana-secondary border-l-4 border-fana-primary' : 'border-l-4 border-transparent'
               }`}
             >
               <span className="text-lg">{language.flag}</span>
               <span className="font-medium text-gray-700 text-sm">{language.name}</span>
               {currentLocale === language.code && (
-                <svg className="h-4 w-4 text-blue-600 ml-auto" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="h-4 w-4 text-fana-primary ml-auto" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
               )}

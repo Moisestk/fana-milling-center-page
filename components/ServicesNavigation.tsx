@@ -27,7 +27,7 @@ export default function ServicesNavigation() {
   ];
 
   return (
-    <section className="bg-blue-600 py-5 overflow-hidden">
+    <section className="bg-fana-primary py-5 overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div 
           className="flex flex-wrap justify-center items-center gap-6 md:gap-10 lg:gap-16"

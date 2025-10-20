@@ -220,16 +220,16 @@
       },
       "address": {
         "title": "Dirección Física",
-        "street": "Polígono Industrial Norte",
-        "city": "Calle Tecnología, 15",
-        "postal": "28050 Madrid, España",
+        "street": "8501 NW 107TH CT. UNIT 3",
+        "city": "MIAMI, FL 33178",
+        "postal": "MIAMI-DADE COUNTY, USA",
         "visits": "Visitas con cita previa"
       }
     },
     "location": {
       "title": "Ubicación del Laboratorio",
       "mapTitle": "Mapa de Google Maps",
-      "mapAddress": "Polígono Industrial Norte, Madrid",
+      "mapAddress": "8501 NW 107TH CT. UNIT 3, MIAMI, FL 33178",
       "hours": {
         "title": "Horarios de Atención B2B",
         "weekdays": "Lunes - Viernes",
@@ -494,9 +494,9 @@
   },
   "newDesign": {
     "header": {
-      "phone": "+34 91 123 45 67",
+      "phone": "+1 (305) 123-4567",
       "email": "info@fanamilling.com",
-      "address": "Polígono Industrial Norte, Madrid 28050",
+      "address": "8501 NW 107TH CT. UNIT 3, MIAMI, FL 33178",
       "cta": "Obtén Cotización"
     },
     "hero": {
@@ -760,16 +760,16 @@
     "contactTitle": "Contacto",
     "contact": {
       "phone": {
-        "number": "+34 91 123 45 67",
-        "hours": "Lun-Vie: 8:00 - 18:00"
+        "number": "+1 (305) 123-4567",
+        "hours": "Lun-Vie: 8:00 - 18:00 EST"
       },
       "email": {
         "address": "info@fanamilling.com",
         "response": "Respuesta en 24h"
       },
       "address": {
-        "street": "Polígono Industrial Norte",
-        "city": "28050 Madrid, España"
+        "street": "8501 NW 107TH CT. UNIT 3",
+        "city": "MIAMI, FL 33178, USA"
       }
     },
     "copyright": "Todos los derechos reservados.",

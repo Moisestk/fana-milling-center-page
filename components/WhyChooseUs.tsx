@@ -13,7 +13,7 @@ export default function WhyChooseUs() {
       title: t('reason1.title'),
       description: t('reason1.description'),
       icon: "👥",
-      gradient: "from-blue-500 to-blue-600"
+      gradient: "from-fana-primary to-fana-navy"
     },
     {
       number: "02", 

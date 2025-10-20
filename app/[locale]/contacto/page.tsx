@@ -48,10 +48,10 @@ export default function ContactoPage() {
               variants={staggerContainer}
             >
               <motion.div 
-                className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-6"
+                className="inline-flex items-center gap-2 bg-blue-100 text-fana-primary px-4 py-2 rounded-full text-sm font-medium mb-6"
                 variants={fadeInUp}
               >
-                <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+                <span className="w-2 h-2 bg-fana-primary rounded-full"></span>
                 Contacto Directo
               </motion.div>
               <motion.h1 
@@ -88,7 +88,7 @@ export default function ContactoPage() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fana-primary focus:border-transparent"
                       required
                     />
                   </div>
@@ -102,7 +102,7 @@ export default function ContactoPage() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fana-primary focus:border-transparent"
                       required
                     />
                   </div>
@@ -118,7 +118,7 @@ export default function ContactoPage() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fana-primary focus:border-transparent"
                     />
                   </div>
                   
@@ -131,7 +131,7 @@ export default function ContactoPage() {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fana-primary focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -144,7 +144,7 @@ export default function ContactoPage() {
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fana-primary focus:border-transparent"
                   >
                     <option value="">Selecciona un servicio</option>
                     <option value="estructuras">Estructuras de Implantes</option>
@@ -163,14 +163,14 @@ export default function ContactoPage() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fana-primary focus:border-transparent"
                     placeholder="Describe tu proyecto o consulta..."
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium text-lg shadow-md hover:shadow-lg"
+                  className="w-full bg-fana-primary text-white py-4 rounded-lg hover:bg-fana-navy transition-colors font-medium text-lg shadow-md hover:shadow-lg"
                 >
                   Enviar Mensaje
                 </button>
@@ -183,7 +183,7 @@ export default function ContactoPage() {
               <div className="space-y-6">
                 <div className="bg-blue-50 p-6 rounded-xl">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-fana-primary rounded-lg flex items-center justify-center flex-shrink-0">
                       <PhoneIcon className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -196,7 +196,7 @@ export default function ContactoPage() {
 
                 <div className="bg-blue-50 p-6 rounded-xl">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-fana-primary rounded-lg flex items-center justify-center flex-shrink-0">
                       <EnvelopeIcon className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -209,7 +209,7 @@ export default function ContactoPage() {
 
                 <div className="bg-blue-50 p-6 rounded-xl">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-fana-primary rounded-lg flex items-center justify-center flex-shrink-0">
                       <MapPinIcon className="w-6 h-6 text-white" />
                     </div>
                     <div>

@@ -29,7 +29,7 @@ export default function Header() {
     <>
       {/* Top Contact Bar */}
       <motion.div 
-        className="bg-blue-600 text-white py-2.5"
+        className="bg-fana-primary text-white py-2.5"
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -130,14 +130,14 @@ export default function Header() {
               {navItems.map((item, index) => (
                 <Link key={item.href} href={item.href}>
                   <motion.span 
-                    className="text-gray-700 hover:text-blue-600 font-medium text-sm transition-colors cursor-pointer relative group"
+                    className="text-gray-700 hover:text-fana-primary font-medium text-sm transition-colors cursor-pointer relative group font-body tracking-wide"
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 + index * 0.05 }}
                     whileHover={{ y: -2 }}
                   >
                     {item.label}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-fana-primary transition-all duration-300 group-hover:w-full"></span>
                   </motion.span>
                 </Link>
               ))}
@@ -153,7 +153,7 @@ export default function Header() {
               <LanguageSwitcher currentLocale={locale} />
               <Link href={`/${locale}/contacto`}>
                 <motion.button 
-                  className="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium text-sm"
+                  className="bg-fana-primary text-white px-5 py-2 rounded-full hover:bg-fana-navy transition-colors font-semibold text-sm font-body tracking-wide"
                   whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(37, 99, 235, 0.5)" }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -228,7 +228,7 @@ export default function Header() {
                       <Link 
                         href={item.href}
                         onClick={() => setIsMenuOpen(false)}
-                        className="text-gray-700 hover:text-blue-600 font-medium transition-colors block"
+                        className="text-gray-700 hover:text-fana-primary font-medium transition-colors block"
                       >
                         {item.label}
                   </Link>
@@ -248,7 +248,7 @@ export default function Header() {
 
               <Link href={`/${locale}/contacto`}>
                 <motion.button 
-                  className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium w-fit"
+                  className="bg-fana-primary text-white px-6 py-2 rounded-full hover:bg-fana-navy transition-colors font-medium w-fit"
                   variants={{
                     initial: { opacity: 0, x: -20 },
                     animate: { opacity: 1, x: 0 }
