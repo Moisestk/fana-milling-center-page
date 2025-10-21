@@ -4,27 +4,33 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Optimización para deployment en cPanel
-  output: 'standalone',
+  // Optimización para deployment en cPanel con memoria limitada
+  // Remover 'standalone' para reducir uso de memoria
   experimental: {
     esmExternals: 'loose',
-    optimizePackageImports: ['framer-motion', '@heroicons/react', 'lucide-react']
+    optimizePackageImports: ['framer-motion', '@heroicons/react', 'lucide-react'],
+    // Reducir workers para limitar uso de memoria
+    workerThreads: false,
+    cpus: 1
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  swcMinify: true,
+  // Deshabilitar swcMinify para reducir uso de memoria durante runtime
+  swcMinify: false,
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  // Reducir opciones de imágenes para menor uso de memoria
   images: {
-    formats: ['image/avif', 'image/webp'],
+    formats: ['image/webp'],
     minimumCacheTTL: 60,
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    deviceSizes: [640, 750, 1080, 1920],
+    imageSizes: [16, 32, 64, 128, 256],
   },
-  // Enable automatic prefetching
-  // Next.js will automatically prefetch pages in the viewport
+  // Optimizaciones adicionales para memoria
+  productionBrowserSourceMaps: false,
+  optimizeFonts: false,
 };
 
 module.exports = withNextIntl(nextConfig);

@@ -1,8 +1,11 @@
 ---
 deployment:
   tasks:
-    # 1. Limpiar caché de npm (opcional pero recomendado)
+    # 1. Configurar variables de entorno para optimizar memoria
     - export DEPLOYPATH=/home/$USER/public_html/
+    - export NODE_ENV=production
+    - export NODE_OPTIONS="--max-old-space-size=1536 --max-semi-space-size=64"
+    - export NEXT_TELEMETRY_DISABLED=1
     
     # 2. Copiar archivos al directorio de producción
     - /bin/cp -R * $DEPLOYPATH
@@ -10,15 +13,26 @@ deployment:
     # 3. Navegar al directorio de deployment
     - cd $DEPLOYPATH
     
-    # 4. Instalar dependencias de producción
+    # 4. Limpiar caché de Next.js si existe
+    - rm -rf .next
+    
+    # 5. Instalar dependencias de producción
     - npm ci --production=false
     
-    # 5. Construir la aplicación Next.js
+    # 6. Construir la aplicación Next.js (con límites de memoria)
     - npm run build
     
-    # 6. Crear directorio para PM2 logs si no existe
+    # 7. Crear directorio para PM2 logs si no existe
     - mkdir -p $DEPLOYPATH/logs
     
-    # 7. Reiniciar la aplicación con PM2
-    - echo "Deployment completado. Asegúrate de tener PM2 configurado para iniciar la aplicación."
+    # 8. Detener PM2 si está corriendo
+    - pm2 delete fana-milling-center || true
+    
+    # 9. Iniciar la aplicación con PM2
+    - pm2 start ecosystem.config.js
+    
+    # 10. Guardar configuración de PM2
+    - pm2 save
+    
+    - echo "✅ Deployment completado con optimizaciones de memoria"
 
