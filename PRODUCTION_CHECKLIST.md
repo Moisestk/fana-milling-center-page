@@ -75,7 +75,7 @@ En el servidor cPanel, crear archivo `.env` basado en `.env.example`:
 
 ```bash
 ssh -p 21098 fanawfcg@fanamillingcenter.com
-cd /home/fanawfcg/public_html
+cd /home/fanawfcg/public_html/demo
 nano .env
 ```
 
@@ -85,7 +85,7 @@ NODE_ENV=production
 PORT=3000
 NODE_OPTIONS=--max-old-space-size=1536 --max-semi-space-size=64
 NEXT_TELEMETRY_DISABLED=1
-NEXT_PUBLIC_SITE_URL=http://fanamillingcenter.com
+NEXT_PUBLIC_SITE_URL=http://fanamillingcenter.com/demo
 ```
 
 ### 2. Verificar Node.js en Servidor
@@ -172,15 +172,15 @@ Decidir estrategia:
 ### Rutas a Probar
 
 ```
-✓ /es                          - Página principal (español)
-✓ /en                          - Página principal (inglés)
-✓ /es/nosotros                 - Página nosotros
-✓ /es/servicios                - Página servicios
-✓ /es/materiales               - Página materiales
-✓ /es/contacto                 - Página contacto
-✓ /es/politica-privacidad      - Política de privacidad
-✓ /es/politica-cookies         - Política de cookies
-✓ /es/terminos-servicio        - Términos de servicio
+✓ /demo/es                          - Página principal (español)
+✓ /demo/en                          - Página principal (inglés)
+✓ /demo/es/nosotros                 - Página nosotros
+✓ /demo/es/servicios                - Página servicios
+✓ /demo/es/materiales               - Página materiales
+✓ /demo/es/contacto                 - Página contacto
+✓ /demo/es/politica-privacidad      - Política de privacidad
+✓ /demo/es/politica-cookies         - Política de cookies
+✓ /demo/es/terminos-servicio        - Términos de servicio
 ```
 
 ### Elementos a Verificar
@@ -237,7 +237,7 @@ pm2 restart fana-milling-center
 
 ### Aplicación No Inicia
 ```bash
-cd /home/fanawfcg/public_html
+cd /home/fanawfcg/public_html/demo
 rm -rf .next
 npm ci
 npm run build
@@ -304,7 +304,8 @@ pm2 logs fana-milling-center --err --lines 100
 
 - **Servidor**: fanamillingcenter.com:21098
 - **Usuario**: fanawfcg
-- **Directorio**: /home/fanawfcg/public_html/
+- **Directorio**: /home/fanawfcg/public_html/demo/
+- **URL del Sitio**: http://fanamillingcenter.com/demo
 - **Documentación**: Ver `docs/CPANEL_FANA_SERVER.md`
 
 ---

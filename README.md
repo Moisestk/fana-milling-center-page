@@ -175,9 +175,13 @@ git push cpanel main
 ssh -p 21098 fanawfcg@fanamillingcenter.com
 
 # Ejecutar script de instalación
-cd /home/fanawfcg/public_html
+cd /home/fanawfcg/public_html/demo
 ./install.sh
 ```
+
+**Nota**: El sitio está configurado para el subdirectorio `/demo`:
+- URL: `http://fanamillingcenter.com/demo`
+- Directorio: `/home/fanawfcg/public_html/demo/`
 
 ### 📂 Archivos de Configuración para cPanel
 
