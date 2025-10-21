@@ -141,41 +141,60 @@ npm run deploy       # Instalar, construir y reiniciar
 
 ## 🌐 Deployment en cPanel
 
-Este proyecto está configurado para ser desplegado fácilmente en servidores cPanel.
+Este proyecto está configurado para ser desplegado en **fanamillingcenter.com** con optimizaciones de memoria.
 
-### Instalación Rápida
+### 🚀 Deployment Rápido (Recomendado)
 
 ```bash
-# Ejecutar script de instalación automatizado
+# Script automatizado que hace todo el proceso
+./deploy-to-cpanel.sh
+```
+
+Este script:
+- ✅ Verifica y hace commit de cambios pendientes
+- ✅ Push a GitHub (opcional)
+- ✅ Push automático a cPanel
+- ✅ El servidor ejecuta `.cpanel.yml` automáticamente
+
+### 📝 Deployment Manual
+
+```bash
+# 1. Commit de cambios
+git add -A
+git commit -m "Tu mensaje"
+
+# 2. Push a cPanel
+git push cpanel main
+# Password: c3gAN(Om7Fk;
+```
+
+### 🔧 Instalación Inicial en Servidor (Solo Primera Vez)
+
+```bash
+# Conectarse al servidor
+ssh -p 21098 fanawfcg@fanamillingcenter.com
+
+# Ejecutar script de instalación
+cd /home/fanawfcg/public_html
 ./install.sh
 ```
 
-### Deployment Manual
+### 📂 Archivos de Configuración para cPanel
 
-```bash
-# 1. Instalar dependencias
-npm ci
-
-# 2. Construir la aplicación
-npm run build
-
-# 3. Iniciar con PM2
-npm run pm2:start
-```
-
-### Archivos de Configuración para cPanel
-
-- **`.cpanel.yml`** - Deployment automático con Git
-- **`ecosystem.config.js`** - Configuración de PM2
+- **`.cpanel.yml`** - Deployment automático con Git (con optimizaciones de memoria)
+- **`ecosystem.config.js`** - Configuración de PM2 (modo fork, límites de memoria)
 - **`server.js`** - Servidor de producción optimizado
-- **`.node-version`** - Versión de Node.js requerida (20.19.0)
+- **`.node-version`** - Versión de Node.js requerida (24.6.0)
 - **`.htaccess.example`** - Ejemplo de proxy reverso
+- **`deploy-to-cpanel.sh`** - Script de deployment automatizado
 
-### Documentación Completa
+### 📚 Documentación Completa
 
 Consulta la documentación detallada de deployment en:
 - 📖 **Guía Completa**: `docs/CPANEL_DEPLOYMENT.md`
 - ⚡ **Inicio Rápido**: `docs/QUICK_START_CPANEL.md`
+- 🌐 **Servidor FANA**: `docs/CPANEL_FANA_SERVER.md` ← **Configuración específica**
+- 🧠 **Optimización de Memoria**: `docs/CPANEL_MEMORY_FIX.md`
 
 ## 📞 Información de Contacto
 
