@@ -4,6 +4,8 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Optimización para deployment en cPanel
+  output: 'standalone',
   experimental: {
     esmExternals: 'loose',
     optimizePackageImports: ['framer-motion', '@heroicons/react', 'lucide-react']

@@ -122,9 +122,60 @@ npm run build
 # Iniciar servidor de producción
 npm start
 
+# Servidor de producción (cPanel)
+npm run prod
+
 # Linting
 npm run lint
+
+# PM2 - Gestión de procesos
+npm run pm2:start    # Iniciar con PM2
+npm run pm2:stop     # Detener
+npm run pm2:restart  # Reiniciar
+npm run pm2:logs     # Ver logs
+npm run pm2:status   # Ver estado
+
+# Deployment completo
+npm run deploy       # Instalar, construir y reiniciar
 ```
+
+## 🌐 Deployment en cPanel
+
+Este proyecto está configurado para ser desplegado fácilmente en servidores cPanel.
+
+### Instalación Rápida
+
+```bash
+# Ejecutar script de instalación automatizado
+./install.sh
+```
+
+### Deployment Manual
+
+```bash
+# 1. Instalar dependencias
+npm ci
+
+# 2. Construir la aplicación
+npm run build
+
+# 3. Iniciar con PM2
+npm run pm2:start
+```
+
+### Archivos de Configuración para cPanel
+
+- **`.cpanel.yml`** - Deployment automático con Git
+- **`ecosystem.config.js`** - Configuración de PM2
+- **`server.js`** - Servidor de producción optimizado
+- **`.node-version`** - Versión de Node.js requerida (20.19.0)
+- **`.htaccess.example`** - Ejemplo de proxy reverso
+
+### Documentación Completa
+
+Consulta la documentación detallada de deployment en:
+- 📖 **Guía Completa**: `docs/CPANEL_DEPLOYMENT.md`
+- ⚡ **Inicio Rápido**: `docs/QUICK_START_CPANEL.md`
 
 ## 📞 Información de Contacto
 

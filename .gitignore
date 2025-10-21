@@ -32,3 +32,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# documentation
+/docs
+
+# cPanel deployment
+.htaccess
+/logs
+*.log
+
+# PM2
+.pm2
+pm2-*.log

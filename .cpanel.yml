@@ -1,0 +1,24 @@
+---
+deployment:
+  tasks:
+    # 1. Limpiar caché de npm (opcional pero recomendado)
+    - export DEPLOYPATH=/home/$USER/public_html/
+    
+    # 2. Copiar archivos al directorio de producción
+    - /bin/cp -R * $DEPLOYPATH
+    
+    # 3. Navegar al directorio de deployment
+    - cd $DEPLOYPATH
+    
+    # 4. Instalar dependencias de producción
+    - npm ci --production=false
+    
+    # 5. Construir la aplicación Next.js
+    - npm run build
+    
+    # 6. Crear directorio para PM2 logs si no existe
+    - mkdir -p $DEPLOYPATH/logs
+    
+    # 7. Reiniciar la aplicación con PM2
+    - echo "Deployment completado. Asegúrate de tener PM2 configurado para iniciar la aplicación."
+
