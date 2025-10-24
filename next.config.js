@@ -11,17 +11,13 @@ const nextConfig = {
   // Optimización para deployment en cPanel con memoria limitada
   // Remover 'standalone' para reducir uso de memoria
   experimental: {
-    esmExternals: 'loose',
-    optimizePackageImports: ['framer-motion', '@heroicons/react', 'lucide-react'],
-    // Reducir workers para limitar uso de memoria
-    workerThreads: false,
-    cpus: 1
+    optimizePackageImports: ['framer-motion', '@heroicons/react', 'lucide-react']
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  // Deshabilitar swcMinify para reducir uso de memoria durante runtime
-  swcMinify: false,
+  // Enable swcMinify for better performance on Vercel
+  swcMinify: true,
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
