@@ -4,9 +4,9 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Configuración para subdirectorio /demo
-  basePath: '/demo',
-  assetPrefix: '/demo',
+  // Configuración para desarrollo local - sin basePath
+  // basePath: '/demo',
+  // assetPrefix: '/demo',
   
   // Optimización para deployment en cPanel con memoria limitada
   // Remover 'standalone' para reducir uso de memoria

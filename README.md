@@ -207,7 +207,7 @@ Consulta la documentación detallada de deployment en:
 - **Estado:** ACTIVO
 - **Fecha de registro:** 09/10/2025
 - **Fecha de vencimiento:** 31/12/2030
-- **Teléfono:** +1 (832) 897-6805
+- **Teléfono:** +1 (832) 897-8335
 - **Email:** info@fanamilling.com
 - **Dirección:** 8501 NW 107TH CT. UNIT 3, MIAMI, FL 33178, USA
 - **Condado:** MIAMI-DADE

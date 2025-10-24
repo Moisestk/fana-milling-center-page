@@ -5,13 +5,14 @@ import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { fadeInUp, slideInLeft, slideInRight, staggerContainer, staggerItem, viewportOptions } from '@/lib/animations';
+import { fadeInUp, slideInLeft, slideInRight, staggerContainer, staggerItem, viewportOptions, mobileViewportOptions } from '@/lib/animations';
+import { useMobile } from '@/lib/useMobile';
 
 export default function AboutSection() {
   const t = useTranslations('newDesign.about');
   const params = useParams();
   const locale = params.locale as string || 'es';
+  const isMobile = useMobile();
   
   const features = [
     t('features.feature1'),
@@ -28,7 +29,7 @@ export default function AboutSection() {
             className="relative"
             initial="initial"
             whileInView="animate"
-            viewport={viewportOptions}
+            viewport={isMobile ? mobileViewportOptions : viewportOptions}
             variants={slideInLeft}
           >
             <div className="relative w-full max-w-md mx-auto">
@@ -47,15 +48,15 @@ export default function AboutSection() {
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 >
-                  {/* Real Laboratory Image */}
+                  {/* Laboratory Video */}
                   <div className="relative w-full h-full z-10">
-                    <Image
-                      src="/images/about/about-laboratory.png"
-                      alt="Laboratorio dental CAD/CAM FANA con equipos de fresado"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 400px"
-                      priority
+                    <video
+                      src="/images/hero/fana.mp4"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 </motion.div>
@@ -68,7 +69,7 @@ export default function AboutSection() {
             className="space-y-6"
             initial="initial"
             whileInView="animate"
-            viewport={viewportOptions}
+            viewport={isMobile ? mobileViewportOptions : viewportOptions}
             variants={staggerContainer}
           >
             {/* Subtitle */}

@@ -58,7 +58,7 @@ export default function MaterialesPage() {
       {/* Materials Grid */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Zirconio */}
             <div className="bg-gradient-to-br from-fana-secondary to-fana-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-fana-secondary/20">
               <div className="w-16 h-16 bg-fana-primary rounded-2xl flex items-center justify-center mb-6">
@@ -117,34 +117,6 @@ export default function MaterialesPage() {
               </ul>
             </div>
 
-            {/* Titanio */}
-            <div className="bg-gradient-to-br from-fana-secondary to-fana-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-fana-secondary/20">
-              <div className="w-16 h-16 bg-fana-primary rounded-2xl flex items-center justify-center mb-6">
-                <BoltIcon className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-fana-navy mb-4">Titanio Grado 5</h3>
-              <p className="text-gray-600 mb-6">
-                Material biocompatible ideal para estructuras de implantes de larga duración.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-fana-primary rounded-full"></span>
-                  ASTM F136 certificado
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-fana-primary rounded-full"></span>
-                  Resistencia a corrosión
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-fana-primary rounded-full"></span>
-                  Biocompatibilidad
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-fana-primary rounded-full"></span>
-                  Ligereza excepcional
-                </li>
-              </ul>
-            </div>
 
             {/* PMMA */}
             <div className="bg-gradient-to-br from-fana-secondary to-fana-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-fana-secondary/20">
@@ -175,34 +147,6 @@ export default function MaterialesPage() {
               </ul>
             </div>
 
-            {/* Cromo-Cobalto */}
-            <div className="bg-gradient-to-br from-fana-secondary to-fana-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-fana-secondary/20">
-              <div className="w-16 h-16 bg-fana-primary rounded-2xl flex items-center justify-center mb-6">
-                <CogIcon className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-fana-navy mb-4">Cromo-Cobalto</h3>
-              <p className="text-gray-600 mb-6">
-                Aleación metálica de alta resistencia para estructuras de prótesis removibles.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-fana-primary rounded-full"></span>
-                  Alta resistencia
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-fana-primary rounded-full"></span>
-                  Biocompatible
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-fana-primary rounded-full"></span>
-                  Durabilidad
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-fana-primary rounded-full"></span>
-                  Certificado ISO
-                </li>
-              </ul>
-            </div>
 
             {/* Cera */}
             <div className="bg-gradient-to-br from-fana-secondary to-fana-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-fana-secondary/20">

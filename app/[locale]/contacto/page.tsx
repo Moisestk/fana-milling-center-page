@@ -188,7 +188,6 @@ export default function ContactoPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-gray-800 mb-2">Teléfono</h3>
-                      <p className="text-gray-600">+1 (832) 897-6805</p>
                       <p className="text-gray-600">+1 (832) 897-8335</p>
                       <p className="text-sm text-gray-500 mt-1">Lunes a Viernes: 8:00 - 18:00</p>
                     </div>
@@ -227,27 +226,6 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nuestra Ubicación</h2>
-            <p className="text-lg text-gray-600">Visítanos en nuestras instalaciones en Miami</p>
-          </div>
-          <div className="w-full h-96 md:h-[500px] rounded-xl overflow-hidden shadow-2xl">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3588.6849407287896!2d-80.3469807!3d25.8579758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9c0c2c5e1f32d%3A0x7e7c1b5e5e5e5e5e!2s8501%20NW%20107th%20Ct%20Unit%203%2C%20Miami%2C%20FL%2033178%2C%20USA!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Ubicación de FANA Milling"
-            ></iframe>
-          </div>
-        </div>
-      </section>
 
       <Footer />
       </div>

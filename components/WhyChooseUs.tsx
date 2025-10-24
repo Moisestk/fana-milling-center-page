@@ -3,9 +3,11 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { ArrowRightIcon, CheckCircleIcon, StarIcon } from '@heroicons/react/24/outline';
+import { useMobile } from '@/lib/useMobile';
 
 export default function WhyChooseUs() {
   const t = useTranslations('gleamer.whyChooseUs');
+  const isMobile = useMobile();
 
   const reasons = [
     {
@@ -59,14 +61,14 @@ export default function WhyChooseUs() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          viewport={isMobile ? { once: true, margin: "-20px" } : { once: true, margin: "-50px" }}
           className="text-center mb-16"
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
+            viewport={isMobile ? { once: true, margin: "-20px" } : { once: true, margin: "-50px" }}
             className="mb-6"
           >
             <span className="inline-block bg-fana-primary/10 text-fana-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
@@ -80,7 +82,7 @@ export default function WhyChooseUs() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
+            viewport={isMobile ? { once: true, margin: "-20px" } : { once: true, margin: "-50px" }}
             className="font-lato text-lg text-gray-600 max-w-3xl mx-auto"
           >
             {t('subtitle')}
@@ -94,7 +96,7 @@ export default function WhyChooseUs() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 * index }}
-              viewport={{ once: true }}
+              viewport={isMobile ? { once: true, margin: "-20px" } : { once: true, margin: "-50px" }}
               whileHover={{ scale: 1.05, y: -10 }}
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group cursor-pointer relative overflow-hidden"
             >
@@ -134,7 +136,7 @@ export default function WhyChooseUs() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
+          viewport={isMobile ? { once: true, margin: "-20px" } : { once: true, margin: "-50px" }}
           className="text-center"
         >
           <div className="bg-gradient-to-br from-fana-navy to-fana-primary rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">

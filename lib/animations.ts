@@ -130,7 +130,14 @@ export const counterAnimation = {
 // Viewport animation options
 export const viewportOptions = {
   once: true,
-  margin: "-100px",
-  amount: 0.3
+  margin: "-50px",
+  amount: 0.1
+};
+
+// Mobile-friendly viewport options
+export const mobileViewportOptions = {
+  once: true,
+  margin: "-20px",
+  amount: 0.1
 };
 

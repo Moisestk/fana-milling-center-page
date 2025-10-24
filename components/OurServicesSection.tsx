@@ -6,7 +6,8 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { fadeInUp, staggerContainer, staggerItem, scaleIn, viewportOptions } from '@/lib/animations';
+import { fadeInUp, staggerContainer, staggerItem, scaleIn, viewportOptions, mobileViewportOptions } from '@/lib/animations';
+import { useMobile } from '@/lib/useMobile';
 
 interface OurServicesSectionProps {
   showCTA?: boolean;
@@ -16,6 +17,7 @@ export default function OurServicesSection({ showCTA = true }: OurServicesSectio
   const t = useTranslations('newDesign.services');
   const params = useParams();
   const locale = params.locale as string || 'es';
+  const isMobile = useMobile();
   const services = [
     {
       icon: CircleStackIcon,
@@ -51,7 +53,7 @@ export default function OurServicesSection({ showCTA = true }: OurServicesSectio
           className="text-center mb-12"
           initial="initial"
           whileInView="animate"
-          viewport={viewportOptions}
+          viewport={isMobile ? mobileViewportOptions : viewportOptions}
           variants={staggerContainer}
         >
           <motion.div 
@@ -75,7 +77,7 @@ export default function OurServicesSection({ showCTA = true }: OurServicesSectio
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           initial="initial"
           whileInView="animate"
-          viewport={viewportOptions}
+          viewport={isMobile ? mobileViewportOptions : viewportOptions}
           variants={staggerContainer}
         >
           {services.map((service, index) => (

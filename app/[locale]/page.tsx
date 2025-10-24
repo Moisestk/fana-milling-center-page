@@ -336,8 +336,7 @@ export default function Home() {
                 { 
                   Icon: PhoneIcon, 
                   title: t('cta2.contact.phone.title'), 
-                  text: t('cta2.contact.phone.value'),
-                  text2: t('cta2.contact.phone.value2')
+                  text: t('cta2.contact.phone.value')
                 },
                 { Icon: EnvelopeIcon, title: t('cta2.contact.email.title'), text: t('cta2.contact.email.value') },
                 { Icon: MapPinIcon, title: t('cta2.contact.location.title'), text: t('cta2.contact.location.value') }

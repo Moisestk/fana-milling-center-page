@@ -32,7 +32,7 @@ export default function Footer() {
   const socialLinks = [
     { Icon: InstagramIcon, href: '#' },
     { Icon: TikTokIcon, href: '#' },
-    { Icon: Linkedin, href: '#' }
+    { Icon: Linkedin, href: 'https://www.linkedin.com/company/fana-milling-center' }
   ];
 
   return (
@@ -148,8 +148,7 @@ export default function Footer() {
                 { 
                   Icon: PhoneIcon, 
                   primary: footer('contact.phone.number'),
-                  secondary: footer('contact.phone.hours'),
-                  tertiary: footer('contact.phone.number2')
+                  secondary: footer('contact.phone.hours')
                 },
                 {
                   Icon: EnvelopeIcon,

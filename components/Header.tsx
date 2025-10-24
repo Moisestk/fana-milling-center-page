@@ -73,7 +73,7 @@ export default function Header() {
                 <motion.a href="#" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="bg-white/20 hover:bg-white/30 rounded-full p-1.5 transition-all duration-200">
                   <TikTokIcon className="w-3 h-3" />
                 </motion.a>
-                <motion.a href="#" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="bg-white/20 hover:bg-white/30 rounded-full p-1.5 transition-all duration-200">
+                <motion.a href="https://www.linkedin.com/company/fana-milling-center" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="bg-white/20 hover:bg-white/30 rounded-full p-1.5 transition-all duration-200">
                   <Linkedin className="w-3 h-3 text-white" fill="white" />
                 </motion.a>
               </motion.div>
@@ -124,7 +124,7 @@ export default function Header() {
                 <motion.a href="#" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="bg-white/20 hover:bg-white/30 rounded-full p-2 transition-all duration-200">
                   <TikTokIcon className="w-3.5 h-3.5" />
                 </motion.a>
-                <motion.a href="#" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="bg-white/20 hover:bg-white/30 rounded-full p-2 transition-all duration-200">
+                <motion.a href="https://www.linkedin.com/company/fana-milling-center" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="bg-white/20 hover:bg-white/30 rounded-full p-2 transition-all duration-200">
                   <Linkedin className="w-3.5 h-3.5 text-white" fill="white" />
                 </motion.a>
               </motion.div>
